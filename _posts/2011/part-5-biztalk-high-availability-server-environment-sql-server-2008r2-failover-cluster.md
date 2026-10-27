@@ -1,4 +1,7 @@
 ---
+title: 'Part 5: BizTalk High Availability Server Environment &#8211; SQL Server 2008r2 Failover Cluster'
+date: 2011-05-01T16:33:28
+url: /2011/05/01/part-5-biztalk-high-availability-server-environment-sql-server-2008r2-failover-cluster/
 ID: 9
 post_title: 'Part 5: BizTalk High Availability Server Environment &#8211; SQL Server 2008r2 Failover Cluster'
 post_name: >
@@ -8,7 +11,7 @@ post_date: 2011-05-01 16:33:28
 layout: post
 link: >
   https://brauwers.azurewebsites.net/2011/05/01/part-5-biztalk-high-availability-server-environment-sql-server-2008r2-failover-cluster/
-published: true
+wp_published: true
 tags:
   - BizTalk
   - Cluster Installation
@@ -132,7 +135,7 @@ IP Address: 192.168.8.22</p>
 <p>On the ‘Specify Volume Size’ click ‘next’</p>
 <p><a href="/assets/images/uploads/2011/05/image31.png"><img style="margin: 0px;padding-left: 0px;padding-right: 0px;padding-top: 0px;border-width: 0px" title="image" alt="image" src="/assets/images/uploads/2011/05/image_thumb31.png" width="244" height="188" border="0" /></a></p>
 <p>On the ‘Assign a drive letter or path’ screen; assign a drive letter and click ‘next’</p>
-<p><a href="/assets/images/uploads/2011/05/image32.png">&lt;img style=&quot;background-image: none; margin: 0px; padding-left: 0px; padding-right: 0px; display: inline; padding-top: 0px; border-width: 0px;&quot; title=&quot;image&quot; alt=&quot;image&quot; src=&quot;http://blog.brauwers <a href="http://biturlz.com/C0q72Hh">viagra 100 mg posologie</a>.nl/wp-content/uploads/2011/05/image_thumb32.png" width="244" height="188" border="0" /&gt;</a></p>
+<p><a href="/assets/images/uploads/2011/05/image32.png">&lt;img style=&quot;background-image: none; margin: 0px; padding-left: 0px; padding-right: 0px; display: inline; padding-top: 0px; border-width: 0px;&quot; title=&quot;image&quot; alt=&quot;image&quot; src=&quot;http://blog.brauwers.nl/wp-content/uploads/2011/05/image_thumb32.png" width="244" height="188" border="0" /&gt;</a></p>
 <p>On the ‘Format Partition’ screen; leave the Default Values intact with exception of the ‘Volume Label’ for this enter a name (fe; Disk1) and press ‘next’</p>
 <p><a href="/assets/images/uploads/2011/05/image33.png"><img style="margin: 0px;padding-left: 0px;padding-right: 0px;padding-top: 0px;border-width: 0px" title="image" alt="image" src="/assets/images/uploads/2011/05/image_thumb33.png" width="244" height="188" border="0" /></a></p>
 <p>Finish the wizard by clicking ‘Finish’</p>
@@ -180,8 +183,8 @@ IP Address: 192.168.8.22</p>
 </blockquote>
 <blockquote><p>In case you get a warning relating to ‘Microsoft .NET Application Security’, verify that your machine has access to the Internet. Fix the issue and rerun the validation process</p></blockquote>
 <blockquote><p>In case you get a warning relating to ‘Network binding order’, check out the following links</p>
-<p><a title="http://theregime.wordpress.com/2008/03/04/how-to-setview-the-nic-bind-order-in-windows/" href="http://theregime.wordpress.com/2008/03/04/how-to-setview-the-nic-bind-order-in-windows/">http://theregime.wordpress.com/2008/03/04/how-to-setview-the-nic-bind-order-in-windows/</a>.</p>
-<p><a title="http://support.microsoft.com/kb/955963" href="http://support.microsoft.com/kb/955963">http://support.microsoft.com/kb/955963</a></p></blockquote>
+<p><a title="http://theregime.wordpress.com/2008/03/04/how-to-setview-the-nic-bind-order-in-windows/" href="https://web.archive.org/web/20221024015152/https://theregime.wordpress.com/2008/03/04/how-to-setview-the-nic-bind-order-in-windows/">http://theregime.wordpress.com/2008/03/04/how-to-setview-the-nic-bind-order-in-windows/</a>.</p>
+<p><a title="http://support.microsoft.com/kb/955963" href="/link-unavailable/?url=http%3A%2F%2Fsupport.microsoft.com%2Fkb%2F955963">http://support.microsoft.com/kb/955963</a></p></blockquote>
 <blockquote><p>Fix the issue and rerun the validation process (you might need to reboot first and rerun the Cluster Installation Preparation.</p>
 <p>Note: if after the binding order changes you still receive the same error; just skip and proceed with the installation as this error is most likely at this point showing up due to the fact that the ‘Failover Feature’ installs a virtual NIC .</p></blockquote>
 <p>&nbsp;</p>
@@ -376,7 +379,7 @@ IP Address: 192.168.8.23</p></blockquote>
 <p><a href="/assets/images/uploads/2011/05/image108.png"><img style="margin: 0px;padding-left: 0px;padding-right: 0px;padding-top: 0px;border-width: 0px" title="image" alt="image" src="/assets/images/uploads/2011/05/image_thumb108.png" width="244" height="172" border="0" /></a></p>
 <p>On the ‘Configure File Share Witness’  browse to an available Shared Folder Path.</p>
 <p><a href="/assets/images/uploads/2011/05/image109.png"><img style="margin: 0px;padding-left: 0px;padding-right: 0px;padding-top: 0px;border-width: 0px" title="image" alt="image" src="/assets/images/uploads/2011/05/image_thumb109.png" width="244" height="171" border="0" /></a></p>
-<blockquote><p>If you’ve not created a share at this point. Go to your FileServer, Create a folder and Share this Folder (<a title="http://technet.microsoft.com/en-us/library/cc770880.aspx#BKMK_interface" href="http://technet.microsoft.com/en-us/library/cc770880.aspx#BKMK_interface">http://technet.microsoft.com/en-us/library/cc770880.aspx#BKMK_interface</a>)</p></blockquote>
+<blockquote><p>If you’ve not created a share at this point. Go to your FileServer, Create a folder and Share this Folder (<a title="http://technet.microsoft.com/en-us/library/cc770880.aspx#BKMK_interface" href="https://web.archive.org/web/20150507004315/https://technet.microsoft.com/en-us/library/cc770880.aspx">http://technet.microsoft.com/en-us/library/cc770880.aspx#BKMK_interface</a>)</p></blockquote>
 <p>On the ‘Browse for Shared Folders’ screen, enter your FileServer name; in my case ‘EUROPOORT’ and click on the ‘Show Shared Folders’ button. Select the share you would like to use; in my case the share is called ‘Majority_SQL’ and press ‘Ok’</p>
 <p><a href="/assets/images/uploads/2011/05/image110.png"><img style="margin: 0px;padding-left: 0px;padding-right: 0px;padding-top: 0px;border-width: 0px" title="image" alt="image" src="/assets/images/uploads/2011/05/image_thumb110.png" width="244" height="242" border="0" /></a></p>
 <p>Click Next</p>

@@ -1,4 +1,7 @@
 ---
+title: 'How to: Store LinkedIn profile info in CRM2011 using BizTalk 2013 and Windows Azure Service Bus'
+date: 2013-04-08T22:22:00
+url: /2013/04/08/how-to-store-linkedin-profile-info-in-crm2011-using-biztalk-2013-and-windows-azure-service-bus/
 ID: 1262
 post_title: 'How to: Store LinkedIn profile info in CRM2011 using BizTalk 2013 and Windows Azure Service Bus'
 post_name: >
@@ -8,7 +11,7 @@ post_date: 2013-04-08 22:22:00
 layout: post
 link: >
   https://brauwers.azurewebsites.net/2013/04/08/how-to-store-linkedin-profile-info-in-crm2011-using-biztalk-2013-and-windows-azure-service-bus/
-published: true
+wp_published: true
 tags:
   - Azure
   - BizTalk
@@ -50,14 +53,14 @@ categories:
 &nbsp;
 
 Okay all kidding aside; in this blog post I will dive deeper in to the above mentioned <span style="color: #555555;">scenar</span>io, and will highlight the ins-and-outs as mentioned in steps 1 to 9. So let’s get started.
-<blockquote><span style="font-size: small;">For all those, not interested in reading about it; but rather want to see the pre-recorded demo. Click <a href="http://www.youtube.com/watch?v=-NONmqs1K5c" target="_blank" rel="noopener noreferrer">here</a> ;-)</span></blockquote>
+<blockquote><span style="font-size: small;">For all those, not interested in reading about it; but rather want to see the pre-recorded demo. Click <a href="/link-unavailable/?url=http%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3D-NONmqs1K5c" target="_blank" rel="noopener noreferrer">here</a> ;-)</span></blockquote>
 <h1>Website (steps 1 to 5) – Get OAUTH token and send it to Service bus</h1>
 One of the first challenges we have to tackle consist of obtaining a token from LinkedIn which allows us to perform authorized requests against a certain user profile. In English; in order to get LinkedIn profile information we need to acquire approval from the profile owner. Once we have obtained this permission we need to obtain an OATH 2.0 token which can then be used to authorize our requests to the LinkedIn API.
 
-So how did I solve this ‘challenge’, well I build this small <a href="http://brauwers.azurewebsites.net/" target="_blank" rel="noopener noreferrer">website</a> based on MVC 4*  and hosted it for free in <a href="http://www.windowsazure.com/en-us/pricing/details/#header-1" target="_blank" rel="noopener noreferrer">Azure</a>. This website uses the default MVC 4 template, and all I did is change some text and added a new controller and subsequent view. The controller, which I gave a self-explanatory name ‘LinkedInController’ takes care of all logic required (getting the OAUTH token and sending it so Windows Azure Service Bus).
-<blockquote><span style="font-size: small;">Read all about </span><a href="http://www.asp.net/mvc" target="_blank" rel="noopener noreferrer"><span style="font-size: small;">MVC</span></a><span style="font-size: small;"> here, and in order to learn more about MVC and other cool stuff go to </span><a href="http://www.pluralsight.com/training" target="_blank" rel="noopener noreferrer"><span style="font-size: small;">Pluralsight</span></a><span style="font-size: small;">)</span></blockquote>
+So how did I solve this ‘challenge’, well I build this small <a href="/" target="_blank" rel="noopener noreferrer">website</a> based on MVC 4*  and hosted it for free in <a href="https://web.archive.org/web/20130402224857/http://www.windowsazure.com/en-us/pricing/details/" target="_blank" rel="noopener noreferrer">Azure</a>. This website uses the default MVC 4 template, and all I did is change some text and added a new controller and subsequent view. The controller, which I gave a self-explanatory name ‘LinkedInController’ takes care of all logic required (getting the OAUTH token and sending it so Windows Azure Service Bus).
+<blockquote><span style="font-size: small;">Read all about </span><a href="https://web.archive.org/web/20190202025205/https://www.asp.net/mvc" target="_blank" rel="noopener noreferrer"><span style="font-size: small;">MVC</span></a><span style="font-size: small;"> here, and in order to learn more about MVC and other cool stuff go to </span><a href="https://web.archive.org/web/20170707155427/http://pluralsight.com:80/Training" target="_blank" rel="noopener noreferrer"><span style="font-size: small;">Pluralsight</span></a><span style="font-size: small;">)</span></blockquote>
 Below a more detailed overview, on how I took care of steps 1 to 4.
-<blockquote><span style="font-size: small;">Note: I gathered the information on how to authenticate using OAUTH 2.0 from  </span><a href="http://developer.linkedin.com/documents/authentication" target="_blank" rel="noopener noreferrer"><span style="font-size: small;">this page</span></a></blockquote>
+<blockquote><span style="font-size: small;">Note: I gathered the information on how to authenticate using OAUTH 2.0 from  </span><a href="https://web.archive.org/web/20150208032512/http://developer.linkedin.com:80/documents/authentication" target="_blank" rel="noopener noreferrer"><span style="font-size: small;">this page</span></a></blockquote>
 &nbsp;
 <h2> </h2>
 <h4>1) Obtaining profile user permission.</h4>
@@ -77,7 +80,7 @@ As a result we retrieve a JSON response which is serialized back into a custom o
 <h4>5) Publish message to windows azure service bus.</h4>
 Once we’ve filled out custom object, I send it to a custom build class*, which then sends this object to a Windows Azure Topic.
 <a href="/assets/images/uploads/2013/04/image4.png"><img style="background-image: none; padding-top: 0px; padding-left: 0px; margin: 0px; display: inline; padding-right: 0px; border-width: 0px;" title="image" alt="image" src="/assets/images/uploads/2013/04/image_thumb4.png" width="244" height="91" border="0" /></a>
-<blockquote><span style="font-size: small;">* The custom class I’ve build is my own implementation of the REST API for creating TOPICs, Subscriptions, Filters and sending messages to Windows Azure Service Bus (see <a href="http://msdn.microsoft.com/en-us/library/windowsazure/hh780717" target="_blank" rel="noopener noreferrer">Service Bus REST API Reference</a>). I’ve build this class a while back and the main reason I;’ve build it, is such that I can reuse it in my Demo Windows Phone Apps and Demo Windows Store Apps). I will not list the code here, however if you are interested just send me an </span><a href="mailto:info@brauwers.nl" target="_blank" rel="noopener noreferrer"><span style="font-size: small;">email</span></a><span style="font-size: small;"> and I’ll send it to you</span></blockquote>
+<blockquote><span style="font-size: small;">* The custom class I’ve build is my own implementation of the REST API for creating TOPICs, Subscriptions, Filters and sending messages to Windows Azure Service Bus (see <a href="https://web.archive.org/web/20130114221130/http://msdn.microsoft.com/en-us/library/windowsazure/hh780717" target="_blank" rel="noopener noreferrer">Service Bus REST API Reference</a>). I’ve build this class a while back and the main reason I;’ve build it, is such that I can reuse it in my Demo Windows Phone Apps and Demo Windows Store Apps). I will not list the code here, however if you are interested just send me an </span><a href="mailto:info@brauwers.nl" target="_blank" rel="noopener noreferrer"><span style="font-size: small;">email</span></a><span style="font-size: small;"> and I’ll send it to you</span></blockquote>
 
 <hr />
 
@@ -143,7 +146,7 @@ In order for BizTalk to recognize a message it’s message definition needs to b
 <ol>
 	<li>In my example I send a message to the service bus; this message is actually a representation of an internal defined class. This class is defined as mentioned below:
 <a href="/assets/images/uploads/2013/04/image8.png"><img style="background-image: none; padding-top: 0px; padding-left: 0px; margin: 0px; display: inline; padding-right: 0px; border-width: 0px;" title="image" alt="image" src="/assets/images/uploads/2013/04/image_thumb8.png" width="244" height="103" border="0" /></a></li>
-	<li>So how do we translate this message to a BizTalk Schema? Well we have a few options, and I’ll use the not so obvious approach and that’s the manual approach. In order to do so, we need to create a new schema in BizTalk which has the following properties and structure:Target Namespace should match the DataContract Namespace, thus in my case : <a title="http://brauwers.nl/socialauthenticator/linkedin/v1.0/" href="http://brauwers.nl/socialauthenticator/linkedin/v1.0/">http://brauwers.nl/socialauthenticator/linkedin/v1.0/</a>
+	<li>So how do we translate this message to a BizTalk Schema? Well we have a few options, and I’ll use the not so obvious approach and that’s the manual approach. In order to do so, we need to create a new schema in BizTalk which has the following properties and structure:Target Namespace should match the DataContract Namespace, thus in my case : <a title="http://brauwers.nl/socialauthenticator/linkedin/v1.0/" href="/link-unavailable/?url=http%3A%2F%2Fbrauwers.nl%2Fsocialauthenticator%2Flinkedin%2Fv1.0%2F">http://brauwers.nl/socialauthenticator/linkedin/v1.0/</a>
 The Main Root should match the class name, thus in my case :ApiAccessInformation
 The main root should contain the following elements, all of them of type string
 1) apiName
@@ -182,7 +185,7 @@ So how do we configure the wcf-webhttp adapter such that we can send a GET reque
 	<li>Create a new static solicit-response port and name it appropriately, choose the WCF-WebHttp adapter, choose your prefered send handler and select XML_Transmit as Send Pipeline and XML_Receive as Receive Pipeline
 <a href="/assets/images/uploads/2013/04/image16.png"><img style="background-image: none; padding-top: 0px; padding-left: 0px; margin: 0px; display: inline; padding-right: 0px; border-width: 0px;" title="image" alt="image" src="/assets/images/uploads/2013/04/image_thumb16.png" width="244" height="198" border="0" /></a></li>
 	<li>Now click on configure, such that we can configure the WCF-WebHttp adapter.</li>
-	<li>First configure the Endpoint address; I’ve used <a title="https://api.linkedin.com/v1/people" href="https://api.linkedin.com/v1/people">https://api.linkedin.com/v1/people</a>
+	<li>First configure the Endpoint address; I’ve used <a title="https://api.linkedin.com/v1/people" href="/link-unavailable/?url=https%3A%2F%2Fapi.linkedin.com%2Fv1%2Fpeople">https://api.linkedin.com/v1/people</a>
 <a href="/assets/images/uploads/2013/04/image17.png"><img style="background-image: none; padding-top: 0px; padding-left: 0px; margin: 0px; display: inline; padding-right: 0px; border-width: 0px;" title="image" alt="image" src="/assets/images/uploads/2013/04/image_thumb17.png" width="244" height="73" border="0" /></a></li>
 	<li>Now we set the HTTP Method and URL Mapping, for this I use the BtsHttpUrlMapping element, which contains an operation method which is set to GET and the rest of the Address Uri which consists of a list of profile fields we want to select and an oauth2 access token which value we will set using variable mapping (step 5 below)
 <a href="/assets/images/uploads/2013/04/SNAGHTML3f1a1cce.png"><img style="background-image: none; padding-top: 0px; padding-left: 0px; margin: 0px; display: inline; padding-right: 0px; border-width: 0px;" title="SNAGHTML3f1a1cce" alt="SNAGHTML3f1a1cce" src="/assets/images/uploads/2013/04/SNAGHTML3f1a1cce_thumb.png" width="244" height="108" border="0" /></a></li>
@@ -204,8 +207,8 @@ Well at this point we have send a GET request to linkedIn, however we haven’t 
 <h5>Figuring out the response format from LinkedIn</h5>
 In order to figure out the response message which is sent back to BizTalk, I have used Fiddler and composed a GET request as it would be sent by BizTalk.
 <ol>
-	<li>Open fiddler, and go to the compose tab, and use the following Uri, and replace [TOKEN] with the OAUTH token (note: you can get your token by going to the <a href="http://brauwers.azurewebsites.net/">web application</a>, but be aware if you allow access to your profile, you will be part of my DEMO and as a result your profile information will be stored in my Demo CRM environment <img class="wlEmoticon wlEmoticon-smilewithtongueout" alt="Smile with tongue out" src="/assets/images/uploads/2013/04/wlEmoticon-smilewithtongueout.png" />)
-<a title="https://api.linkedin.com/v1/people~:(first-name,last-name,email-address,date-of-birth,main-address,primary-twitter-account,picture-url,headline,interests,summary,languages,skills,specialties,educations,certifications,courses,three-current-positions,three-past-positions,following,job-bookmarks,phone-numbers,bound-account-types,twitter-accounts,im-accounts)?oauth2_access_token=[TOKEN]" href="https://api.linkedin.com/v1/people~:(first-name,last-name,email-address,date-of-birth,main-address,primary-twitter-account,picture-url,headline,interests,summary,languages,skills,specialties,educations,certifications,courses,three-current-positions,three-past-positions,following,job-bookmarks,phone-numbers,bound-account-types,twitter-accounts,im-accounts)?oauth2_access_token=[TOKEN]">https://api.linkedin.com/v1/people~:(first-name,last-name,email-address,date-of-birth,main-address,primary-twitter-account,picture-url,headline,interests,summary,languages,skills,specialties,educations,certifications,courses,three-current-positions,three-past-positions,following,job-bookmarks,phone-numbers,bound-account-types,twitter-accounts,im-accounts)?oauth2_access_token=[TOKEN]</a></li>
+	<li>Open fiddler, and go to the compose tab, and use the following Uri, and replace [TOKEN] with the OAUTH token (note: you can get your token by going to the <a href="/">web application</a>, but be aware if you allow access to your profile, you will be part of my DEMO and as a result your profile information will be stored in my Demo CRM environment <img class="wlEmoticon wlEmoticon-smilewithtongueout" alt="Smile with tongue out" src="/assets/images/uploads/2013/04/wlEmoticon-smilewithtongueout.png" />)
+<a title="https://api.linkedin.com/v1/people~:(first-name,last-name,email-address,date-of-birth,main-address,primary-twitter-account,picture-url,headline,interests,summary,languages,skills,specialties,educations,certifications,courses,three-current-positions,three-past-positions,following,job-bookmarks,phone-numbers,bound-account-types,twitter-accounts,im-accounts)?oauth2_access_token=[TOKEN]" href="/link-unavailable/?url=https%3A%2F%2Fapi.linkedin.com%2Fv1%2Fpeople~%3A%28first-name%2Clast-name%2Cemail-address%2Cdate-of-birth%2Cmain-address%2Cprimary-twitter-account%2Cpicture-url%2Cheadline%2Cinterests%2Csummary%2Clanguages%2Cskills%2Cspecialties%2Ceducations%2Ccertifications%2Ccourses%2Cthree-current-positions%2Cthree-past-positions%2Cfollowing%2Cjob-bookmarks%2Cphone-numbers%2Cbound-account-types%2Ctwitter-accounts%2Cim-accounts)?oauth2_access_token=[TOKEN]">https://api.linkedin.com/v1/people~:(first-name,last-name,email-address,date-of-birth,main-address,primary-twitter-account,picture-url,headline,interests,summary,languages,skills,specialties,educations,certifications,courses,three-current-positions,three-past-positions,following,job-bookmarks,phone-numbers,bound-account-types,twitter-accounts,im-accounts)?oauth2_access_token=[TOKEN]</a></li>
 	<li>Add the following request headers
 Accept: application/atom+xml;
 Content-Type: application/atom+xml;charset=utf-8
@@ -226,7 +229,7 @@ User-Agent: BizTalk<a href="/assets/images/uploads/2013/04/image22.png"><img sty
 <h4>9) Transforming the LinkedIn Profile RESPONSE and constructing a CRM POST request.</h4>
 Well at this point we have the response definition, and now we are ready for constructing our POST request which eventually will ensure that we store the data in CRM. So let’s get started with these final pieces.
 <h5>Figuring out the request message structure needed for inserting data into CRM</h5>
-In order to figure out the request or payload message which is sent as body in the POST request to CRM, I have used this CRM Codeplex project <a href="http://crm2011odatatool.codeplex.com/">CRM ODATA Query Designer</a> Below the steps I performed to obtain the correct XML structure (note you need to have installed the codeplex project)
+In order to figure out the request or payload message which is sent as body in the POST request to CRM, I have used this CRM Codeplex project <a href="https://web.archive.org/web/20180107135126/http://crm2011odatatool.codeplex.com:80/">CRM ODATA Query Designer</a> Below the steps I performed to obtain the correct XML structure (note you need to have installed the codeplex project)
 <ol>
 	<li>Open up CRM in your browser and select the CRM Odata Query Designer</li>
 	<li>Select ContactSet
@@ -253,7 +256,7 @@ Our final step, before testing, consists of adding one last send port which leve
 	<li>Create a new static One-Wayport and name it appropriately, choose the WCF-WebHttp adapter, choose your prefered send handler and select XML_Transmit as Send Pipeline
 <a href="/assets/images/uploads/2013/04/image33.png"><img style="background-image: none; padding-top: 0px; padding-left: 0px; margin: 0px; display: inline; padding-right: 0px; border: 0px;" title="image" alt="image" src="/assets/images/uploads/2013/04/image_thumb33.png" width="244" height="196" border="0" /></a></li>
 	<li>Now click on configure, such that we can configure the WCF-WebHttp adapter.</li>
-	<li>First configure the Endpoint address, which should point to an address ending on OrganisationData.svc/ContactSet .The full endpoint I’ve used is <a title="http://lb-2008-s07/Motion10/XRMServices/2011/OrganizationData.svc/ContactSet/" href="http://lb-2008-s07/Motion10/XRMServices/2011/OrganizationData.svc/ContactSet/">http://lb-2008-s07/Motion10/XRMServices/2011/OrganizationData.svc/ContactSet/</a>
+	<li>First configure the Endpoint address, which should point to an address ending on OrganisationData.svc/ContactSet .The full endpoint I’ve used is <a title="http://lb-2008-s07/Motion10/XRMServices/2011/OrganizationData.svc/ContactSet/" href="/link-unavailable/?url=http%3A%2F%2Flb-2008-s07%2FMotion10%2FXRMServices%2F2011%2FOrganizationData.svc%2FContactSet%2F">http://lb-2008-s07/Motion10/XRMServices/2011/OrganizationData.svc/ContactSet/</a>
 <a href="/assets/images/uploads/2013/04/image34.png"><img style="background-image: none; padding-top: 0px; padding-left: 0px; margin: 0px; display: inline; padding-right: 0px; border: 0px;" title="image" alt="image" src="/assets/images/uploads/2013/04/image_thumb34.png" width="244" height="105" border="0" /></a></li>
 	<li>Now we set the HTTP Method and URL Mapping, this is pretty straightforward as we only have to add the verb POST.
 <a href="/assets/images/uploads/2013/04/image35.png"><img style="background-image: none; padding-top: 0px; padding-left: 0px; margin: 0px; display: inline; padding-right: 0px; border: 0px;" title="image" alt="image" src="/assets/images/uploads/2013/04/image_thumb35.png" width="244" height="124" border="0" /></a></li>
@@ -293,7 +296,7 @@ Content-Type: application/atom+xml<a href="/assets/images/uploads/2013/04/image3
 &nbsp;</blockquote>
 
 <hr />
-<p align="center"><em><span style="color: #555555; font-size: x-large;"><a href="http://www.youtube.com/watch?v=-NONmqs1K5c" target="_blank" rel="noopener noreferrer">Click Here to see a video showcasing above mentioned scenario</a></span></em></p>
+<p align="center"><em><span style="color: #555555; font-size: x-large;"><a href="/link-unavailable/?url=http%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3D-NONmqs1K5c" target="_blank" rel="noopener noreferrer">Click Here to see a video showcasing above mentioned scenario</a></span></em></p>
 
 
 <hr />

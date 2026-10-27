@@ -1,4 +1,7 @@
 ---
+title: 'How to: Microsoft CRM 2011 Integration example (Part 2 &#8211; Get data out of CRM 2011)'
+date: 2012-01-17T18:30:00
+url: /2012/01/17/how-to-microsoft-crm-2011-integration-example-part-2-get-data-out-of-crm-2011/
 ID: 161
 post_title: 'How to: Microsoft CRM 2011 Integration example (Part 2 &#8211; Get data out of CRM 2011)'
 post_name: >
@@ -8,7 +11,7 @@ post_date: 2012-01-17 18:30:00
 layout: post
 link: >
   https://brauwers.azurewebsites.net/2012/01/17/how-to-microsoft-crm-2011-integration-example-part-2-get-data-out-of-crm-2011/
-published: true
+wp_published: true
 tags:
   - BizTalk
   - 'C#'
@@ -23,12 +26,12 @@ categories:
 ---
 First things first, at this point in time I assume
 <ul>
-	<li>you’ve read the <a href="http://blog.brauwers.nl/2012/01/13/how-to-microsoft-crm-2011-integration-example-part-1introduction/" target="_blank" rel="noopener noreferrer">previous post</a></li>
-	<li>downloaded and installed the <a href="http://www.microsoft.com/download/en/details.aspx?id=24004" target="_blank" rel="noopener noreferrer">CRM2011 SDK</a></li>
+	<li>you’ve read the <a href="/2012/01/13/how-to-microsoft-crm-2011-integration-example-part-1introduction/" target="_blank" rel="noopener noreferrer">previous post</a></li>
+	<li>downloaded and installed the <a href="https://web.archive.org/web/20120418070412/http://www.microsoft.com:80/download/en/details.aspx?id=24004" target="_blank" rel="noopener noreferrer">CRM2011 SDK</a></li>
 	<li>have a working CRM2011 environment to your proposal.</li>
 	<li>you have an account for CRM2011 with sufficient rights (I’d recommend System Administrator)</li>
 	<li>have visual studio 2010 installed.</li>
-	<li>downloaded and extract my visual studio <a href="http://blog.brauwers.nl/?attachment_id=1292" target="_blank" rel="noopener noreferrer">example solution</a></li>
+	<li>downloaded and extract my visual studio <a href="/" target="_blank" rel="noopener noreferrer">example solution</a></li>
 </ul>
 &nbsp;
 
@@ -38,7 +41,7 @@ So you’ve met all the requirements mentioned above? Good; let’s get started.
 <blockquote>Note: all code should be used for Demo/Test purposes only! I did not intent it to be Production Grade. So, if you decide to use it, don’t use it for Production Purposes!</blockquote>
 &nbsp;
 <h2>Building your Custom Workflow Activity for CRM2011</h2>
-Once you’ve downloaded and extracted my visual studio <a href="http://blog.brauwers.nl/?attachment_id=1292" target="_blank" rel="noopener noreferrer">example solution</a>, it is time to open it and fix some issues.
+Once you’ve downloaded and extracted my visual studio <a href="/" target="_blank" rel="noopener noreferrer">example solution</a>, it is time to open it and fix some issues.
 
 &nbsp;
 <h3> </h3>
@@ -157,7 +160,7 @@ Browse to the directory in which the generated class was saved, and select the g
 &nbsp;
 
 At this point you should be able to compile the complete solution, so go ahead and do so.
-<blockquote>Note: The <a href="http://blog.brauwers.nl/?attachment_id=1292" target="_blank" rel="noopener noreferrer">source code</a>; includes comments which should be self-explanatory</blockquote>
+<blockquote>Note: The <a href="/" target="_blank" rel="noopener noreferrer">source code</a>; includes comments which should be self-explanatory</blockquote>
 &nbsp;
 
 &nbsp;
@@ -201,7 +204,7 @@ Fill out the connection information, consisting of:
 </li>
 	<li>Discovery Url:   <em>Base url of CRM</em>
 <ul>
-	<li>I used: <a href="http://crm-demo/">http://crm-demo/</a></li>
+	<li>I used: <a href="/link-unavailable/?url=http%3A%2F%2Fcrm-demo%2F">http://crm-demo/</a></li>
 </ul>
 </li>
 	<li>User Name: <em>Domain Account with sufficient rights in CRM 2011</em>

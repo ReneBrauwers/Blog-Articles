@@ -1,4 +1,7 @@
 ---
+title: Back into business
+date: 2011-03-27T22:33:54
+url: /2011/03/27/back-into-business/
 ID: 4854
 post_title: Back into business
 post_name: back-into-business
@@ -7,7 +10,7 @@ post_date: 2011-03-27 22:33:54
 layout: post
 link: >
   https://brauwers.azurewebsites.net/2011/03/27/back-into-business/
-published: true
+wp_published: true
 tags:
   - General
 categories:

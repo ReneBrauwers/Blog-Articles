@@ -1,4 +1,7 @@
 ---
+title: 'Part 3: BizTalk High Availability Server Environment &#8211; SQL &#038; BizTalk Active Directory Accounts'
+date: 2011-04-04T12:33:21
+url: /2011/04/04/part-3-biztalk-high-availability-server-environment-sql-biztalk-active-directory-accounts/
 ID: 7
 post_title: 'Part 3: BizTalk High Availability Server Environment &#8211; SQL &#038; BizTalk Active Directory Accounts'
 post_name: >
@@ -8,7 +11,7 @@ post_date: 2011-04-04 12:33:21
 layout: post
 link: >
   https://brauwers.azurewebsites.net/2011/04/04/part-3-biztalk-high-availability-server-environment-sql-biztalk-active-directory-accounts/
-published: true
+wp_published: true
 tags:
   - Active Directory
   - BizTalk

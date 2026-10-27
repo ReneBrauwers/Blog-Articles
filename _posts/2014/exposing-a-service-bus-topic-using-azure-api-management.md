@@ -1,4 +1,7 @@
 ---
+title: >
+date: 2014-05-29T19:17:18
+url: /2014/05/29/exposing-a-service-bus-topic-using-azure-api-management/
 ID: 4012
 post_title: >
   Exposing a service bus topic using Azure
@@ -10,7 +13,7 @@ post_date: 2014-05-29 19:17:18
 layout: post
 link: >
   https://brauwers.azurewebsites.net/2014/05/29/exposing-a-service-bus-topic-using-azure-api-management/
-published: true
+wp_published: true
 tags:
   - API Management
   - Azure
@@ -29,11 +32,11 @@ categories:
 <p>Currently the Azure API Management is still in Preview, but already it enables us to easily create an API façade over a diverse set of currently available Azure services like Cloud Services, Mobile Services, Service bus as well as on premise web-services.</p>
 <p>Instead of listing all the features and write an extensive introduction about Azure API Management I&#8217;d rather supply you with a few links which contains more information about the Azure API Management service:</p>
 <p style="margin-left: 36pt">Microsoft:</p>
-<p style="margin-left: 36pt"><a href="http://azure.microsoft.com/en-us/services/api-management/">http://azure.microsoft.com/en-us/services/api-management/</a></p>
-<p style="margin-left: 36pt"><a href="http://azure.microsoft.com/en-us/documentation/services/api-management/">http://azure.microsoft.com/en-us/documentation/services/api-management/</a></p>
+<p style="margin-left: 36pt"><a href="https://web.archive.org/web/20220921202224/https://azure.microsoft.com/en-us/services/api-management/">http://azure.microsoft.com/en-us/services/api-management/</a></p>
+<p style="margin-left: 36pt"><a href="https://web.archive.org/web/20161018060329/https://azure.microsoft.com/en-us/documentation/services/api-management/">http://azure.microsoft.com/en-us/documentation/services/api-management/</a></p>
 <p style="margin-left: 36pt">Blogs:</p>
-<p style="margin-left: 36pt"><a href="http://trinityordestiny.blogspot.in/2014/05/azure-api-management.html">http://trinityordestiny.blogspot.in/2014/05/azure-api-management.html</a></p>
-<p style="margin-left: 36pt"><a href="http://blog.codit.eu/post/2014/05/14/Microsoft-Azure-API-Management-Getting-started.aspx">http://blog.codit.eu/post/2014/05/14/Microsoft-Azure-API-Management-Getting-started.aspx</a></p>
+<p style="margin-left: 36pt"><a href="https://web.archive.org/web/20170923013137/http://trinityordestiny.blogspot.in:80/2014/05/azure-api-management.html">http://trinityordestiny.blogspot.in/2014/05/azure-api-management.html</a></p>
+<p style="margin-left: 36pt"><a href="https://web.archive.org/web/20140726183542/http://blog.codit.eu:80/post/2014/05/14/Microsoft-Azure-API-Management-Getting-started.aspx">http://blog.codit.eu/post/2014/05/14/Microsoft-Azure-API-Management-Getting-started.aspx</a></p>
 <h2>Some more background</h2>
 <p>As most of my day-to-day work involves around the Microsoft Integration space in which I am mainly focusing on BizTalk Server, BizTalk Services and Azure in general, I was looking to a find a scenario in which I, as an Integration person, could and would use Azure API management.</p>
 <p>The first thing which popped in to my mind; wouldn&#8217;t it be great to virtualize my existing BizTalk Service Bridges using Azure API management. Well currently this is not possible, as the only authentication and authorization method on a BizTalk Service Bridge is ACS (Access Control Service) and this is not supported in the Azure API Management Service.</p>
@@ -41,10 +44,10 @@ categories:
 <p>Knowing the above, I should be able to define API&#8217;s which virtualize my Service bus Endpoints. Create a product combining the defined API&#8217;s and assign policies to my API operations.</p>
 <p>Sounds easy? Doesn&#8217;t it. Well it actually is. So without further ado, let&#8217;s dive into a scenario which involves exposing an Azure Service bus Topic using Azure API Management.</p>
 <h2>Getting started</h2>
-<p>Before we actually start please note that the sample data (Topic names, user-accounts, topic subscriptions, topic subscription rules etc.) I use for this &#8216;Step by step&#8217; guide is meant for a future blog post 😉 <a href="http://bit.ly/1lD2BYM">extending an article I posted a while back on the TechNet Wiki</a></p>
+<p>Before we actually start please note that the sample data (Topic names, user-accounts, topic subscriptions, topic subscription rules etc.) I use for this &#8216;Step by step&#8217; guide is meant for a future blog post 😉 <a href="/link-unavailable/?url=http%3A%2F%2Fbit.ly%2F1lD2BYM">extending an article I posted a while back on the TechNet Wiki</a></p>
 <p>Other points you should keep in mind are</p>
 <ul>
-<li>Messages send to a TOPIC <a href="http://msdn.microsoft.com/en-us/library/hh694235.aspx">may not exceed 256Kb in size</a>, if a message is larger you will receive an error message from Service Bus telling you that the message is too large.</li>
+<li>Messages send to a TOPIC <a href="https://web.archive.org/web/20140617205540/http://msdn.microsoft.com:80/en-us/library/hh694235.aspx">may not exceed 256Kb in size</a>, if a message is larger you will receive an error message from Service Bus telling you that the message is too large.</li>
 <li>Communication to service bus is asynchronous; thus we send a message and all we get back is an HTTP code telling us the status of the submission (200 OK, 210 Accepted etc.) or an error message indicating that something went wrong (401 Access Denied, etc.). So actually our scenario is using the Fire and Forget principle.</li>
 <li>You will have to create a SAS Token, which needs to be send in the header of the message in order to authenticate to Service bus.</li>
 </ul>
@@ -72,7 +75,7 @@ categories:
 </ul>
 </blockquote>
 <h3><a name="#Create_a_new_Azure_Account">Create a new Azure Account</a></h3>
-<p>If you don&#8217;t already have an Azure account, you can sign up for a free trial <a href="http://azure.microsoft.com/en-us/">here</a></p>
+<p>If you don&#8217;t already have an Azure account, you can sign up for a free trial <a href="https://web.archive.org/web/20261023160313/https://azure.microsoft.com/en-us">here</a></p>
 <p>&nbsp;</p>
 <h3><a name="#Provision_an_Azure_Service_Bus_entity">Provision an Azure Service Bus entity</a></h3>
 <p>Once you&#8217;ve signed up for an Azure account, login to the Azure Portal and create a new Azure Service Bus Topic by following the steps listed below.</p>
@@ -98,7 +101,7 @@ categories:
 </ol>
 <p>&nbsp;</p>
 <h3><a name="#Create_a_new_Azure_Service_Bus_TOPIC">Create a new Azure Service Bus TOPIC</a></h3>
-<p>Now that a new Service Bus Entity has been provisioned, we can proceed with creating a TOPIC within the created Service Bus entity, for this we will use the Service Bus Explorer from Paolo Salvatori. Which you can download <a href="http://code.msdn.microsoft.com/windowsazure/Service-Bus-Explorer-f2abca5a">here</a>. Once you&#8217;ve downloaded this tool, extract it and execute the ServiceBusExplorer.exe file and follow the below mentioned steps.</p>
+<p>Now that a new Service Bus Entity has been provisioned, we can proceed with creating a TOPIC within the created Service Bus entity, for this we will use the Service Bus Explorer from Paolo Salvatori. Which you can download <a href="https://web.archive.org/web/20150905090257/https://code.msdn.microsoft.com/windowsazure/Service-Bus-Explorer-f2abca5a">here</a>. Once you&#8217;ve downloaded this tool, extract it and execute the ServiceBusExplorer.exe file and follow the below mentioned steps.</p>
 <ol>
 <li>
 <div>Press CRTL+N which will open the &#8220;Connect to Service Bus Namespace&#8221; window</div>
@@ -150,10 +153,10 @@ categories:
 </ol>
 <h3></h3>
 <h3><a name="#Assign_Shared_Access_Policies_to_your_TOPIC">Assign Shared Access Policies to your TOPIC</a></h3>
-<p>At this point we have set up our Topic and added some subscriptions <a href="http://biturlz.com/revRzgU">le viagra est il efficace</a>. The next step consists of adding a Shared Access Policy to our topic. This policy than allows us to generate a SAS token which later on will be used to authenticate against our newly created Topic. So first things first, let&#8217;s assign a Shared Access Policy first. The next steps will guide you through this.</p>
+<p>At this point we have set up our Topic and added some subscriptions. The next step consists of adding a Shared Access Policy to our topic. This policy than allows us to generate a SAS token which later on will be used to authenticate against our newly created Topic. So first things first, let&#8217;s assign a Shared Access Policy first. The next steps will guide you through this.</p>
 <ol>
 <li>
-<div>Login to the <a href="https://manage.windowsazure.com/">Azure Portal</a></div>
+<div>Login to the <a href="https://web.archive.org/web/20201224095920/https://manage.windowsazure.com/">Azure Portal</a></div>
 </li>
 <li>
 <div>Go to the Service Bus menu item and select the Service Bus Service you created earlier by clicking on it.</div>
@@ -185,10 +188,10 @@ categories:
 </ol>
 <h3></h3>
 <h3><a name="#Generate_a_SAS_Token">Generate a SAS Token</a></h3>
-<p>Once we&#8217;ve added the policies to our Topic we can generate a token. In order to generate a token, I&#8217;ve build a small forms application which uses part of the code which was originally <a href="http://code.msdn.microsoft.com/wpapps/Shared-Access-Signature-0a88adf8">published by Santosh Chandwani</a>. Click the following link to start downloading the application &#8220;<a href="http://bit.ly/1htBEW1">Sas Token Generator</a>&#8220;. Using the SAS Token Generator application we will now generate the token signatures.</p>
+<p>Once we&#8217;ve added the policies to our Topic we can generate a token. In order to generate a token, I&#8217;ve build a small forms application which uses part of the code which was originally <a href="https://web.archive.org/web/20130731140515/http://code.msdn.microsoft.com/wpapps/Shared-Access-Signature-0a88adf8">published by Santosh Chandwani</a>. Click the following link to start downloading the application &#8220;<a href="/link-unavailable/?url=http%3A%2F%2Fbit.ly%2F1htBEW1">Sas Token Generator</a>&#8220;. Using the SAS Token Generator application we will now generate the token signatures.</p>
 <ol>
 <li>
-<div>Download the <a href="http://bit.ly/1htBEW1">Sas Token Generator</a> and start it</div>
+<div>Download the <a href="/link-unavailable/?url=http%3A%2F%2Fbit.ly%2F1htBEW1">Sas Token Generator</a> and start it</div>
 </li>
 <li>
 <div>Fill out the following form data</div>
@@ -210,7 +213,7 @@ categories:
 <p>At this point we have set up our Service Bus Topic, Subscriptions and have generated our Sas Tokens we are all set to start exposing the newly created service bus topic using Azure API Management, but before we can start with this we need to create a new API Management Instance. The steps below detail how to do this.</p>
 <ol>
 <li>
-<div>Login to the <a href="https://manage.windowsazure.com/">Azure Portal</a></div>
+<div>Login to the <a href="https://web.archive.org/web/20201224095920/https://manage.windowsazure.com/">Azure Portal</a></div>
 </li>
 <li>
 <div>Click on API Management, in the right menu-bar, and click on the link &#8220;Create an API Management Service&#8221;</div>
@@ -270,7 +273,7 @@ categories:
 <li>
 <div><strong>B)</strong> Web Service Uri</div>
 <ul>
-<li>This should point to your Azure Service Bus Rest Endpoint. Click on this <a href="http://msdn.microsoft.com/en-us/library/hh780786.aspx">link</a> to get more information. The format would be: http{s}://{serviceNamespace}.servicebus.Windows.net/{topic path}/messages</li>
+<li>This should point to your Azure Service Bus Rest Endpoint. Click on this <a href="https://web.archive.org/web/20141206102541/http://msdn.microsoft.com:80/en-us/library/hh780786.aspx">link</a> to get more information. The format would be: http{s}://{serviceNamespace}.servicebus.Windows.net/{topic path}/messages</li>
 </ul>
 </li>
 <li>
@@ -298,7 +301,7 @@ categories:
 <li>
 <div>Now click on the Operations Tab, and click on ADD Operation.</div>
 <ul>
-<li>Note: detailed information on how to configure an operation can be found <a href="http://azure.microsoft.com/en-us/documentation/articles/api-management-howto-add-operations/">here</a></li>
+<li>Note: detailed information on how to configure an operation can be found <a href="https://web.archive.org/web/20160827043453/https://azure.microsoft.com/en-us/documentation/articles/api-management-howto-add-operations/">here</a></li>
 </ul>
 <p><img src="/assets/images/uploads/2014/05/052914_1715_Exposingase33.png" alt="" /></li>
 <li>
@@ -360,7 +363,7 @@ categories:
 <li>Press save</li>
 </ol>
 <h3><a name="#Create_a_new_Product">Create a new Product</a></h3>
-<p>Now that we have defined our API we need to make it part of a Product. Within Azure API Management this concept has been introduced as a container containing one or more API definitions to which consumers (developers) can subscribe. In short if your API is not part of a product definition consumers can not subscribe to it and use it. More information regarding the &#8216;Product&#8217; definition can be found <a href="http://azure.microsoft.com/en-us/documentation/articles/api-management-key-concepts/">here</a>.</p>
+<p>Now that we have defined our API we need to make it part of a Product. Within Azure API Management this concept has been introduced as a container containing one or more API definitions to which consumers (developers) can subscribe. In short if your API is not part of a product definition consumers can not subscribe to it and use it. More information regarding the &#8216;Product&#8217; definition can be found <a href="https://web.archive.org/web/20160827105329/https://azure.microsoft.com/en-us/documentation/articles/api-management-key-concepts/">here</a>.</p>
 <p>In order to create a new product, we need to perform the following steps:</p>
 <ol>
 <li>
@@ -425,7 +428,7 @@ categories:
 <li>Automatically convert potential JSON messages to their equivalent XML counterpart</li>
 <li>Add some additional context information to the inbound message which are converted to brokered message properties when passed won to Azure Service Bus.</li>
 </ul>
-<p>General information on which policies are available to you within the Azure API Management Administration Portal and how to use them can be found <a href="http://azure.microsoft.com/en-us/documentation/articles/api-management-howto-policies/">here</a></p>
+<p>General information on which policies are available to you within the Azure API Management Administration Portal and how to use them can be found <a href="https://web.archive.org/web/20160827104556/https://azure.microsoft.com/en-us/documentation/articles/api-management-howto-policies/">here</a></p>
 <p>The next few steps will show you how we can add policy statements which will ensure the above mentioned functionality is added.</p>
 <ol>
 <li>

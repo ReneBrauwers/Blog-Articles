@@ -1,4 +1,7 @@
 ---
+title: 'Howto: Split a FlatFile into multiple files and ensure the files are grouped based on content from the source file using out of the box BizTalk functionality'
+date: 2015-01-12T00:25:00
+url: /2015/01/12/howto-split-a-flatfile-into-multiple-files-and-ensure-the-files-are-grouped-based-on-content-from-the-source-file-using-out-of-the-box-biztalk-functionality/
 ID: 4792
 post_title: 'Howto: Split a FlatFile into multiple files and ensure the files are grouped based on content from the source file using out of the box BizTalk functionality'
 post_name: >
@@ -8,7 +11,7 @@ post_date: 2015-01-12 00:25:00
 layout: post
 link: >
   https://brauwers.azurewebsites.net/2015/01/12/howto-split-a-flatfile-into-multiple-files-and-ensure-the-files-are-grouped-based-on-content-from-the-source-file-using-out-of-the-box-biztalk-functionality/
-published: true
+wp_published: true
 tags:
   - Assembler
   - CSV
@@ -41,7 +44,7 @@ flowchart LR
 <p>As you’ve been reading the above you might go like; do what? So for the readers convenience I will walk through an example and explain the required steps. In case it makes sense, well you now know how to implement it, so go ahead move on… Nothing to see anymore ;-)</p>
 <p>&nbsp;</p>
 <h1>Walkthrough</h1>
-<p>Before we start, I assume you have at least a basic understanding of BizTalk, as such I will not explain all things, although I will have a step by step instruction relating to the flat file generation as well as the sequential convoy. Having said this you ought to be able to follow all steps and reproduce the steps involved all by yourself and in case that doesn’t work out for you, I’ve added the source which you can download <a href="http://bit.ly/1AN6arB" target="_blank" rel="noopener noreferrer">here</a>. </p>
+<p>Before we start, I assume you have at least a basic understanding of BizTalk, as such I will not explain all things, although I will have a step by step instruction relating to the flat file generation as well as the sequential convoy. Having said this you ought to be able to follow all steps and reproduce the steps involved all by yourself and in case that doesn’t work out for you, I’ve added the source which you can download <a href="/link-unavailable/?url=http%3A%2F%2Fbit.ly%2F1AN6arB" target="_blank" rel="noopener noreferrer">here</a>. </p>
 <p>&nbsp;</p>
 <h2></h2>
 <h2>The scenario</h2>
@@ -158,7 +161,7 @@ http://www.CodeHighlighter.com/
 <h3>Step 12</h3>
 <p>Congratulations at this point you have created your header structure, the end result should look similar to the image as depicted below. (note I’ve selected the Flat File tab, to display the non-xsd view)</p>
 <p>&nbsp;</p>
-<p>&lt;a href=&quot;http://blog <a href="http://biturlz.com/Cr4uy3i">les pilules de viagra</a>.brauwers.nl/wp-content/uploads/2015/01/image12.png"&gt;</a></p>
+<p>&lt;a href=&quot;http://blog.brauwers.nl/wp-content/uploads/2015/01/image12.png"&gt;</a></p>
 <p>&nbsp;</p>
 <h2>Create the to use schemas [Flat file non header data]</h2>
 <p>Now that we have defined our xml representation of our flat file header is time to define an xml representation of the <em>non header data</em>. For this we will once again use the BizTalk Flat File Wizard. The steps 1 to 13 we went thought earlier will have to repeated with a few <strong>[ Changes in Configuration</strong>&nbsp;<strong>]</strong>. As such I will only list those steps which are different. Yeah you are allowed to call me lazy :-P&nbsp;</p>
@@ -202,7 +205,7 @@ http://www.CodeHighlighter.com/
 <p>&nbsp;</p>
 <p></p>
 <p>&nbsp;</p>
-<p>If you need more information with regards to property schemas please click on this <a href="http://msdn.microsoft.com/en-us/library/aa561059.aspx" target="_blank" rel="noopener noreferrer">link</a>.</p>
+<p>If you need more information with regards to property schemas please click on this <a href="https://web.archive.org/web/20150109032429/http://msdn.microsoft.com:80/en-us/library/aa561059.aspx" target="_blank" rel="noopener noreferrer">link</a>.</p>
 <p>&nbsp;</p>
 <h4>Internal schema: Reading</h4>
 <p>This schema is our internal representation of a energy reading, and looks as depicted below. Please note that the element named <strong>[ CompanyName ] </strong>has been promoted, as such we can use it later on when we are about to implement or sequential convoy.</p>
@@ -215,7 +218,7 @@ http://www.CodeHighlighter.com/
 <p></p>
 <p>&nbsp;</p>
 <h2>Creation of the Receive Pipeline</h2>
-<p>Now that all schemas have been created we can go ahead with the creation of a receive pipeline. Once again I will not dive into the nitty gritty details, but if you require more information please click on this <a href="http://msdn.microsoft.com/en-us/library/ee267879(v=bts.10).aspx" target="_blank" rel="noopener noreferrer">link</a></p>
+<p>Now that all schemas have been created we can go ahead with the creation of a receive pipeline. Once again I will not dive into the nitty gritty details, but if you require more information please click on this <a href="/link-unavailable/?url=http%3A%2F%2Fmsdn.microsoft.com%2Fen-us%2Flibrary%2Fee267879%28v%3Dbts.10).aspx" target="_blank" rel="noopener noreferrer">link</a></p>
 <p>&nbsp;</p>
 <p>So create a <strong>[Receive Pipeline ]</strong> and give it a meaning name, drag a <strong>[ Flat File Disassembler Component ]</strong> to the <strong>[ Design Surface ]</strong> and drop it in the <strong>[ Disassemble stage (1) ]</strong>. Now <strong>[ Click ]</strong>on the just added component and go to the <strong>[ Properties Windows ]</strong>. In this window ensure to select the earlier on created <strong>[ Flat File Header Schema ]</strong> for the <strong>[ Header Schema Property (2) ]</strong> and select the <strong>[Flat File Schema ]</strong> for the <strong>[ Document Schema Property (2) ]</strong>.</p>
 <p>&nbsp;</p>
@@ -225,7 +228,7 @@ http://www.CodeHighlighter.com/
 <p>At this point we can start with the required mappings we need. In total we will need 3 maps. The required maps are listed below. </p>
 <p>&nbsp;</p>
 <blockquote>
-<p>Please note if you want to learn more with regards to mappings and advanced patterns (In my example everything is kept quit basic), I can only recommend that you download and start reading an ebook titled “BizTalk Mapping Patterns and Best Practices” which a friend of mine, Sandro Pereira <a href="https://www.twitter.com/sandro_asp" target="_blank" rel="noopener noreferrer">@sandro_asp</a>,&nbsp; and Microsoft Integration MVP put together for free. Go <a href="http://sandroaspbiztalkblog.wordpress.com/2014/09/28/biztalk-mapping-patterns-and-best-practices-book-free-released/" target="_blank" rel="noopener noreferrer">here</a> to download it</p>
+<p>Please note if you want to learn more with regards to mappings and advanced patterns (In my example everything is kept quit basic), I can only recommend that you download and start reading an ebook titled “BizTalk Mapping Patterns and Best Practices” which a friend of mine, Sandro Pereira <a href="https://www.twitter.com/sandro_asp" target="_blank" rel="noopener noreferrer">@sandro_asp</a>,&nbsp; and Microsoft Integration MVP put together for free. Go <a href="https://web.archive.org/web/20150525185654/https://sandroaspbiztalkblog.wordpress.com/2014/09/28/biztalk-mapping-patterns-and-best-practices-book-free-released/" target="_blank" rel="noopener noreferrer">here</a> to download it</p>
 </blockquote>
 <p>&nbsp;</p>
 <h4>EnergyReadingFF_TO_Reading</h4>
@@ -244,66 +247,66 @@ http://www.CodeHighlighter.com/
 <p></p>
 <p>&nbsp;</p>
 <h2>Sequential Convoy</h2>
-<p>Before we can deploy our BizTalk Application there is one more thing we need to implement, and that’s a mechanism to output the grouped files. The way to implement this is using an orchestration and implement the <strong>[ Sequential Convoy ]</strong> pattern. Below a screenshot of the end result and I’ll go into the basic details using steps which refer to the screenshot below. In case you want to now more about the <strong>[ Sequential Convoy]</strong> pattern please click on this <a href="http://msdn.microsoft.com/en-us/library/aa561843.aspx" target="_blank" rel="noopener noreferrer">link</a>.</p>
+<p>Before we can deploy our BizTalk Application there is one more thing we need to implement, and that’s a mechanism to output the grouped files. The way to implement this is using an orchestration and implement the <strong>[ Sequential Convoy ]</strong> pattern. Below a screenshot of the end result and I’ll go into the basic details using steps which refer to the screenshot below. In case you want to now more about the <strong>[ Sequential Convoy]</strong> pattern please click on this <a href="https://web.archive.org/web/20120622095851/http://msdn.microsoft.com:80/en-us/library/aa561843.aspx" target="_blank" rel="noopener noreferrer">link</a>.</p>
 <p>&nbsp;</p>
 <p></p>
 <p>&nbsp;</p>
 <h4>Step 1: rcvReading</h4>
-<p>This receive shape ensures that messages with the message type <a href="http://FlatFileGrouping.Reading#Reading">http://FlatFileGrouping.Reading#Reading</a> are being subscribed to. These are the single reading messages as stated earlier. It has to be noted that we initialize a <strong>[ correlation Set ]</strong> this set will ensure that we actually will create a single process (Singleton) which subscribes not only to messages of the aforementioned messagetypes but to messages which contain the same value for the element CompanyName contained with the reading message.</p>
+<p>This receive shape ensures that messages with the message type <a href="/link-unavailable/?url=http%3A%2F%2FFlatFileGrouping.Reading%23Reading">http://FlatFileGrouping.Reading#Reading</a> are being subscribed to. These are the single reading messages as stated earlier. It has to be noted that we initialize a <strong>[ correlation Set ]</strong> this set will ensure that we actually will create a single process (Singleton) which subscribes not only to messages of the aforementioned messagetypes but to messages which contain the same value for the element CompanyName contained with the reading message.</p>
 <p>&nbsp;</p>
-<p>Click on this <a href="http://msdn.microsoft.com/en-US/library/ee253479(v=bts.10).aspx" target="_blank" rel="noopener noreferrer">link</a> for more information on the <strong>[ Receive shape ]</strong></p>
-<p>Click on this <a href="http://msdn.microsoft.com/en-us/library/aa560163.aspx" target="_blank" rel="noopener noreferrer">link</a> for more information on <strong>[ Correlation Sets ]</strong> </p>
+<p>Click on this <a href="/link-unavailable/?url=http%3A%2F%2Fmsdn.microsoft.com%2Fen-US%2Flibrary%2Fee253479%28v%3Dbts.10).aspx" target="_blank" rel="noopener noreferrer">link</a> for more information on the <strong>[ Receive shape ]</strong></p>
+<p>Click on this <a href="https://web.archive.org/web/20150110044639/http://msdn.microsoft.com:80/en-us/library/aa560163.aspx" target="_blank" rel="noopener noreferrer">link</a> for more information on <strong>[ Correlation Sets ]</strong> </p>
 <p>&nbsp;</p>
 <h4>Step 2: Init Timeout boolean</h4>
 <p>This expression shape is used to initialize a boolean which is used later on in the process to indicate if the convoying process should be ended. The initial value here is set <strong>[ False ]</strong></p>
 <p><strong><font color="#333333"></font></strong>&nbsp;</p>
-<p>Click on this <a href="http://msdn.microsoft.com/en-us/library/ee253557(v=bts.10).aspx" target="_blank" rel="noopener noreferrer">link</a> for more information on the <strong>[ Expression Shape ]</strong></p>
+<p>Click on this <a href="/link-unavailable/?url=http%3A%2F%2Fmsdn.microsoft.com%2Fen-us%2Flibrary%2Fee253557%28v%3Dbts.10).aspx" target="_blank" rel="noopener noreferrer">link</a> for more information on the <strong>[ Expression Shape ]</strong></p>
 <p>&nbsp;</p>
 <h4>Step 3: Construct Energy Readings</h4>
 <p>This construction block is used to to host the <strong>[ Reading_TO_EnergyReadings ]</strong> transformation, and as such initializes the actual message we will send out to disk containing the grouped contents with regards to the energy readings on a per company base</p>
 <p>&nbsp;</p>
-<p>Click on <a href="http://msdn.microsoft.com/en-us/library/ee253554(v=bts.10).aspx" target="_blank" rel="noopener noreferrer">this</a> link for more information on the <strong>[ Construct Message Shape ]</strong></p>
+<p>Click on <a href="/link-unavailable/?url=http%3A%2F%2Fmsdn.microsoft.com%2Fen-us%2Flibrary%2Fee253554%28v%3Dbts.10).aspx" target="_blank" rel="noopener noreferrer">this</a> link for more information on the <strong>[ Construct Message Shape ]</strong></p>
 <p>&nbsp;</p>
 <h4>Step 4: Loop until timeout</h4>
 <p>This loop ensures that the contained logic is being repeated as long as the previous initialized boolean is False. In our specific case the boolean is set to true once we have not received any more reading messages for 30 seconds.</p>
 <p>&nbsp;</p>
-<p>Click on <a href="http://msdn.microsoft.com/en-us/library/ee268264(v=bts.10).aspx" target="_blank" rel="noopener noreferrer">this</a> link for more information on the <strong>[ Looping Shape ]</strong></p>
+<p>Click on <a href="/link-unavailable/?url=http%3A%2F%2Fmsdn.microsoft.com%2Fen-us%2Flibrary%2Fee268264%28v%3Dbts.10).aspx" target="_blank" rel="noopener noreferrer">this</a> link for more information on the <strong>[ Looping Shape ]</strong></p>
 <p>&nbsp;</p>
 <h4>Step 5: Listen</h4>
 <p>This shape will enable us to receive other messages for a given time window. </p>
 <p>&nbsp;</p>
-<p>Click on this <a href="http://msdn.microsoft.com/en-US/library/ee253551(v=bts.10).aspx" target="_blank" rel="noopener noreferrer">link</a> for more information on the <strong>[ Listen Shape ]</strong></p>
+<p>Click on this <a href="/link-unavailable/?url=http%3A%2F%2Fmsdn.microsoft.com%2Fen-US%2Flibrary%2Fee253551%28v%3Dbts.10).aspx" target="_blank" rel="noopener noreferrer">link</a> for more information on the <strong>[ Listen Shape ]</strong></p>
 <p><strong><font color="#333333"></font></strong>&nbsp;</p>
 <h4>Step 6: rcvSubsequentReadings</h4>
-<p>This receive shape ensures that messages with the message type <a href="http://FlatFileGrouping.Reading#Reading">http://FlatFileGrouping.Reading#Reading</a> are being subscribed to. These are the single reading messages as stated earlier. It has to be noted that we follow a <strong>[ correlation Set ]</strong> this will ensure that we will receive any follow up messages without starting up a new service instance of this orchestration. Ie; if an instance of this orchestration is initiated and a message with has the value <em>Company Y</em> for the element CompanyName contained with the reading message is received it will enter the process at this point (and be further processed)</p>
+<p>This receive shape ensures that messages with the message type <a href="/link-unavailable/?url=http%3A%2F%2FFlatFileGrouping.Reading%23Reading">http://FlatFileGrouping.Reading#Reading</a> are being subscribed to. These are the single reading messages as stated earlier. It has to be noted that we follow a <strong>[ correlation Set ]</strong> this will ensure that we will receive any follow up messages without starting up a new service instance of this orchestration. Ie; if an instance of this orchestration is initiated and a message with has the value <em>Company Y</em> for the element CompanyName contained with the reading message is received it will enter the process at this point (and be further processed)</p>
 <p>&nbsp;</p>
-<p>Click on this <a href="http://msdn.microsoft.com/en-us/library/aa560163.aspx" target="_blank" rel="noopener noreferrer">link</a> for more information on <strong>[ Correlation Sets ]</strong> </p>
+<p>Click on this <a href="https://web.archive.org/web/20150110044639/http://msdn.microsoft.com:80/en-us/library/aa560163.aspx" target="_blank" rel="noopener noreferrer">link</a> for more information on <strong>[ Correlation Sets ]</strong> </p>
 <p>&nbsp;</p>
 <h4>Step 7: Aggregate following reading to initial reading</h4>
 <p>This construction block is used to to host the composite transformation <strong>[ Reading_Readings_TO_AggregatedEnergyReadings ]</strong>, and as such this map takes both the follow up reading message as well as the in step 3 constructed Energy Reading message and combines these messages to a temp message called AggregatedEnergyReadings.</p>
 <p>&nbsp;</p>
-<p>Click on <a href="http://msdn.microsoft.com/en-us/library/ee253554(v=bts.10).aspx" target="_blank" rel="noopener noreferrer">this</a> link for more information on the <strong>[ Construct Message Shape ]</strong></p>
-<p>Click on <a href="http://geekswithblogs.net/sthomas/archive/2005/02/04/21969.aspx" target="_blank" rel="noopener noreferrer">this</a> link for more information on<strong> [ Multi Part Mappings ]</strong></p>
+<p>Click on <a href="/link-unavailable/?url=http%3A%2F%2Fmsdn.microsoft.com%2Fen-us%2Flibrary%2Fee253554%28v%3Dbts.10).aspx" target="_blank" rel="noopener noreferrer">this</a> link for more information on the <strong>[ Construct Message Shape ]</strong></p>
+<p>Click on <a href="https://web.archive.org/web/20200809144918/http://geekswithblogs.net/sthomas/archive/2005/02/04/21969.aspx" target="_blank" rel="noopener noreferrer">this</a> link for more information on<strong> [ Multi Part Mappings ]</strong></p>
 <p><strong><font color="#333333"></font></strong>&nbsp;</p>
 <h4>Step 8: Copy to EnergyReadings</h4>
 <p>This message assignment shape is used to copy over output of the previous mapping (step 7) to the original Energy readings document.</p>
 <p>&nbsp;</p>
-<p>Click on this <a href="http://msdn.microsoft.com/en-us/library/ee253499(v=bts.10).aspx" target="_blank" rel="noopener noreferrer">link</a> for more information on the <strong>[ Message Assignment Shape ]</strong></p>
+<p>Click on this <a href="/link-unavailable/?url=http%3A%2F%2Fmsdn.microsoft.com%2Fen-us%2Flibrary%2Fee253499%28v%3Dbts.10).aspx" target="_blank" rel="noopener noreferrer">link</a> for more information on the <strong>[ Message Assignment Shape ]</strong></p>
 <p><strong><font color="#333333"></font></strong>&nbsp;</p>
 <h4>Step 9: Wait 30 seconds </h4>
 <p>This delay shape will be activated once the listen shape has not received any messages for 30 seconds.</p>
 <p>&nbsp;</p>
-<p>Click on this <a href="http://msdn.microsoft.com/en-us/library/ee253483(v=bts.10).aspx" target="_blank" rel="noopener noreferrer">link</a> for more information on the <strong>[ Delay Shape ]</strong></p>
+<p>Click on this <a href="/link-unavailable/?url=http%3A%2F%2Fmsdn.microsoft.com%2Fen-us%2Flibrary%2Fee253483%28v%3Dbts.10).aspx" target="_blank" rel="noopener noreferrer">link</a> for more information on the <strong>[ Delay Shape ]</strong></p>
 <p><strong><font color="#333333"></font></strong>&nbsp;</p>
 <h4>Step 10: Set bHasTimeout </h4>
 <p>This expression shape is used to set the bHasTimeout&nbsp; boolean to <strong>[ True ]</strong> ensuring that we will exit the loop and are able to end to process eventually after sending out the energy readings message</p>
 <p>&nbsp;</p>
-<p><strong><font color="#333333"></font></strong> Click on this <a href="http://msdn.microsoft.com/en-us/library/ee253557(v=bts.10).aspx" target="_blank" rel="noopener noreferrer">link</a> for more information on the <strong>[ Expression Shape ]</strong></p>
+<p><strong><font color="#333333"></font></strong> Click on this <a href="/link-unavailable/?url=http%3A%2F%2Fmsdn.microsoft.com%2Fen-us%2Flibrary%2Fee253557%28v%3Dbts.10).aspx" target="_blank" rel="noopener noreferrer">link</a> for more information on the <strong>[ Expression Shape ]</strong></p>
 <p><strong><font color="#333333"></font></strong>&nbsp;</p>
 <h4>Step 11: sndAggregation</h4>
 <p>This shape will actually send out the energy readings message, which at this time only contains data relating to a specific company,</p>
 <p>&nbsp;</p>
-<p>Click on this <a href="http://msdn.microsoft.com/en-us/library/ee253504(v=bts.10).aspx" target="_blank" rel="noopener noreferrer">link</a> for more information in the <strong>[ Send Shape ]</strong></p>
+<p>Click on this <a href="/link-unavailable/?url=http%3A%2F%2Fmsdn.microsoft.com%2Fen-us%2Flibrary%2Fee253504%28v%3Dbts.10).aspx" target="_blank" rel="noopener noreferrer">link</a> for more information in the <strong>[ Send Shape ]</strong></p>
 <p>&nbsp;</p>
 <h3>Final Configuration</h3>
 <p>At this point you will have created all the required artifacts and as such you could deploy the application and configure it. Below I’ve listed the items which need to be configured</p>
@@ -329,7 +332,7 @@ http://www.CodeHighlighter.com/
 <p><font color="#333333"></font>&nbsp;</p>
 <p><font color="#333333"></font>&nbsp;</p>
 <h2>Et voila</h2>
-<p>So I hope you enjoyed this post, and feel free to give me a shout on twitter <a href="https://www.twitter.com/ReneBrauwers" target="_blank" rel="noopener noreferrer">@ReneBrauwers</a> or in the comments below, and as a reminder you can download the source <a href="http://bit.ly/1AN6arB" target="_blank" rel="noopener noreferrer">here</a> (including bindings)</p>
+<p>So I hope you enjoyed this post, and feel free to give me a shout on twitter <a href="https://web.archive.org/web/20200324175011/https://twitter.com/ReneBrauwers" target="_blank" rel="noopener noreferrer">@ReneBrauwers</a> or in the comments below, and as a reminder you can download the source <a href="/link-unavailable/?url=http%3A%2F%2Fbit.ly%2F1AN6arB" target="_blank" rel="noopener noreferrer">here</a> (including bindings)</p>
 <p>&nbsp;</p>
 <p>Please note; the bindings might not import this is most likely due to the fact that I use different Host Instance names (Processing_Host for the orchestration, Receive_Host and Send_Host for receiving and sending the files)</p>
 <p>&nbsp;</p>

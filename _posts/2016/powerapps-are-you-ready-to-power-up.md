@@ -1,4 +1,7 @@
 ---
+title: PowerApps– Are you ready to power UP?
+date: 2016-03-09T10:37:04
+url: /2016/03/09/powerapps-are-you-ready-to-power-up/
 ID: 4870
 post_title: PowerApps– Are you ready to power UP?
 post_name: powerapps-are-you-ready-to-power-up
@@ -7,14 +10,14 @@ post_date: 2016-03-09 10:37:04
 layout: post
 link: >
   https://brauwers.azurewebsites.net/2016/03/09/powerapps-are-you-ready-to-power-up/
-published: true
+wp_published: true
 tags: [ ]
 categories:
   - PowerApps
 ---
-<p>I still remember when I first I heard Microsoft was working on Project Siena (which later became PowerApps), the first thing which popped up in my mind was Visual Studio Lightswitch, which allows us to easily create business applications. Anyways I am digressing J … I might blog about Lightswitch vs PowerApps in the near future, otherwise just attend the upcoming <a href="http://j.mp/globalazure">Global Azure Bootcamp in Sydney</a>, and ask me in person.</p>
+<p>I still remember when I first I heard Microsoft was working on Project Siena (which later became PowerApps), the first thing which popped up in my mind was Visual Studio Lightswitch, which allows us to easily create business applications. Anyways I am digressing J … I might blog about Lightswitch vs PowerApps in the near future, otherwise just attend the upcoming <a href="/link-unavailable/?url=http%3A%2F%2Fj.mp%2Fglobalazure">Global Azure Bootcamp in Sydney</a>, and ask me in person.</p>
 <h1>IntegrationUserGroup</h1>
-<p>On February 22<sup>nd</sup> I gave a closet presentation on PowerApps on <a href="http://www.integrationusergroup.com/powerapps-great-power-comes-great-responsibility/">IntegrationUsergroup.com</a>. Yeah you read it right, a closet presentation J. Just imagine the following, to get a better understanding…</p>
+<p>On February 22<sup>nd</sup> I gave a closet presentation on PowerApps on <a href="https://web.archive.org/web/20210421110756/https://www.integrationusergroup.com/powerapps-great-power-comes-great-responsibility/">IntegrationUsergroup.com</a>. Yeah you read it right, a closet presentation J. Just imagine the following, to get a better understanding…</p>
 <p>6 am Sydney, as the sun rises the temperature slowly increases. I just got my first cup of Coffee. I hooked up my laptop to the Big Screen TV. While the laptop is booting I take a sip of my Coffee and put on my Bluetooth headset. After logging in, I perform a final sound check and open up my power point presentation. Once everything seems to be working, I connect to the IntegrationUserGroup webinar. There I am, sitting alone in the living with a cup of coffee, ready to present to a virtual audience.</p>
 <p>darn, I’ve been digressing again. Ok where was I. O yeah PowerApps</p>
 <h1>Business App Gap</h1>
@@ -37,8 +40,8 @@ categories:
 <p>If you are able to build a business app within minutes, and deploy it to all kinds of devices regardless of their operating systems. You should have a pretty darn valuable business proposition.</p>
 <p>Wait…Having said the above…</p>
 <h1>Introducing PowerApps</h1>
-<p>In short PowerApps is Microsoft’s answer to address the business app gap, it does so by offering a platform which includes tooling to enable employees, developers, and integrators to create and share mobile business apps. These apps work on phones, tablets or desktops and they work across iOS, Windows and soon Android and allow to seamlessly connect to disparate data sources spanning both on-prem and the cloud in a secure way <a href="http://biturlz.com/kG5Leks">viagra en belgique</a>.</p>
-<p>Microsoft PowerApps was <a href="http://blogs.microsoft.com/blog/2015/11/30/introducing-microsoft-powerapps/">announced</a> a few months ago and so far getting access to the preview is on an invitation basis only. You can go to <a href="https://powerapps.microsoft.com/en-us/">https://powerapps.microsoft.com/en-us/</a> and request an invite.</p>
+<p>In short PowerApps is Microsoft’s answer to address the business app gap, it does so by offering a platform which includes tooling to enable employees, developers, and integrators to create and share mobile business apps. These apps work on phones, tablets or desktops and they work across iOS, Windows and soon Android and allow to seamlessly connect to disparate data sources spanning both on-prem and the cloud in a secure way.</p>
+<p>Microsoft PowerApps was <a href="https://web.archive.org/web/20260207132720/https://blogs.microsoft.com/blog/2015/11/30/introducing-microsoft-powerapps/">announced</a> a few months ago and so far getting access to the preview is on an invitation basis only. You can go to <a href="https://powerapps.microsoft.com/en-us/">https://powerapps.microsoft.com/en-us/</a> and request an invite.</p>
 <p>Pfff, enough of this blurb stuff, let’s cut to the chase. (click <a href="https://azure.microsoft.com/en-us/documentation/suites/powerapps/">here</a> for some more technical details on what PowerApps are)</p>
 <h2>Why should you use PowerApps?</h2>
 <p>Easy answer, why shouldn’t you. No seriously. In my opinion, if you as a business have an active ‘power user’ base who are more than comfortable with Excel and Access and want to quickly leverage ‘intranet’ like business apps which boost productivity or simply allow user to gain quick access, anytime and anywhere to business information, PowerApps is the platform to go for, your imagination is your limitation.</p>
@@ -81,6 +84,6 @@ categories:
 <h2>What’s next.</h2>
 <p>My upcoming posts will be covering more hands-on topics, in which I both will guide you through the building process of a simple intranet like business app as well as a LOB business app.</p>
 <p>Well I hoped this post was of any use to you. I purposely did not specifically dive into the different components which make up PowerApps (Designer, Logic Flows) nor the difference between the different PowerApps tiers as there are already some good resources available on the world wide web diving into these.</p>
-<p>So if you require some more details on PowerApps please have a look at the following link &#8211; <a href="http://bit.ly/1THnLL8">http://bit.ly/1THnLL8</a> -, which I find very helpful and will guide you in your discovery path into the wonderful world of PowerApps</p>
+<p>So if you require some more details on PowerApps please have a look at the following link &#8211; <a href="/link-unavailable/?url=http%3A%2F%2Fbit.ly%2F1THnLL8">http://bit.ly/1THnLL8</a> -, which I find very helpful and will guide you in your discovery path into the wonderful world of PowerApps</p>
 <p>Cheers and feel free to add some comments to get the discussion going!</p>
 <p>René</p>

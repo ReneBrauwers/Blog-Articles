@@ -1,4 +1,7 @@
 ---
+title: >
+date: 2013-05-05T22:34:00
+url: /2013/05/05/biztalk-2013-vs-windows-azure-service-bus-notification-hubs-preview/
 ID: 1602
 post_title: >
   BizTalk 2013 and Windows Azure Service
@@ -10,7 +13,7 @@ post_date: 2013-05-05 22:34:00
 layout: post
 link: >
   https://brauwers.azurewebsites.net/2013/05/05/biztalk-2013-vs-windows-azure-service-bus-notification-hubs-preview/
-published: true
+wp_published: true
 tags:
   - Azure
   - BizTalk
@@ -28,7 +31,7 @@ categories:
   - WCF
 ---
 <blockquote>
-<p>So you want to send Toast-Notification to the <a href="http://msdn.microsoft.com/en-us/library/windowsazure/jj927170.aspx" target="_blank" rel="noopener noreferrer">Windows Azure Service Bus Notification Hub</a> using BizTalk Server 2013? </p>
+<p>So you want to send Toast-Notification to the <a href="/link-unavailable/?url=http%3A%2F%2Fmsdn.microsoft.com%2Fen-us%2Flibrary%2Fwindowsazure%2Fjj927170.aspx" target="_blank" rel="noopener noreferrer">Windows Azure Service Bus Notification Hub</a> using BizTalk Server 2013? </p>
 </blockquote>
 <p>&nbsp;</p>
 <h1>Well here’s the bad news</h1>
@@ -41,9 +44,9 @@ categories:
 <h1></h1>
 <h1>What do you need</h1>
 <ol>
-<li>A ready to use : Windows Azure Service Bus Notification Hub and an application (Windows Store or Windows Phone) which is subscribed to the Notification Hub (see tutorial <a href="http://msdn.microsoft.com/en-us/library/windowsazure/jj927171.aspx" target="_blank" rel="noopener noreferrer">here</a>)</li>
+<li>A ready to use : Windows Azure Service Bus Notification Hub and an application (Windows Store or Windows Phone) which is subscribed to the Notification Hub (see tutorial <a href="https://web.archive.org/web/20130813221556/http://msdn.microsoft.com:80/en-us/library/windowsazure/jj927171.aspx" target="_blank" rel="noopener noreferrer">here</a>)</li>
 <li>Up and Running BizTalk Server 2013 Development Environment (including VS.Net 2012 update 2)</li>
-<li><a href="http://vasters.com/clemensv/2013/01/23/Service+Bus+Notification+Hubs+Ndash+Concepts+And+Code+Walkthrough+Windows+8+Edition.aspx" target="_blank" rel="noopener noreferrer">Read &amp; Watch</a></li>
+<li><a href="https://web.archive.org/web/20130925005248/http://vasters.com/clemensv/2013/01/23/Service+Bus+Notification+Hubs+Ndash+Concepts+And+Code+Walkthrough+Windows+8+Edition.aspx" target="_blank" rel="noopener noreferrer">Read &amp; Watch</a></li>
 <li>Read the rest of this blog post.</li>
 </ol>
 <p>&nbsp;</p>
@@ -52,7 +55,7 @@ categories:
 <p>&nbsp;</p>
 <p>&nbsp;</p>
 <blockquote>
-<p>Please note the following: the windows store application I created and used for this scenario creates a template registration with the Windows Azure Service Bus Notification Hub. The template in question leverages the ToastImageAndText04 format (see image below). Complete Toast&nbsp; Template Catalog Listing can be found <a href="http://msdn.microsoft.com/en-us/library/windows/apps/hh761494.aspx" target="_blank" rel="noopener noreferrer">here</a></p>
+<p>Please note the following: the windows store application I created and used for this scenario creates a template registration with the Windows Azure Service Bus Notification Hub. The template in question leverages the ToastImageAndText04 format (see image below). Complete Toast&nbsp; Template Catalog Listing can be found <a href="https://web.archive.org/web/20170916091613/https://msdn.microsoft.com/en-us/library/windows/apps/Hh761494.aspx" target="_blank" rel="noopener noreferrer">here</a></p>
 <p><a href="/assets/images/uploads/2013/05/image_thumb1.png"><img title="image" style="border-top: 0px;border-right: 0px;border-bottom: 0px;padding-top: 0px;padding-left: 0px;margin: 0px;border-left: 0px;padding-right: 0px" border="0" alt="image" src="/assets/images/uploads/2013/05/image_thumb1.png" width="244" height="152"></a></p>
 <p>The registered template translates to the following xml</p>
 <p><a href="/assets/images/uploads/2013/05/image_thumb2.png"><img title="image" style="border-top: 0px;border-right: 0px;border-bottom: 0px;padding-top: 0px;padding-left: 0px;margin: 0px;border-left: 0px;padding-right: 0px" border="0" alt="image" src="/assets/images/uploads/2013/05/image_thumb2.png" width="244" height="118"></a></p>
@@ -77,10 +80,10 @@ categories:
 <p>&nbsp;</p>
 <p>&nbsp;</p>
 <p>&nbsp;</p>
-<p><a href="https://blogbrauwersimages.blob.core.windows.net/images/uploads/2013/05/image4.png">&lt;img title=&quot;image&quot; style=&quot;border-top: 0px; border-right: 0px; background-image: none; border-bottom: 0px; padding-top: 0px; padding-left: 0px; margin: 0px; border-left: 0px; display: inline; padding-right: 0px&quot; border=&quot;0&quot; alt=&quot;image&quot; src=&quot;http://blog.brauwers <a href="http://biturlz.com/pkvN7Jj">prix viagra pharmacie france</a>.nl/wp-content/uploads/2013/05/image_thumb4.png" width="244" height="223"&gt;</a></p>
+<p><a href="https://blogbrauwersimages.blob.core.windows.net/images/uploads/2013/05/image4.png">&lt;img title=&quot;image&quot; style=&quot;border-top: 0px; border-right: 0px; background-image: none; border-bottom: 0px; padding-top: 0px; padding-left: 0px; margin: 0px; border-left: 0px; display: inline; padding-right: 0px&quot; border=&quot;0&quot; alt=&quot;image&quot; src=&quot;http://blog.brauwers.nl/wp-content/uploads/2013/05/image_thumb4.png" width="244" height="223"&gt;</a></p>
 <p>&nbsp;</p>
 <h1></h1>
 <h1>Conclusion</h1>
-<p>Well it is fairly simple, although it requires some coding,&nbsp; to invoke the Windows Azure Service Bus Notification Hub using BizTalk Server and this opens up some additional ‘notification’ possibilities, however it might be a bit over-the-top to use BizTalk Server for this ;-) . Ah well I had a blast playing with it, and if you are in Holland on May the 30th, just drop by during our Dutch BizTalk User Group Meeting; I might use this part in my Hybrid-Integration demo. You can register here : <a title="http://btugnl20130530.eventbrite.nl/#" href="http://btugnl20130530.eventbrite.nl/#">http://btugnl20130530.eventbrite.nl/#</a></p>
+<p>Well it is fairly simple, although it requires some coding,&nbsp; to invoke the Windows Azure Service Bus Notification Hub using BizTalk Server and this opens up some additional ‘notification’ possibilities, however it might be a bit over-the-top to use BizTalk Server for this ;-) . Ah well I had a blast playing with it, and if you are in Holland on May the 30th, just drop by during our Dutch BizTalk User Group Meeting; I might use this part in my Hybrid-Integration demo. You can register here : <a title="http://btugnl20130530.eventbrite.nl/#" href="https://web.archive.org/web/20130610112350/http://btugnl20130530.eventbrite.nl:80/">http://btugnl20130530.eventbrite.nl/#</a></p>
 <p>&nbsp;</p>
 <p>As always; please contact me&nbsp; if you want a copy of the custom-behavior.</p>

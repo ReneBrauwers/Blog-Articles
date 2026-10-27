@@ -1,0 +1,2 @@
+{{ define "main" }}<h1>{{ .Title }}</h1>{{ .Content }}<p>Original link: <code id="orig">(unknown)</code></p>
+<script>const u=new URLSearchParams(location.search).get("url");if(u){document.getElementById("orig").textContent=u;}</script>{{ end }}

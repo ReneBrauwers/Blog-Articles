@@ -1,4 +1,7 @@
 ---
+title: 'First-Look:Installing &#038; Configuration of BizTalk Server  2010 on Windows 8 Developer Preview'
+date: 2011-09-19T10:52:00
+url: /2011/09/19/first-lookinstalling-configuration-of-biztalk-server-2010-on-windows-8-developer-preview/
 ID: 60
 post_title: 'First-Look:Installing &#038; Configuration of BizTalk Server  2010 on Windows 8 Developer Preview'
 post_name: >
@@ -8,7 +11,7 @@ post_date: 2011-09-19 10:52:00
 layout: post
 link: >
   https://brauwers.azurewebsites.net/2011/09/19/first-lookinstalling-configuration-of-biztalk-server-2010-on-windows-8-developer-preview/
-published: true
+wp_published: true
 tags:
   - BizTalk
   - BizTalk Server 2010
