@@ -1,4 +1,7 @@
 ---
+title: 'PowerShell issue: Account with name ‘True’ does not exist'
+date: 2016-07-30T11:14:06
+url: /2016/07/30/powershell-issue-account-with-name-true-does-not-exist/
 ID: 4872
 post_title: 'PowerShell issue: Account with name ‘True’ does not exist'
 post_name: >
@@ -8,7 +11,7 @@ post_date: 2016-07-30 11:14:06
 layout: post
 link: >
   https://brauwers.azurewebsites.net/2016/07/30/powershell-issue-account-with-name-true-does-not-exist/
-published: true
+wp_published: true
 tags: [ ]
 categories:
   - Azure

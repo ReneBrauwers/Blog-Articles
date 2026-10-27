@@ -1,4 +1,7 @@
 ---
+title: >
+date: 2019-02-25T23:44:00
+url: /2019/02/25/on-premise-point-to-site-connectivity-leveraging-logic-apps-isolated-service-environment-ise-in-a-hub-spoke-network-topology/
 ID: 5477
 post_title: >
   On-Premise point-to-site connectivity
@@ -12,7 +15,7 @@ post_date: 2019-02-25 23:44:00
 layout: post
 link: >
   https://brauwers.azurewebsites.net/2019/02/25/on-premise-point-to-site-connectivity-leveraging-logic-apps-isolated-service-environment-ise-in-a-hub-spoke-network-topology/
-published: true
+wp_published: true
 tags: [ ]
 categories:
   - Azure

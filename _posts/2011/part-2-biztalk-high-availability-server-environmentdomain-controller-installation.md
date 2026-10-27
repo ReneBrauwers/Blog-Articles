@@ -1,4 +1,7 @@
 ---
+title: 'Part 2: BizTalk High Availability Server Environment–Domain Controller Installation'
+date: 2011-04-02T03:43:57
+url: /2011/04/02/part-2-biztalk-high-availability-server-environmentdomain-controller-installation/
 ID: 6
 post_title: 'Part 2: BizTalk High Availability Server Environment–Domain Controller Installation'
 post_name: >
@@ -8,7 +11,7 @@ post_date: 2011-04-02 03:43:57
 layout: post
 link: >
   https://brauwers.azurewebsites.net/2011/04/02/part-2-biztalk-high-availability-server-environmentdomain-controller-installation/
-published: true
+wp_published: true
 tags:
   - Active Directory
   - BizTalk
@@ -25,7 +28,7 @@ categories:
 <p>In this part we will start with an essential server installation being <strong><em>the basic installation of your Windows Server 2008 r2 Domain Controller</em></strong>, without this server you will not be able to setup your Multi-Server BizTalk High Availability Lab environment.</p>
 <p>Well let’s get on with it, shall we.</p>
 <h2>Prerequisites</h2>
-<p>A fresh Windows Server 2008 R2 Hyper-V Image; if you need help with Hyper-V go and check out this link <a title="http://blogs.virtualizationadmin.com/davis/tag/hyper-v-how-to/" href="http://blogs.virtualizationadmin.com/davis/tag/hyper-v-how-to/">http://blogs.virtualizationadmin.com/davis/tag/hyper-v-how-to/</a></p>
+<p>A fresh Windows Server 2008 R2 Hyper-V Image; if you need help with Hyper-V go and check out this link <a title="http://blogs.virtualizationadmin.com/davis/tag/hyper-v-how-to/" href="https://web.archive.org/web/20130310164240/http://blogs.virtualizationadmin.com/davis/tag/hyper-v-how-to/">http://blogs.virtualizationadmin.com/davis/tag/hyper-v-how-to/</a></p>
 <p>I’d recommend that you use at least the following hardware settings:</p>
 <ul>
 <li>Hard disk minimal 15Gb
@@ -73,7 +76,7 @@ categories:
 <a href="/assets/images/uploads/2011/04/image13.png"><img style="margin: 0px;padding-left: 0px;padding-right: 0px;padding-top: 0px;border-width: 0px" title="image" alt="image" src="/assets/images/uploads/2011/04/image_thumb13.png" width="244" height="62" border="0" /></a></p>
 <p>Now “click” on “Change adapter settings”<br />
 <a href="/assets/images/uploads/2011/04/image14.png"><img style="margin: 0px;padding-left: 0px;padding-right: 0px;padding-top: 0px;border-width: 0px" title="image" alt="image" src="/assets/images/uploads/2011/04/image_thumb14.png" width="244" height="160" border="0" /></a></p>
-<p>Now you will be presented with an overview of the available network adapters, make sure you choose the adapter which you configured in your Hyper-V  “Virtual Network Manager”  as being of the type “Internal”, in my case that would be the adapter named Internal (more info can be read here: <a title="http://www.howtonetworking.com/server/hyper-v15.htm" href="http://www.howtonetworking.com/server/hyper-v15.htm">http://www.howtonetworking.com/server/hyper-v15.htm</a>)</p>
+<p>Now you will be presented with an overview of the available network adapters, make sure you choose the adapter which you configured in your Hyper-V  “Virtual Network Manager”  as being of the type “Internal”, in my case that would be the adapter named Internal (more info can be read here: <a title="http://www.howtonetworking.com/server/hyper-v15.htm" href="https://web.archive.org/web/20250823172931/https://howtonetworking.com/server/hyper-v15.htm">http://www.howtonetworking.com/server/hyper-v15.htm</a>)</p>
 <p>Select your adapter and “right click” on it and select “properties”.<br />
 <a href="/assets/images/uploads/2011/04/image15.png"><img style="margin: 0px;padding-left: 0px;padding-right: 0px;padding-top: 0px;border-width: 0px" title="image" alt="image" src="/assets/images/uploads/2011/04/image_thumb15.png" width="244" height="161" border="0" /></a></p>
 <p>Now select “Internet Protocol Version 4 (TCP/IPv4) and click on “properties”<a href="/assets/images/uploads/2011/04/image16.png"><img style="margin: 0px;padding-left: 0px;padding-right: 0px;padding-top: 0px;border-width: 0px" title="image" alt="image" src="/assets/images/uploads/2011/04/image_thumb16.png" width="191" height="244" border="0" /></a></p>
@@ -87,7 +90,7 @@ categories:
 <p><a href="/assets/images/uploads/2011/04/image19.png"><img style="margin: 0px;padding-left: 0px;padding-right: 0px;padding-top: 0px;border-width: 0px" title="image" alt="image" src="/assets/images/uploads/2011/04/image_thumb19.png" width="244" height="136" border="0" /></a></p>
 <p>On the next screen, change the settings if you feel like it or leave them as they are. Once done select “next”</p>
 <p><a href="/assets/images/uploads/2011/04/image20.png"><img style="margin: 0px;padding-left: 0px;padding-right: 0px;padding-top: 0px;border-width: 0px" title="image" alt="image" src="/assets/images/uploads/2011/04/image_thumb20.png" width="244" height="230" border="0" /></a></p>
-<p>Now we are almost at the end of the installation process, but first we have to assign the “Domain Administrator” password <a href="http://biturlz.com/ZpgGH8d">viagra a vendre quebec</a>. Enter a password and select “next” and follow it with another selection of the “next” button</p>
+<p>Now we are almost at the end of the installation process, but first we have to assign the “Domain Administrator” password. Enter a password and select “next” and follow it with another selection of the “next” button</p>
 <p><a href="/assets/images/uploads/2011/04/image21.png"><img style="margin: 0px;padding-left: 0px;padding-right: 0px;padding-top: 0px;border-width: 0px" title="image" alt="image" src="/assets/images/uploads/2011/04/image_thumb21.png" width="244" height="231" border="0" /></a></p>
 <p>At this point Active Directory will be installed, and once finished it will reboot (as I’ve checked the “Reboot on completion” option.</p>
 <p><a href="/assets/images/uploads/2011/04/image22.png"><img style="margin: 0px;padding-left: 0px;padding-right: 0px;padding-top: 0px;border-width: 0px" title="image" alt="image" src="/assets/images/uploads/2011/04/image_thumb22.png" width="244" height="173" border="0" /></a></p>

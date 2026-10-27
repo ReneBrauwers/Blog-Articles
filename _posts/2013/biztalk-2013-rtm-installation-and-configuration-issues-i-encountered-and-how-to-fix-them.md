@@ -1,4 +1,7 @@
 ---
+title: 'BizTalk 2013 RTM &#8211; Installation and configuration issues I encountered and how to fix them'
+date: 2013-03-23T15:27:00
+url: /2013/03/23/biztalk-2013-rtm-installation-and-configuration-issues-i-encountered-and-how-to-fix-them/
 ID: 252
 post_title: 'BizTalk 2013 RTM &#8211; Installation and configuration issues I encountered and how to fix them'
 post_name: >
@@ -8,7 +11,7 @@ post_date: 2013-03-23 15:27:00
 layout: post
 link: >
   https://brauwers.azurewebsites.net/2013/03/23/biztalk-2013-rtm-installation-and-configuration-issues-i-encountered-and-how-to-fix-them/
-published: true
+wp_published: true
 tags:
   - BizTalk
   - BizTalk 2013
@@ -39,16 +42,16 @@ Below the issues I encountered and how I resolved them.
 Error encountered:   Missing file 'MSVCP100.dll'
 <h3>Resolution</h3>
 <ol>
-	<li><strong></strong>Download and install <a href="http://www.microsoft.com/en-us/download/details.aspx?id=5555">Microsoft Visual C++ 2010 Redistributable Package (both x64 as x86)</a> </li>
+	<li><strong></strong>Download and install <a href="https://web.archive.org/web/20240716172949/https://www.microsoft.com/en-us/download/details.aspx?id=5555">Microsoft Visual C++ 2010 Redistributable Package (both x64 as x86)</a> </li>
 </ol>
 <h2>Issue #2: BizTalk Configuration – BAM Tools</h2>
 Error encountered: Could not install BAM Tools
 <h3>Resolution</h3>
 <ol>
 	<li>install SQL Server 2005 Notification Services
-x64 - <a href="http://download.microsoft.com/download/4/4/D/44DBDE61-B385-4FC2-A67D-48053B8F9FAD/SQLServer2005_NS_x64.msi">http://download.microsoft.com/download/4/4/D/44DBDE61-B385-4FC2-A67D-48053B8F9FAD/SQLServer2005_NS_x64.msi</a>
-x86 - <a href="http://download.microsoft.com/download/4/4/D/44DBDE61-B385-4FC2-A67D-48053B8F9FAD/SQLServer2005_NS.msi">http://download.microsoft.com/download/4/4/D/44DBDE61-B385-4FC2-A67D-48053B8F9FAD/SQLServer2005_NS.msi</a></li>
-	<li>set up database to use <a href="http://www.sqlservercentral.com/blogs/sqlservernotesfromthefield/2012/05/01/how-to-configure-database-mail">database-mail</a> </li>
+x64 - <a href="https://web.archive.org/web/20070208223552/http://download.microsoft.com:80/download/4/4/D/44DBDE61-B385-4FC2-A67D-48053B8F9FAD/SQLServer2005_NS_x64.msi">http://download.microsoft.com/download/4/4/D/44DBDE61-B385-4FC2-A67D-48053B8F9FAD/SQLServer2005_NS_x64.msi</a>
+x86 - <a href="https://web.archive.org/web/20070403195050/http://download.microsoft.com:80/download/4/4/D/44DBDE61-B385-4FC2-A67D-48053B8F9FAD/SQLServer2005_NS.msi">http://download.microsoft.com/download/4/4/D/44DBDE61-B385-4FC2-A67D-48053B8F9FAD/SQLServer2005_NS.msi</a></li>
+	<li>set up database to use <a href="/link-unavailable/?url=http%3A%2F%2Fwww.sqlservercentral.com%2Fblogs%2Fsqlservernotesfromthefield%2F2012%2F05%2F01%2Fhow-to-configure-database-mail">database-mail</a> </li>
 	<li>configure BAM Alerts</li>
 </ol>
 <h2>Issue #3: BizTalk Configuration – BAM Portal</h2>

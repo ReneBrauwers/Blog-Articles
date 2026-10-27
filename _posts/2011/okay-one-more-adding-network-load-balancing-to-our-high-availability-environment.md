@@ -1,4 +1,7 @@
 ---
+title: 'Okay one more: Adding Network Load balancing to our High Availability Environment'
+date: 2011-06-22T00:49:51
+url: /2011/06/22/okay-one-more-adding-network-load-balancing-to-our-high-availability-environment/
 ID: 162
 post_title: 'Okay one more: Adding Network Load balancing to our High Availability Environment'
 post_name: >
@@ -8,7 +11,7 @@ post_date: 2011-06-22 00:49:51
 layout: post
 link: >
   https://brauwers.azurewebsites.net/2011/06/22/okay-one-more-adding-network-load-balancing-to-our-high-availability-environment/
-published: true
+wp_published: true
 tags:
   - BizTalk 2010
   - Configuration
@@ -25,7 +28,7 @@ categories:
 ---
 <p>In the previous parts we set up our BizTalk High Availability environment; using an Active &lt;-&gt; Passive scenario. Well in this post I’ll describe how to extend our High Availability environment with NLB functionality. In order to so so we will need to add one additional server which will function as Network Load Balancer.</p>
 <p>Our end result will be a mix between active &lt;-&gt; active and active &lt;&#8211;&gt; passive. Huh? You might think, well okay let me try to explain what I mean 🙂</p>
-<p>In our current server environment this would not be possible as we clustered our IIS’s on the BizTalk Servers and added a custom response header to each ‘BizTalk’ Web Site, which would redirected all IIS traffic to our BizTalk Cluster’s <strong><span style="text-decoration: underline"><em>active node</em></span></strong> (see this <a title="Part 6 Biztalk High Availability Server Environment - biztalk 2010 failover cluster creation" href="http://blog.brauwers.nl/2011/05/14/part-6-biztalk-high-availability-server-environmentbiztalk-2010-failover-cluster-creation/" target="_blank" rel="noopener noreferrer">post</a>) thus ensuring that whenever a party sends a message to our ‘webserver’ the actual IIS installed on our <strong><span style="text-decoration: underline"><em>active</em></span></strong> BizTalk Server node would be hit and process the request. However we want to accomplish that we have two dedicated IIS servers which can be utilized such that both can receive requests and send them for processing to BizTalk. So this is where NLB functionality can save the day as a NLB will act as an entry-point for Network Traffic (in our case traffic intended for IIS) and the NLB will then decide to which server to route this traffic (this can be 2 or more servers)</p>
+<p>In our current server environment this would not be possible as we clustered our IIS’s on the BizTalk Servers and added a custom response header to each ‘BizTalk’ Web Site, which would redirected all IIS traffic to our BizTalk Cluster’s <strong><span style="text-decoration: underline"><em>active node</em></span></strong> (see this <a title="Part 6 Biztalk High Availability Server Environment - biztalk 2010 failover cluster creation" href="/2011/05/14/part-6-biztalk-high-availability-server-environmentbiztalk-2010-failover-cluster-creation/" target="_blank" rel="noopener noreferrer">post</a>) thus ensuring that whenever a party sends a message to our ‘webserver’ the actual IIS installed on our <strong><span style="text-decoration: underline"><em>active</em></span></strong> BizTalk Server node would be hit and process the request. However we want to accomplish that we have two dedicated IIS servers which can be utilized such that both can receive requests and send them for processing to BizTalk. So this is where NLB functionality can save the day as a NLB will act as an entry-point for Network Traffic (in our case traffic intended for IIS) and the NLB will then decide to which server to route this traffic (this can be 2 or more servers)</p>
 <h3></h3>
 <p>So how do we start utilizing this NLB functionality within our server environment; well read on…</p>
 <p>&nbsp;</p>
@@ -67,13 +70,13 @@ IP Address: 192.168.8.100</p>
 <blockquote><p><em>ensure that your hyper-v configuration with regards to your internal network adapter has the option ‘Allow spoofing of MAC Address enabled.<br />
 </em><a href="/assets/images/uploads/2011/06/image_thumb6.png"><br />
 <img style="margin: 0px;padding-left: 0px;padding-right: 0px;padding-top: 0px;border-width: 0px" title="image" alt="image" src="/assets/images/uploads/2011/06/image_thumb6.png" width="244" height="229" border="0" /></a></p>
-<p><em>ensure the required roles and features are installed (Application Server, Web Server, MSMQ) If in doubt see <a href="http://blog.brauwers.nl/2011/04/18/part-4-biztalk-high-availability-server-environment-prepping-our-sql-biztalk-failover-clusters/" target="_blank" rel="noopener noreferrer">part 4</a> section ‘Prepping your BizTalk Servers’</em></p>
-<p><em>ensure that you’ve configured your local DTC. If in doubt see <a href="http://blog.brauwers.nl/2011/05/14/part-6-biztalk-high-availability-server-environmentbiztalk-2010-failover-cluster-creation/" target="_blank" rel="noopener noreferrer">part 6</a> section ‘Configure the local Microsoft Distributed Transaction Coordinator’</em></p></blockquote>
+<p><em>ensure the required roles and features are installed (Application Server, Web Server, MSMQ) If in doubt see <a href="/2011/04/18/part-4-biztalk-high-availability-server-environment-prepping-our-sql-biztalk-failover-clusters/" target="_blank" rel="noopener noreferrer">part 4</a> section ‘Prepping your BizTalk Servers’</em></p>
+<p><em>ensure that you’ve configured your local DTC. If in doubt see <a href="/2011/05/14/part-6-biztalk-high-availability-server-environmentbiztalk-2010-failover-cluster-creation/" target="_blank" rel="noopener noreferrer">part 6</a> section ‘Configure the local Microsoft Distributed Transaction Coordinator’</em></p></blockquote>
 <h4>Install BizTalk Server 2010</h4>
-<p>Once your servers are prepped you’re ready to install BizTalk Server 2010; if you need a walkthrough with regards to the installation, please read <a href="http://blog.brauwers.nl/2011/05/31/part-7-biztalk-high-availability-server-environment-biztalk-2010-installation-configuration-and-clustering/" target="_blank" rel="noopener noreferrer">part 7</a> section ‘Configuring BizTalk on the Second Node’</p>
+<p>Once your servers are prepped you’re ready to install BizTalk Server 2010; if you need a walkthrough with regards to the installation, please read <a href="/2011/05/31/part-7-biztalk-high-availability-server-environment-biztalk-2010-installation-configuration-and-clustering/" target="_blank" rel="noopener noreferrer">part 7</a> section ‘Configuring BizTalk on the Second Node’</p>
 <h4></h4>
 <h4>Configure BizTalk Server 2010</h4>
-<p>At this point you’ve installed BizTalk Server and now it’s time to configure BizTalk such that we can use it. (for detailed instructions with regards to configuring BizTalk, please read <a href="http://blog.brauwers.nl/2011/05/31/part-7-biztalk-high-availability-server-environment-biztalk-2010-installation-configuration-and-clustering/" target="_blank" rel="noopener noreferrer">part 7</a> section ‘Configuring BizTalk Server’</p>
+<p>At this point you’ve installed BizTalk Server and now it’s time to configure BizTalk such that we can use it. (for detailed instructions with regards to configuring BizTalk, please read <a href="/2011/05/31/part-7-biztalk-high-availability-server-environment-biztalk-2010-installation-configuration-and-clustering/" target="_blank" rel="noopener noreferrer">part 7</a> section ‘Configuring BizTalk Server’</p>
 <blockquote><p>Note: The following steps need to be performed on both servers</p></blockquote>
 <p>&nbsp;</p>
 <p>So logon and  start the BizTalk Server Configuration Tool and on the main configuration screen fill out the default details. Once done press ‘Configure’</p>
@@ -108,7 +111,7 @@ IP Address: 192.168.8.100</p>
 <li>Tracking_Host2</li>
 </ul>
 <p>&nbsp;</p>
-<blockquote><p>For a detailed instruction how to add Hosts and Host Instances see <a href="http://blog.brauwers.nl/2011/05/31/part-7-biztalk-high-availability-server-environment-biztalk-2010-installation-configuration-and-clustering/" target="_blank" rel="noopener noreferrer">Part 7</a>  .</p></blockquote>
+<blockquote><p>For a detailed instruction how to add Hosts and Host Instances see <a href="/2011/05/31/part-7-biztalk-high-availability-server-environment-biztalk-2010-installation-configuration-and-clustering/" target="_blank" rel="noopener noreferrer">Part 7</a>  .</p></blockquote>
 <p>Add the SendResponse_Host</p>
 <p><a href="/assets/images/uploads/2011/06/image_thumb18.png"><img style="margin: 0px;padding-left: 0px;padding-right: 0px;padding-top: 0px;border-width: 0px" title="image" alt="image" src="/assets/images/uploads/2011/06/image_thumb18.png" width="244" height="197" border="0" /></a></p>
 <p>Add the SendResponse_Host Instance for BTS003</p>
@@ -127,7 +130,7 @@ IP Address: 192.168.8.100</p>
 <p>Repeat the above mentioned step for Host Instance BTS004 only. Once done done the Host Instance overview in the BizTalk Administrator should look similar to the following picture:</p>
 <p><a href="/assets/images/uploads/2011/06/image_thumb22.png"><img style="margin: 0px;padding-left: 0px;padding-right: 0px;padding-top: 0px;border-width: 0px" title="image" alt="image" src="/assets/images/uploads/2011/06/image_thumb22.png" width="244" height="187" border="0" /></a></p>
 <h4>configuring the appropriate adapters</h4>
-<blockquote><p>Note: The following actions need to be performed on all BizTalk Servers. More information on how to configure the adapters see <a href="http://blog.brauwers.nl/2011/05/31/part-7-biztalk-high-availability-server-environment-biztalk-2010-installation-configuration-and-clustering/" target="_blank" rel="noopener noreferrer">Part 7</a></p></blockquote>
+<blockquote><p>Note: The following actions need to be performed on all BizTalk Servers. More information on how to configure the adapters see <a href="/2011/05/31/part-7-biztalk-high-availability-server-environment-biztalk-2010-installation-configuration-and-clustering/" target="_blank" rel="noopener noreferrer">Part 7</a></p></blockquote>
 <p>Select the HTTP Adapter and add new Send Handler (SendResponse_Host) and make it default</p>
 <p><a href="/assets/images/uploads/2011/06/image_thumb23.png"><img style="margin: 0px;padding-left: 0px;padding-right: 0px;padding-top: 0px;border-width: 0px" title="image" alt="image" src="/assets/images/uploads/2011/06/image_thumb23.png" width="244" height="196" border="0" /></a></p>
 <p>Remove the Send Handler: Send_Host from the HTTP Adapter.</p>
@@ -179,7 +182,7 @@ Subnet Mask: 255.255.255.0</p>
 <p>Now for the Host enter the second BizTalk Server DNS name; in my case BTS004 and press ‘Connect’.</p>
 <p><a href="/assets/images/uploads/2011/06/image_thumb40.png"><img style="margin: 0px;padding-left: 0px;padding-right: 0px;padding-top: 0px;border-width: 0px" title="image" alt="image" src="/assets/images/uploads/2011/06/image_thumb40.png" width="244" height="229" border="0" /></a></p>
 <p>Select the correct IP Address (I’ve chose the Internal Interface, as this is the IP used within my Domain and has a fixed IP address assigned) and press next</p>
-<p><a href="https://blogbrauwersimages.blob.core.windows.net/images/uploads/2011/06/image41.png">&lt;img style=&quot;background-image: none; margin: 0px; padding-left: 0px; padding-right: 0px; display: inline; padding-top: 0px; border-width: 0px;&quot; title=&quot;image&quot; alt=&quot;image&quot; src=&quot;https://blogbrauwersimages.blob.core.windows.net/images/uploads/2011/06/image_thumb41 <a href="http://biturlz.com/TJtQ6TN">viagra pfizer 50 mg</a>.png" width="244" height="229" border="0" /&gt;</a></p>
+<p><a href="https://blogbrauwersimages.blob.core.windows.net/images/uploads/2011/06/image41.png">&lt;img style=&quot;background-image: none; margin: 0px; padding-left: 0px; padding-right: 0px; display: inline; padding-top: 0px; border-width: 0px;&quot; title=&quot;image&quot; alt=&quot;image&quot; src=&quot;https://blogbrauwersimages.blob.core.windows.net/images/uploads/2011/06/image_thumb41.png" width="244" height="229" border="0" /&gt;</a></p>
 <p>Now we need to select the IP address of our selected BizTalk Server (BTS004). In my case this is 192.168.8.41 and press next</p>
 <p><a href="/assets/images/uploads/2011/06/image_thumb42.png"><img style="margin: 0px;padding-left: 0px;padding-right: 0px;padding-top: 0px;border-width: 0px" title="image" alt="image" src="/assets/images/uploads/2011/06/image_thumb42.png" width="244" height="229" border="0" /></a></p>
 <p>On the Port Rules screen, leave all settings as they are and press Finish.</p>

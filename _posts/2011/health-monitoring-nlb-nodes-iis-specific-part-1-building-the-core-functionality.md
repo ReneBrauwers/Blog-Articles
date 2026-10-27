@@ -1,4 +1,7 @@
 ---
+title: >
+date: 2011-07-21T15:32:00
+url: /2011/07/21/health-monitoring-nlb-nodes-iis-specific-part-1-building-the-core-functionality/
 ID: 39
 post_title: >
   Health Monitoring NLB Nodes (IIS
@@ -10,7 +13,7 @@ post_date: 2011-07-21 15:32:00
 layout: post
 link: >
   https://brauwers.azurewebsites.net/2011/07/21/health-monitoring-nlb-nodes-iis-specific-part-1-building-the-core-functionality/
-published: true
+wp_published: true
 tags:
   - Application Pool
   - BizTalk

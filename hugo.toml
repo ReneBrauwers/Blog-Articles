@@ -1,0 +1,35 @@
+baseURL = "https://blog.reneb.au/"
+title = "Rene Brauwers – Blog Archive"
+languageCode = "en-au"
+assetDir = "hugo-assets"
+disableKinds = ["taxonomy", "term"]
+enableRobotsTXT = true
+
+[permalinks]
+  posts = "/:year/:month/:day/:contentbasename/"
+
+[frontmatter]
+  date = ["date", "post_date", ":default"]
+  publishDate = ["publishDate", "pubdate"]
+
+[markup.goldmark.renderer]
+  unsafe = true   # WordPress posts contain raw HTML; HTML comments (PR 2 TODOs) stay invisible
+
+[params]
+  description = "Integration, BizTalk and Azure articles by Rene Brauwers (2011–2019)."
+  umamiScript = "https://stats.reneb.au/script.js"
+  umamiWebsiteId = "0b5843ad-fbfc-491f-a1f2-748d867a85e7"   # set to "" to disable analytics
+
+[module]
+  [[module.mounts]]
+    source = "content"
+    target = "content"
+  [[module.mounts]]
+    source = "_posts"
+    target = "content/posts"
+  [[module.mounts]]
+    source = "static"
+    target = "static"
+  [[module.mounts]]
+    source = "assets"
+    target = "static/assets"

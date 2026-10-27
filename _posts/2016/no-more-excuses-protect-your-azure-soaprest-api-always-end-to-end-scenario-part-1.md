@@ -1,4 +1,7 @@
 ---
+title: 'No more excuses; protect your (Azure) Soap/rest API, ALWAYS!  &#8211; End-to-End Scenario part 1'
+date: 2016-11-30T17:57:00
+url: /2016/11/30/no-more-excuses-protect-your-azure-soaprest-api-always-end-to-end-scenario-part-1/
 ID: 4886
 post_title: 'No more excuses; protect your (Azure) Soap/rest API, ALWAYS!  &#8211; End-to-End Scenario part 1'
 post_name: >
@@ -8,7 +11,7 @@ post_date: 2016-11-30 17:57:00
 layout: post
 link: >
   https://brauwers.azurewebsites.net/2016/11/30/no-more-excuses-protect-your-azure-soaprest-api-always-end-to-end-scenario-part-1/
-published: true
+wp_published: true
 tags:
   - end-to-end scenario
 categories:
@@ -23,7 +26,7 @@ categories:
 <h2>Intro</h2>
 you don't want to know, how many times I’ve encountered web apps / API’s which are publically accessible and as such don't use any form of authentication whatsoever. So please do me a favour. From now on please protect your APIs.
 
-Azure really makes this easy, especially with the recent (preview) release of <a href="https://blogs.msdn.microsoft.com/appserviceteam/2016/11/17/url-authorization-rules/" target="_blank" rel="noopener noreferrer">URL Authorization</a> and having the Azure Active Directory management functionality available in the <a href="https://blogs.technet.microsoft.com/enterprisemobility/2016/09/12/the-azuread-admin-experience-in-the-new-azure-portal-is-now-in-public-preview/" target="_blank" rel="noopener noreferrer">new portal</a>.
+Azure really makes this easy, especially with the recent (preview) release of <a href="https://blogs.msdn.microsoft.com/appserviceteam/2016/11/17/url-authorization-rules/" target="_blank" rel="noopener noreferrer">URL Authorization</a> and having the Azure Active Directory management functionality available in the <a href="https://web.archive.org/web/20170606183205/https://blogs.technet.microsoft.com/enterprisemobility/2016/09/12/the-azuread-admin-experience-in-the-new-azure-portal-is-now-in-public-preview/" target="_blank" rel="noopener noreferrer">new portal</a>.
 
 This blogpost will detail an simple but effective end to end scenario in which we will be leveraging
 <ul>
@@ -32,7 +35,7 @@ This blogpost will detail an simple but effective end to end scenario in which w
  	<li><a href="https://docs.microsoft.com/en-us/azure/logic-apps/" target="_blank" rel="noopener noreferrer">Logic Apps</a></li>
  	<li><a href="https://docs.microsoft.com/en-us/azure/app-service/" target="_blank" rel="noopener noreferrer">App Services</a></li>
  	<li>WCF (yes soap :-)  <a href="https://docs.microsoft.com/en-us/azure/app-service-web/" target="_blank" rel="noopener noreferrer">web app</a></li>
- 	<li>Public RESTful service (<a href="http://postcodeapi.com.au/" target="_blank" rel="noopener noreferrer">Postcode API</a>)</li>
+ 	<li>Public RESTful service (<a href="https://web.archive.org/web/20260617000533/https://postcodeapi.com.au/" target="_blank" rel="noopener noreferrer">Postcode API</a>)</li>
  	<li><a href="https://docs.microsoft.com/en-us/azure/api-management/" target="_blank" rel="noopener noreferrer">Azure API Management</a></li>
 </ul>
 &nbsp;
@@ -205,7 +208,7 @@ Now that we have created our WCF service, we are ready and can deploy the servic
 
 <a href="https://blogbrauwersimages.blob.core.windows.net/images/uploads/2016/11/image-11.png"><img style="background-image: none; padding-top: 0px; padding-left: 0px; display: inline; padding-right: 0px; border: 0px;" title="image" src="https://blogbrauwersimages.blob.core.windows.net/images/uploads/2016/11/image_thumb-11.png" alt="image" width="561" height="564" border="0" /></a>
 <h3>Test customer WCF service</h3>
-Now that you’ve published the webservice it is time to test if everything works. The easiest way to test the service would be by means of SOAPUI. So in case you don’t have SOAPUI go and download it <a href="https://www.soapui.org/downloads/soapui.html" target="_blank" rel="noopener noreferrer">here</a>
+Now that you’ve published the webservice it is time to test if everything works. The easiest way to test the service would be by means of SOAPUI. So in case you don’t have SOAPUI go and download it <a href="https://web.archive.org/web/20200305073251/https://www.soapui.org/downloads/soapui.html" target="_blank" rel="noopener noreferrer">here</a>
 
 1) Go ahead and start SOAPUI once it is installed
 

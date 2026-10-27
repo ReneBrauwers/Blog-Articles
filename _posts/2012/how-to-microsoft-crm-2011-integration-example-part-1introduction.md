@@ -1,4 +1,7 @@
 ---
+title: 'How to: Microsoft CRM 2011 Integration example (Part 1–Introduction)'
+date: 2012-01-13T17:06:00
+url: /2012/01/13/how-to-microsoft-crm-2011-integration-example-part-1introduction/
 ID: 62
 post_title: 'How to: Microsoft CRM 2011 Integration example (Part 1–Introduction)'
 post_name: >
@@ -8,7 +11,7 @@ post_date: 2012-01-13 17:06:00
 layout: post
 link: >
   https://brauwers.azurewebsites.net/2012/01/13/how-to-microsoft-crm-2011-integration-example-part-1introduction/
-published: true
+wp_published: true
 tags:
   - BizTalk
   - BizTalk 2010
@@ -26,7 +29,7 @@ categories:
   - BizTalk
   - 'C#'
 ---
-Well it has been a while since my last post; however as I stated in my first <a href="http://blog.brauwers.nl/2011/03/27/back-into-business/" target="_blank" rel="noopener noreferrer">post</a>. “I’ll only try to blog whenever I have something which in my opinion adds value”, and well the topic I want to discuss today might just add that additional value.
+Well it has been a while since my last post; however as I stated in my first <a href="/2011/03/27/back-into-business/" target="_blank" rel="noopener noreferrer">post</a>. “I’ll only try to blog whenever I have something which in my opinion adds value”, and well the topic I want to discuss today might just add that additional value.
 
 &nbsp;
 
@@ -75,13 +78,13 @@ Well in order to get data (let me rephrase; an entity) out of CRM for our Integr
 
 So which ingredients are required to do this?
 <ul>
-	<li>We need to download the CRM2011 SDK; so go and fetch it <a href="http://www.microsoft.com/download/en/details.aspx?id=24004" target="_blank" rel="noopener noreferrer">here</a></li>
+	<li>We need to download the CRM2011 SDK; so go and fetch it <a href="https://web.archive.org/web/20120418070412/http://www.microsoft.com:80/download/en/details.aspx?id=24004" target="_blank" rel="noopener noreferrer">here</a></li>
 </ul>
 &nbsp;
 
 So what are we going to build?
 <ul>
-	<li>We will build a custom activity and deploy it to CRM2011 such that it can be used in a workflow, or <a href="http://www.brauwers.nl/downloads/Demo.Crm2011.zip" target="_blank" rel="noopener noreferrer">download</a> my example and install it</li>
+	<li>We will build a custom activity and deploy it to CRM2011 such that it can be used in a workflow, or <a href="/link-unavailable/?url=http%3A%2F%2Fwww.brauwers.nl%2Fdownloads%2FDemo.Crm2011.zip" target="_blank" rel="noopener noreferrer">download</a> my example and install it</li>
 </ul>
 &nbsp;
 
@@ -99,7 +102,7 @@ So which ingredients are required to do this?
 
 So what are we going to build?
 <ul>
-	<li>Well you could build your own application, or <a href="http://www.brauwers.nl/downloads/Demo.Erp.zip" target="_blank" rel="noopener noreferrer">download</a> my example and install it.</li>
+	<li>Well you could build your own application, or <a href="/link-unavailable/?url=http%3A%2F%2Fwww.brauwers.nl%2Fdownloads%2FDemo.Erp.zip" target="_blank" rel="noopener noreferrer">download</a> my example and install it.</li>
 </ul>
 &nbsp;
 <h3>Step 3: How do I get data into CRM2011?</h3>
@@ -109,7 +112,7 @@ Well in order to get data into CRM; we will use the out of the box web services 
 
 So which ingredients are required to do this?
 <ul>
-	<li>Well if you have not yet downloaded the CRM2011 SDK; go and fetch it <a href="http://www.microsoft.com/download/en/details.aspx?id=24004" target="_blank" rel="noopener noreferrer">here</a></li>
+	<li>Well if you have not yet downloaded the CRM2011 SDK; go and fetch it <a href="https://web.archive.org/web/20120418070412/http://www.microsoft.com:80/download/en/details.aspx?id=24004" target="_blank" rel="noopener noreferrer">here</a></li>
 </ul>
 &nbsp;
 
@@ -127,7 +130,7 @@ Well for this part we will use BizTalk, BizTalk will receive the ‘Create Custo
 
 So which ingredients are required to do this?
 <ul>
-	<li>Well if you have not yet downloaded the CRM2011 SDK; go and fetch it <a href="http://www.microsoft.com/download/en/details.aspx?id=24004" target="_blank" rel="noopener noreferrer">here</a> :-)</li>
+	<li>Well if you have not yet downloaded the CRM2011 SDK; go and fetch it <a href="https://web.archive.org/web/20120418070412/http://www.microsoft.com:80/download/en/details.aspx?id=24004" target="_blank" rel="noopener noreferrer">here</a> :-)</li>
 </ul>
 &nbsp;
 

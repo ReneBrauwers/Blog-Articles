@@ -1,4 +1,7 @@
 ---
+title: >
+date: 2016-11-08T22:26:25
+url: /2016/11/08/the-new-integration-specialist-become-extinct-or-evolve-the-choice-is-up-to-you/
 ID: 4879
 post_title: >
   The ‘new’ integration specialist;
@@ -11,7 +14,7 @@ post_date: 2016-11-08 22:26:25
 layout: post
 link: >
   https://brauwers.azurewebsites.net/2016/11/08/the-new-integration-specialist-become-extinct-or-evolve-the-choice-is-up-to-you/
-published: true
+wp_published: true
 tags:
   - BizTalk 2016
   - integration
@@ -26,7 +29,7 @@ Like all things in nature, things evolve. Well they either evolve or get instinc
 
 So how would you know if your existence as an Integration Specialist is not about to get obliviated from this world? Well keep on reading..
 
-Let’s start off with: Yes BizTalk Server is here to stay for the foreseeable future.  BizTalk Server 2016 was just <a href="https://blogs.technet.microsoft.com/hybridcloud/2016/10/27/announcing-the-launch-of-microsoft-biztalk-server-2016/">released</a> and once again this is proof that Microsoft is still heavily investing in this great , one of a kind, integration platform.
+Let’s start off with: Yes BizTalk Server is here to stay for the foreseeable future.  BizTalk Server 2016 was just <a href="https://web.archive.org/web/20170409123340/https://blogs.technet.microsoft.com/hybridcloud/2016/10/27/announcing-the-launch-of-microsoft-biztalk-server-2016/">released</a> and once again this is proof that Microsoft is still heavily investing in this great , one of a kind, integration platform.
 
 You might wonder, how does Microsoft keep it alive? Well Microsoft is doing so by constantly evolving as it understands the business needs and the fact that integration space is changing and now both spans on-premises as the cloud and a clear example of this is to be seen with the new release of BizTalk Server 2016. This release a new adapter is being introduced which allows us to seamlessly expand into the Hybrid Integration Space, the <a href="https://blogs.msdn.microsoft.com/biztalk_server_team_blog/2016/08/08/announcing-the-new-biztalk-connector-for-logic-apps/">logic app adapter</a> for BizTalk. Besides this adapter we offcourse still have our good 'old' friend the <a href="https://msdn.microsoft.com/en-us/library/jj572852.aspx">SB Messaging adapter</a> (service bus).
 
@@ -51,7 +54,7 @@ So in fact it is pretty simple to ensure you will not get extinct, all it takes 
 <ul>
  	<li>Logic Apps
 <ul>
- 	<li><a href="https://azure.microsoft.com/en-us/documentation/services/logic-apps/">https://azure.microsoft.com/en-us/documentation/services/logic-apps/</a></li>
+ 	<li><a href="https://web.archive.org/web/20161018042420/https://azure.microsoft.com/en-us/documentation/services/logic-apps/">https://azure.microsoft.com/en-us/documentation/services/logic-apps/</a></li>
  	<li><a href="https://channel9.msdn.com/Search?term=logic%20apps#lang-en=en&amp;ch9Search">https://channel9.msdn.com/Search?term=logic%20apps#lang-en=en&amp;ch9Search</a></li>
  	<li><a href="https://www.youtube.com/channel/UCbJQweD96Y7n-ebKpdLDJww">https://www.youtube.com/channel/UCbJQweD96Y7n-ebKpdLDJww</a></li>
  	<li><a href="https://github.com/logicappsio">https://github.com/logicappsio</a></li>
@@ -59,13 +62,13 @@ So in fact it is pretty simple to ensure you will not get extinct, all it takes 
 </li>
  	<li>API Management
 <ul>
- 	<li><a href="https://azure.microsoft.com/en-us/documentation/articles/api-management-get-started/">https://azure.microsoft.com/en-us/documentation/articles/api-management-get-started/</a></li>
+ 	<li><a href="https://web.archive.org/web/20160826062326/https://azure.microsoft.com/en-us/documentation/articles/api-management-get-started/">https://azure.microsoft.com/en-us/documentation/articles/api-management-get-started/</a></li>
  	<li><a href="https://channel9.msdn.com/Search?term=api%20management#lang-en=en&amp;ch9Search">https://channel9.msdn.com/Search?term=api%20management#lang-en=en&amp;ch9Search</a></li>
 </ul>
 </li>
  	<li>Service Bus
 <ul>
- 	<li><a href="https://azure.microsoft.com/en-us/documentation/services/service-bus/">https://azure.microsoft.com/en-us/documentation/services/service-bus/</a></li>
+ 	<li><a href="https://web.archive.org/web/20161018051729/https://azure.microsoft.com/en-us/documentation/services/service-bus/">https://azure.microsoft.com/en-us/documentation/services/service-bus/</a></li>
  	<li><a href="https://channel9.msdn.com/Search?term=azure%20service%20bus#lang-en=en&amp;ch9Search">https://channel9.msdn.com/Search?term=azure%20service%20bus#lang-en=en&amp;ch9Search</a></li>
  	<li><a href="https://github.com/Azure-Samples/azure-servicebus-messaging-samples">https://github.com/Azure-Samples/azure-servicebus-messaging-samples</a></li>
 </ul>
@@ -81,7 +84,7 @@ So in fact it is pretty simple to ensure you will not get extinct, all it takes 
 </ul>
 &nbsp;
 
-If you are in Sydney Australia, please do check out the <a href="http://www.meetup.com/Sydney-Hybrid-Integration-Platform-User-Group/">Hybrid Integration Platform Usergroup</a> and feel free to join us for one of our meetups!
+If you are in Sydney Australia, please do check out the <a href="/link-unavailable/?url=http%3A%2F%2Fwww.meetup.com%2FSydney-Hybrid-Integration-Platform-User-Group%2F">Hybrid Integration Platform Usergroup</a> and feel free to join us for one of our meetups!
 
 Cheers
 

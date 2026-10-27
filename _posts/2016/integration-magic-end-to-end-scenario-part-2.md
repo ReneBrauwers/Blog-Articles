@@ -1,4 +1,7 @@
 ---
+title: 'Integration Magic &#8211; End-to-End Scenario part 2'
+date: 2016-12-20T23:35:00
+url: /2016/12/20/integration-magic-end-to-end-scenario-part-2/
 ID: 5171
 post_title: 'Integration Magic &#8211; End-to-End Scenario part 2'
 post_name: >
@@ -8,7 +11,7 @@ post_date: 2016-12-20 23:35:00
 layout: post
 link: >
   https://brauwers.azurewebsites.net/2016/12/20/integration-magic-end-to-end-scenario-part-2/
-published: true
+wp_published: true
 tags:
   - Step by step
 categories:
@@ -109,7 +112,7 @@ As such our Json request can be represented as follows:
 
 }
 
-Now that we know what the payload message looks like, we need to derive the Json schema. Well luckily for us, we can go to <a href="http://jsonschema.net/">JSONSchema.net </a>and generate a schema. J The generated schema, subsequently would be represented as
+Now that we know what the payload message looks like, we need to derive the Json schema. Well luckily for us, we can go to <a href="https://web.archive.org/web/20250429214855/https://jsonschema.net:443/">JSONSchema.net </a>and generate a schema. J The generated schema, subsequently would be represented as
 
 {
 
@@ -170,7 +173,7 @@ Once you’ve selected the compose action the following ‘Card’ will show up 
 
 <a href="https://blogbrauwersimages.blob.core.windows.net/images/uploads/2017/02/clip_image0241.png"><img style="background-image: none; padding-top: 0px; padding-left: 0px; margin: 0px; display: inline; padding-right: 0px; border: 0px;" title="clip_image024[1]" src="https://blogbrauwersimages.blob.core.windows.net/images/uploads/2017/02/clip_image0241_thumb.png" alt="clip_image024[1]" width="244" height="91" border="0" /></a>
 
-So how would you determine what this message would look like. Well the easiest way would be by using a tool such as SOAPUI which can generate a sample request message. In the <a href="http://blog.brauwers.nl/2016/11/30/no-more-excuses-protect-your-azure-soaprest-api-always-end-to-end-scenario-part-1/">previous post</a>, I’ve added a section which explains how to do this and in our scenario the soap request message looks as follow:
+So how would you determine what this message would look like. Well the easiest way would be by using a tool such as SOAPUI which can generate a sample request message. In the <a href="/2016/11/30/no-more-excuses-protect-your-azure-soaprest-api-always-end-to-end-scenario-part-1/">previous post</a>, I’ve added a section which explains how to do this and in our scenario the soap request message looks as follow:
 
 &lt;?xml version="1.0" encoding="UTF-8"?&gt;
 
@@ -205,13 +208,13 @@ Once you’ve selected the HTTP action the following ‘Card’ will show up on 
 
 <a href="https://blogbrauwersimages.blob.core.windows.net/images/uploads/2017/02/clip_image0271.png"><img style="background-image: none; padding-top: 0px; padding-left: 0px; margin: 0px; display: inline; padding-right: 0px; border: 0px;" title="clip_image027[1]" src="https://blogbrauwersimages.blob.core.windows.net/images/uploads/2017/02/clip_image0271_thumb.png" alt="clip_image027[1]" width="244" height="203" border="0" /></a>
 
-As you might remember the custom WCF Service which we are about to invoke uses URL Authorization using Azure Active Directory (see <a href="http://blog.brauwers.nl/2016/11/30/no-more-excuses-protect-your-azure-soaprest-api-always-end-to-end-scenario-part-1/">previous post</a>) and as such requires any (POST) request to be authenticated. Long story short; One of the nice things of the HTTP action is that it makes it a breeze invoking web-services even if they require authentication, all we need to do is configure the action correctly and this is done by expanding the advanced options of the HTTP Card, which will allow us to do so.
+As you might remember the custom WCF Service which we are about to invoke uses URL Authorization using Azure Active Directory (see <a href="/2016/11/30/no-more-excuses-protect-your-azure-soaprest-api-always-end-to-end-scenario-part-1/">previous post</a>) and as such requires any (POST) request to be authenticated. Long story short; One of the nice things of the HTTP action is that it makes it a breeze invoking web-services even if they require authentication, all we need to do is configure the action correctly and this is done by expanding the advanced options of the HTTP Card, which will allow us to do so.
 
 1. The Method which we need to select is ‘POST’ as we will be posting the soap request to the customer WCF service.
 
 <a href="https://blogbrauwersimages.blob.core.windows.net/images/uploads/2017/02/clip_image0281.png"><img style="background-image: none; padding-top: 0px; padding-left: 0px; margin: 0px; display: inline; padding-right: 0px; border: 0px;" title="clip_image028[1]" src="https://blogbrauwersimages.blob.core.windows.net/images/uploads/2017/02/clip_image0281_thumb.png" alt="clip_image028[1]" width="244" height="56" border="0" /></a>
 
-2. The Uri sections allows us to enter the Request URL of the web-service. In our case that would be <a href="https://demo-apis.azurewebsites.net/Customers.svc">https://demo-apis.azurewebsites.net/Customers.svc</a>
+2. The Uri sections allows us to enter the Request URL of the web-service. In our case that would be <a href="/link-unavailable/?url=https%3A%2F%2Fdemo-apis.azurewebsites.net%2FCustomers.svc">https://demo-apis.azurewebsites.net/Customers.svc</a>
 
 <a href="https://blogbrauwersimages.blob.core.windows.net/images/uploads/2017/02/clip_image029.png"><img style="background-image: none; padding-top: 0px; padding-left: 0px; margin: 0px; display: inline; padding-right: 0px; border: 0px;" title="clip_image029" src="https://blogbrauwersimages.blob.core.windows.net/images/uploads/2017/02/clip_image029_thumb.png" alt="clip_image029" width="244" height="51" border="0" /></a>
 
@@ -320,7 +323,7 @@ The xpath expression in our case would be:
 
 /*[local-name()="Envelope"]/*[local-name()="Body"]/*[local-name()="GetCustomersResponse"]/*[local-name()="GetCustomersResult"]/*
 
-Easiest way to test this xpath expression, would be by using the response message we extracted when we tested our logic app earlier and subsequently use an online tool <a href="http://www.freeformatter.com/xpath-tester.html">to test the xpath expression</a>.
+Easiest way to test this xpath expression, would be by using the response message we extracted when we tested our logic app earlier and subsequently use an online tool <a href="https://web.archive.org/web/20260726205333/https://www.freeformatter.com/xpath-tester.html">to test the xpath expression</a>.
 
 Now that we have our xpath expression, we can use it in the following Logic App Expression
 
@@ -416,9 +419,9 @@ Once you’ve selected the HTTP action the following ‘Card’ will show up on 
 
 <a href="https://blogbrauwersimages.blob.core.windows.net/images/uploads/2017/02/clip_image0611.png"><img style="background-image: none; padding-top: 0px; padding-left: 0px; margin: 0px; display: inline; padding-right: 0px; border: 0px;" title="clip_image061[1]" src="https://blogbrauwersimages.blob.core.windows.net/images/uploads/2017/02/clip_image0611_thumb.png" alt="clip_image061[1]" width="244" height="79" border="0" /></a>
 
-2. The Uri sections allows us to enter the Request URL of the web-service. In our case that would be <a href="http://v0.postcodeapi.com.au/suburbs.json?postcode=XXXXX">http://v0.postcodeapi.com.au/suburbs.json?postcode=XXXXX</a> where XXXX is a dynamic parameter, to be more specific; we will be using the PostCode field which we extracted in step 5. In order to use this PostCode value we will
+2. The Uri sections allows us to enter the Request URL of the web-service. In our case that would be <a href="https://web.archive.org/web/20231130213643/http://v0.postcodeapi.com.au/suburbs.json?postcode=XXXXX">http://v0.postcodeapi.com.au/suburbs.json?postcode=XXXXX</a> where XXXX is a dynamic parameter, to be more specific; we will be using the PostCode field which we extracted in step 5. In order to use this PostCode value we will
 
-a. Enter the value <a href="http://v0.postcodeapi.com.au/suburbs.json?postcode=">http://v0.postcodeapi.com.au/suburbs.json?postcode=</a> in the Uri field.
+a. Enter the value <a href="https://web.archive.org/web/20260609215404/http://v0.postcodeapi.com.au/suburbs.json?postcode=">http://v0.postcodeapi.com.au/suburbs.json?postcode=</a> in the Uri field.
 
 b. Select the dynamic content ‘Outputs’ from the Extracted xml
 
@@ -432,12 +435,12 @@ Note: In a future release of logic-apps this experience will be improved and add
 
 <a href="https://blogbrauwersimages.blob.core.windows.net/images/uploads/2017/02/clip_image064.png"><img style="background-image: none; padding-top: 0px; padding-left: 0px; margin: 0px; display: inline; padding-right: 0px; border: 0px;" title="clip_image064" src="https://blogbrauwersimages.blob.core.windows.net/images/uploads/2017/02/clip_image064_thumb.png" alt="clip_image064" width="244" height="38" border="0" /></a>
 
-4. Once in code view, find the code block which contains the <a href="http://v0.postcodeapi.com.au/suburbs.json?postcode=">http://v0.postcodeapi.com.au/suburbs.json?postcode=</a> url. Once found we simple modify the code from
-<a href="http://v0.postcodeapi.com.au/suburbs.json?postcode=@%7boutputs('Extracted_xml')%7d">http://v0.postcodeapi.com.au/suburbs.json?postcode=@{outputs('Extracted_xml')}</a>
+4. Once in code view, find the code block which contains the <a href="https://web.archive.org/web/20260609215404/http://v0.postcodeapi.com.au/suburbs.json?postcode=">http://v0.postcodeapi.com.au/suburbs.json?postcode=</a> url. Once found we simple modify the code from
+<a href="/link-unavailable/?url=http%3A%2F%2Fv0.postcodeapi.com.au%2Fsuburbs.json%3Fpostcode%3D%40%257boutputs%28'Extracted_xml')%7d">http://v0.postcodeapi.com.au/suburbs.json?postcode=@{outputs('Extracted_xml')}</a>
 
 to
 
-<a href="http://v0.postcodeapi.com.au/suburbs.json?postcode=@%7boutputs('Extracted_xml').PostCode%7d">http://v0.postcodeapi.com.au/suburbs.json?postcode=@{outputs('Extracted_xml').PostCode}</a>
+<a href="/link-unavailable/?url=http%3A%2F%2Fv0.postcodeapi.com.au%2Fsuburbs.json%3Fpostcode%3D%40%257boutputs%28'Extracted_xml').PostCode%7d">http://v0.postcodeapi.com.au/suburbs.json?postcode=@{outputs('Extracted_xml').PostCode}</a>
 
 <a href="https://blogbrauwersimages.blob.core.windows.net/images/uploads/2017/02/clip_image066.jpg"><img style="background-image: none; padding-top: 0px; padding-left: 0px; margin: 0px; display: inline; padding-right: 0px; border: 0px;" title="clip_image066" src="https://blogbrauwersimages.blob.core.windows.net/images/uploads/2017/02/clip_image066_thumb.jpg" alt="clip_image066" width="244" height="108" border="0" /></a>
 
@@ -568,7 +571,7 @@ Note: In a future release of logic-apps this experience will be improved and add
 <h5>Test</h5>
 Now that we’ve composed a message containing both the WCF and PostCode API data, it would be another good time to go ahead and test if everything works and this time we will be testing our logic app using Fiddler
 
-1. Download <a href="http://www.telerik.com/fiddler">Fiddler</a>, if you already have.
+1. Download <a href="https://web.archive.org/web/20261021010523/https://www.telerik.com/fiddler">Fiddler</a>, if you already have.
 
 2. Go to you logic app and expand the Request Trigger and press on the “Copy Icon”, this will copy the logic app endpoint to your clipboard.
 
@@ -736,7 +739,7 @@ c. In the body we will add the dynamic content which relates to documents which 
 
 <a href="https://blogbrauwersimages.blob.core.windows.net/images/uploads/2017/02/clip_image117.jpg"><img style="background-image: none; padding-top: 0px; padding-left: 0px; margin: 0px; display: inline; padding-right: 0px; border: 0px;" title="clip_image117" src="https://blogbrauwersimages.blob.core.windows.net/images/uploads/2017/02/clip_image117_thumb.jpg" alt="clip_image117" width="244" height="170" border="0" /></a>
 <h5>Test</h5>
-Well now that we have implemented the complete flow, it is time to do our final test and once again we will be using <a href="http://www.telerik.com/fiddler">Fiddler</a> to perform this test.
+Well now that we have implemented the complete flow, it is time to do our final test and once again we will be using <a href="https://web.archive.org/web/20261021010523/https://www.telerik.com/fiddler">Fiddler</a> to perform this test.
 
 1. Open fiddler, and select the composer tab
 

@@ -1,4 +1,7 @@
 ---
+title: 'Tips &#038; Tricks: Cost savings using Logic Apps'
+date: 2017-03-30T20:25:00
+url: /2017/03/30/tips-tricks-cost-savings-using-logic-apps/
 ID: 5417
 post_title: 'Tips &#038; Tricks: Cost savings using Logic Apps'
 post_name: >
@@ -8,7 +11,7 @@ post_date: 2017-03-30 20:25:00
 layout: post
 link: >
   https://brauwers.azurewebsites.net/2017/03/30/tips-tricks-cost-savings-using-logic-apps/
-published: true
+wp_published: true
 tags:
   - Azure DB
   - Cost Savings

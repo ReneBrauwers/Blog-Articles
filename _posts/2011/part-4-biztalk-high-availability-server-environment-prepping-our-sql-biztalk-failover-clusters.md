@@ -1,4 +1,7 @@
 ---
+title: 'Part 4: BizTalk High Availability Server Environment &#8211; Prepping our SQL &#038; BizTalk Failover Clusters'
+date: 2011-04-18T20:32:00
+url: /2011/04/18/part-4-biztalk-high-availability-server-environment-prepping-our-sql-biztalk-failover-clusters/
 ID: 8
 post_title: 'Part 4: BizTalk High Availability Server Environment &#8211; Prepping our SQL &#038; BizTalk Failover Clusters'
 post_name: >
@@ -8,7 +11,7 @@ post_date: 2011-04-18 20:32:00
 layout: post
 link: >
   https://brauwers.azurewebsites.net/2011/04/18/part-4-biztalk-high-availability-server-environment-prepping-our-sql-biztalk-failover-clusters/
-published: true
+wp_published: true
 tags:
   - BizTalk
   - Failover Clustering
@@ -156,7 +159,7 @@ Check the results and click on Close
 
 <a href="/assets/images/uploads/2011/04/image80.png"><img style="background-image: none; margin: 0px; padding-left: 0px; padding-right: 0px; display: inline; padding-top: 0px; border-width: 0px;" title="image" alt="image" src="/assets/images/uploads/2011/04/image_thumb80.png" width="244" height="180" border="0" /></a>
 <h3>Adding the required Features (MSMQ)</h3>
-<em><strong>Please note the following instructions (copied from : <a title="http://technet.microsoft.com/en-us/library/cc730960.aspx" href="http://technet.microsoft.com/en-us/library/cc730960.aspx">http://technet.microsoft.com/en-us/library/cc730960.aspx</a>) </strong></em>
+<em><strong>Please note the following instructions (copied from : <a title="http://technet.microsoft.com/en-us/library/cc730960.aspx" href="https://web.archive.org/web/20170305063146/https://technet.microsoft.com/en-us/library/cc730960.aspx">http://technet.microsoft.com/en-us/library/cc730960.aspx</a>) </strong></em>
 <blockquote>
 <h4><span style="font-size: xx-small;">Setting Permissions in Active Directory Domain Services Before Installing the Routing Service or the Directory Service Integration Features of Message Queuing</span></h4>
 <span style="font-size: xx-small;">The successful installation of the Routing Service feature on a Windows Server 2008 R2 computer that is not a domain controller, or the Directory Service Integration feature of Message Queuing on a Windows Server 2008 R2 computer that is a domain controller requires that specific permissions are set in Active Directory Domain Services. Follow these steps to grant the appropriate permissions in Active Directory Domain Services before installing these features.</span>
@@ -226,7 +229,7 @@ At this point we will have prepped our File Server and all of of our BizTalk and
 
 As we are running our servers in a Virtual Environment and we don’t have dedicated storage servers we will need to ‘emulate’ this. In order to do this I’ve decided to use the iSCSI Target software which is part of the Windows Server 2008 Storage Server.
 
-Please note that this is not part of the Windows Server 2008 .iso, you will actually need to download it from MSDN (<a title="http://msdn.microsoft.com/en-us/subscriptions/downloads/default.aspx" href="http://msdn.microsoft.com/en-us/subscriptions/downloads/default.aspx">http://msdn.microsoft.com/en-us/subscriptions/downloads/default.aspx</a>)
+Please note that this is not part of the Windows Server 2008 .iso, you will actually need to download it from MSDN (<a title="http://msdn.microsoft.com/en-us/subscriptions/downloads/default.aspx" href="https://web.archive.org/web/20170903034145/https://msdn.microsoft.com/en-us/subscriptions/downloads/default.aspx">http://msdn.microsoft.com/en-us/subscriptions/downloads/default.aspx</a>)
 
 <a href="/assets/images/uploads/2011/04/image89.png"><img style="background-image: none; margin: 0px; padding-left: 0px; padding-right: 0px; display: inline; padding-top: 0px; border-width: 0px;" title="image" alt="image" src="/assets/images/uploads/2011/04/image_thumb89.png" width="244" height="109" border="0" /></a>
 

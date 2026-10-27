@@ -1,4 +1,7 @@
 ---
+title: 'Part 7 &#8211; BizTalk High Availability Server Environment –BizTalk 2010 Installation, Configuration and Clustering'
+date: 2011-05-31T00:02:06
+url: /2011/05/31/part-7-biztalk-high-availability-server-environment-biztalk-2010-installation-configuration-and-clustering/
 ID: 11
 post_title: 'Part 7 &#8211; BizTalk High Availability Server Environment –BizTalk 2010 Installation, Configuration and Clustering'
 post_name: >
@@ -8,7 +11,7 @@ post_date: 2011-05-31 00:02:06
 layout: post
 link: >
   https://brauwers.azurewebsites.net/2011/05/31/part-7-biztalk-high-availability-server-environment-biztalk-2010-installation-configuration-and-clustering/
-published: true
+wp_published: true
 tags:
   - BizTalk
   - BizTalk Clustering
@@ -30,7 +33,7 @@ categories:
 So, finally we’ve reached the part in which we will actually install, configure and cluster BizTalk Server 2010. As mentioned in my previous posts; I assume you’ve followed all steps mentioned in the previous posts. Okay let’s get started!
 <h2></h2>
 <h2>Verify that MSDTC is configured</h2>
-Before we can go ahead with the actual installation, we need to make sure that we’ve configured our MSDTC correctly. In order to do so we will need the following tool dtcping.exe, which can be downloaded <a href="http://www.microsoft.com/downloads/en/details.aspx?FamilyID=5e325025-4dcd-4658-a549-1d549ac17644" target="_blank" rel="noopener noreferrer">here</a>. Once you’ve downloaded dtcping, copy it over to all servers involved, in my case that would be
+Before we can go ahead with the actual installation, we need to make sure that we’ve configured our MSDTC correctly. In order to do so we will need the following tool dtcping.exe, which can be downloaded <a href="/link-unavailable/?url=http%3A%2F%2Fwww.microsoft.com%2Fdownloads%2Fen%2Fdetails.aspx%3FFamilyID%3D5e325025-4dcd-4658-a549-1d549ac17644" target="_blank" rel="noopener noreferrer">here</a>. Once you’ve downloaded dtcping, copy it over to all servers involved, in my case that would be
 <ul>
 	<li>SQL001</li>
 	<li>SQL002</li>
@@ -236,7 +239,7 @@ On the ‘Component Installation’ screen, check all items you can <img class="
 <blockquote>I was able to check all with exception of; <em>Developer Tools and SDK, MQSeries Agent, Windows Sharepoint Services Adapter</em> as I did not install the pre-requisites for them.</blockquote>
 <a href="/assets/images/uploads/2011/05/image240.png"><img style="background-image: none; margin: 0px; padding-left: 0px; padding-right: 0px; display: inline; padding-top: 0px; border-width: 0px;" title="image" alt="image" src="/assets/images/uploads/2011/05/image_thumb240.png" width="244" height="199" border="0" /></a>
 
-On the ‘Redistributable Prerequisites’ screen, select your preferred option. I’ve selected ‘Automatically install the redistributable prerequisites from a CAB file’ which I downloaded previously (click <a href="http://sandroaspbiztalkblog.wordpress.com/2010/10/15/biztalk-2010-prerequisite-redistributable-cab-files/" target="_blank" rel="noopener noreferrer">here</a>) and press ‘Next’ <a href="/assets/images/uploads/2011/05/image241.png"><img style="background-image: none; margin: 0px; padding-left: 0px; padding-right: 0px; display: inline; padding-top: 0px; border-width: 0px;" title="image" alt="image" src="/assets/images/uploads/2011/05/image_thumb241.png" width="244" height="197" border="0" /></a>
+On the ‘Redistributable Prerequisites’ screen, select your preferred option. I’ve selected ‘Automatically install the redistributable prerequisites from a CAB file’ which I downloaded previously (click <a href="https://web.archive.org/web/20161112033511/https://sandroaspbiztalkblog.wordpress.com/2010/10/15/biztalk-2010-prerequisite-redistributable-cab-files/" target="_blank" rel="noopener noreferrer">here</a>) and press ‘Next’ <a href="/assets/images/uploads/2011/05/image241.png"><img style="background-image: none; margin: 0px; padding-left: 0px; padding-right: 0px; display: inline; padding-top: 0px; border-width: 0px;" title="image" alt="image" src="/assets/images/uploads/2011/05/image_thumb241.png" width="244" height="197" border="0" /></a>
 
 On the ‘Summary Screen’ press ‘Install’ <a href="/assets/images/uploads/2011/05/image242.png"><img style="background-image: none; margin: 0px; padding-left: 0px; padding-right: 0px; display: inline; padding-top: 0px; border-width: 0px;" title="image" alt="image" src="/assets/images/uploads/2011/05/image_thumb242.png" width="244" height="198" border="0" /></a>
 

@@ -1,4 +1,7 @@
 ---
+title: 'Part 6: BizTalk High Availability Server Environment–BizTalk 2010 Failover Cluster Creation'
+date: 2011-05-14T01:44:04
+url: /2011/05/14/part-6-biztalk-high-availability-server-environmentbiztalk-2010-failover-cluster-creation/
 ID: 10
 post_title: 'Part 6: BizTalk High Availability Server Environment–BizTalk 2010 Failover Cluster Creation'
 post_name: >
@@ -8,7 +11,7 @@ post_date: 2011-05-14 01:44:04
 layout: post
 link: >
   https://brauwers.azurewebsites.net/2011/05/14/part-6-biztalk-high-availability-server-environmentbiztalk-2010-failover-cluster-creation/
-published: true
+wp_published: true
 tags:
   - BizTalk
   - BizTalk Application Pool
@@ -24,8 +27,8 @@ categories:
 ---
 <p>Part 5 covered setting up our SQL-Server Cluster, so now it’s time to do the same but this time for our BizTalk 2010 Server environment.</p>
 <p>Once again this post assumes you’ve followed all steps mentioned in the previous posts. All right let’s get on with it <img class="wlEmoticon wlEmoticon-smile" alt="Smile" src="/assets/images/uploads/2011/05/wlEmoticon-smile1.png" /></p>
-<p>Please note the following with regards to MSMQ: <a title="http://technet.microsoft.com/en-us/library/cc730960.aspx" href="http://technet.microsoft.com/en-us/library/cc730960.aspx">http://technet.microsoft.com/en-us/library/cc730960.aspx</a></p>
-<blockquote><p>In case you’ve already installed the MSMQ feature as instructed in part 4, please uninstall the MSMQ feature and then apply the AD modifications as mentioned here: <a title="http://technet.microsoft.com/en-us/library/cc730960.aspx" href="http://technet.microsoft.com/en-us/library/cc730960.aspx">http://technet.microsoft.com/en-us/library/cc730960.aspx</a> . . Once done, add the MSMQ feature again as mentioned in part 4. Sorry for the inconvenience, but this part was unintended left out in the original part 4 (The current version of Part 4 has been updated)</p></blockquote>
+<p>Please note the following with regards to MSMQ: <a title="http://technet.microsoft.com/en-us/library/cc730960.aspx" href="https://web.archive.org/web/20170305063146/https://technet.microsoft.com/en-us/library/cc730960.aspx">http://technet.microsoft.com/en-us/library/cc730960.aspx</a></p>
+<blockquote><p>In case you’ve already installed the MSMQ feature as instructed in part 4, please uninstall the MSMQ feature and then apply the AD modifications as mentioned here: <a title="http://technet.microsoft.com/en-us/library/cc730960.aspx" href="https://web.archive.org/web/20170305063146/https://technet.microsoft.com/en-us/library/cc730960.aspx">http://technet.microsoft.com/en-us/library/cc730960.aspx</a> . . Once done, add the MSMQ feature again as mentioned in part 4. Sorry for the inconvenience, but this part was unintended left out in the original part 4 (The current version of Part 4 has been updated)</p></blockquote>
 <h2>Preparing our BizTalk Cluster</h2>
 <p>Before we can actually start with Clustering BizTalk Server, we need to perform all kinds of other things, like:</p>
 <ul>
@@ -74,7 +77,7 @@ categories:
 <p><a href="/assets/images/uploads/2011/05/image135.png"><img style="margin: 0px;padding-left: 0px;padding-right: 0px;padding-top: 0px;border-width: 0px" title="image" alt="image" src="/assets/images/uploads/2011/05/image_thumb135.png" width="244" height="61" border="0" /></a></p>
 <p>Change the following settings and once done click on ‘ok’:</p>
 <ul>
-<li>Net Framework Version: v4.0 (if this version is not available; stop your horses and go fetch the .Net 4.0 Framework <a title="http://www.microsoft.com/downloads/en/confirmation.aspx?displaylang=en&amp;FamilyID=0a391abd-25c1-4fc0-919f-b21f31ab88b7" href="http://www.microsoft.com/downloads/en/confirmation.aspx?displaylang=en&amp;FamilyID=0a391abd-25c1-4fc0-919f-b21f31ab88b7" target="_blank" rel="noopener noreferrer">here</a>)</li>
+<li>Net Framework Version: v4.0 (if this version is not available; stop your horses and go fetch the .Net 4.0 Framework <a title="http://www.microsoft.com/downloads/en/confirmation.aspx?displaylang=en&amp;FamilyID=0a391abd-25c1-4fc0-919f-b21f31ab88b7" href="/link-unavailable/?url=http%3A%2F%2Fwww.microsoft.com%2Fdownloads%2Fen%2Fconfirmation.aspx%3Fdisplaylang%3Den%26amp%3BFamilyID%3D0a391abd-25c1-4fc0-919f-b21f31ab88b7" target="_blank" rel="noopener noreferrer">here</a>)</li>
 <li>Enable 32-Bit Applications: True</li>
 </ul>
 <p><a href="/assets/images/uploads/2011/05/image_thumb136.png"><img style="margin: 0px;padding-left: 0px;padding-right: 0px;padding-top: 0px;border-width: 0px" title="image" alt="image" src="/assets/images/uploads/2011/05/image_thumb136.png" width="201" height="244" border="0" /></a></p>
@@ -240,7 +243,7 @@ IP: 192.168.8.33</p>
 <p><a href="/assets/images/uploads/2011/05/image180.png"><img style="margin: 0px;padding-left: 0px;padding-right: 0px;padding-top: 0px;border-width: 0px" title="image" alt="image" src="/assets/images/uploads/2011/05/image_thumb180.png" width="244" height="62" border="0" /></a></p>
 <p>The ‘Add Custom HTTP Response Header’ windows will appear. In this window we will add a custom header which will ensure that all trafic redirected to our BizTalk Cluster Group will point to the Localhost. In my case I filled out the following information. Once done press ok.</p>
 <blockquote><p>Name: BTS2010<br />
-Value: <a href="http://localhost">http://localhost</a></p>
+Value: <a href="https://web.archive.org/web/20250408014520/http://localhost">http://localhost</a></p>
 <p><a href="/assets/images/uploads/2011/05/image181.png"><img style="margin: 0px;padding-left: 0px;padding-right: 0px;padding-top: 0px;border-width: 0px" title="image" alt="image" src="/assets/images/uploads/2011/05/image_thumb181.png" width="244" height="138" border="0" /></a></p></blockquote>
 <p>Now go to your second server (in my case BTS002) and perform the above mentioned step ‘Adding HTTP Response Header’. Once done; return to your main server (BTS001)</p>
 <h4>Create a Generic-Script resource for IIS Clustering</h4>
@@ -450,7 +453,7 @@ Value: <a href="http://localhost">http://localhost</a></p>
 <pre style="background-color: #fbfbfb;margin: 0em;width: 100%;font-family: consolas,'Courier New',courier,monospace;font-size: 10px"><span style="color: #0000ff">Function</span> StopWebSite()</pre>
 <pre style="background-color: #fbfbfb;margin: 0em;width: 100%;font-family: consolas,'Courier New',courier,monospace;font-size: 10px"></pre>
 <pre style="background-color: #fbfbfb;margin: 0em;width: 100%;font-family: consolas,'Courier New',courier,monospace;font-size: 10px">    <span style="color: #0000ff">Dim</span> ahwriter, sitesSection, sitesSectionCollection, siteSection, index, siteMethods, startMethod, executeMethod, autoStartProperty</pre>
-<pre style="background-color: #fbfbfb;margin: 0em;width: 100%;font-family: consolas,'Courier New',courier,monospace;font-size: 10px">    <span style="color: #0000ff">Set</span> ahwriter = <span style="color: #0000ff">CreateObject</span>("<span style="color: #8b0000">Microsoft <a href="http://biturlz.com/gTiKuOd">achat viagra 50</a>.ApplicationHost.WritableAdminManager</span>")</pre>
+<pre style="background-color: #fbfbfb;margin: 0em;width: 100%;font-family: consolas,'Courier New',courier,monospace;font-size: 10px">    <span style="color: #0000ff">Set</span> ahwriter = <span style="color: #0000ff">CreateObject</span>("<span style="color: #8b0000">Microsoft.ApplicationHost.WritableAdminManager</span>")</pre>
 <pre style="background-color: #fbfbfb;margin: 0em;width: 100%;font-family: consolas,'Courier New',courier,monospace;font-size: 10px">    <span style="color: #0000ff">Set</span> sitesSection = ahwriter.GetAdminSection(SITES_SECTION_NAME, CONFIG_APPHOST_ROOT)</pre>
 <pre style="background-color: #fbfbfb;margin: 0em;width: 100%;font-family: consolas,'Courier New',courier,monospace;font-size: 10px">    <span style="color: #0000ff">Set</span> sitesSectionCollection = sitesSection.Collection</pre>
 <pre style="background-color: #fbfbfb;margin: 0em;width: 100%;font-family: consolas,'Courier New',courier,monospace;font-size: 10px"></pre>
@@ -580,7 +583,7 @@ Value: <a href="http://localhost">http://localhost</a></p>
 <pre style="background-color: #fbfbfb;margin: 0em;width: 100%;font-family: consolas,'Courier New',courier,monospace;font-size: 10px"></pre>
 <pre style="background-color: #fbfbfb;margin: 0em;width: 100%;font-family: consolas,'Courier New',courier,monospace;font-size: 10px"><span style="color: #0000ff">End</span> <span style="color: #0000ff">Function</span></pre>
 <pre style="background-color: #fbfbfb;margin: 0em;width: 100%;font-family: consolas,'Courier New',courier,monospace;font-size: 10px">'&lt;<span style="color: #0000ff">end</span> script sample&gt;</pre>
-<p>script source credits: <a title="http://support.microsoft.com/kb/970759/" href="http://support.microsoft.com/kb/970759/">http://support.microsoft.com/kb/970759/</a></p>
+<p>script source credits: <a title="http://support.microsoft.com/kb/970759/" href="https://web.archive.org/web/20150131041830/http://support.microsoft.com/kb/970759">http://support.microsoft.com/kb/970759/</a></p>
 <p>Once you’ve copied the code into notepad, look for the following two lines</p>
 <blockquote><p>SITE_NAME = &#8220;Default Web Site&#8221;</p>
 <p>APP_POOL_NAME = &#8220;DefaultAppPool&#8221;</p></blockquote>

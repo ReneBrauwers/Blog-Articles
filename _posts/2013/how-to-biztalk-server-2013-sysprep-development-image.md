@@ -1,4 +1,7 @@
 ---
+title: 'How to: BizTalk Server 2013 Sysprep Development Image'
+date: 2013-07-30T20:28:00
+url: /2013/07/30/how-to-biztalk-server-2013-sysprep-development-image/
 ID: 2832
 post_title: 'How to: BizTalk Server 2013 Sysprep Development Image'
 post_name: >
@@ -8,7 +11,7 @@ post_date: 2013-07-30 20:28:00
 layout: post
 link: >
   https://brauwers.azurewebsites.net/2013/07/30/how-to-biztalk-server-2013-sysprep-development-image/
-published: true
+wp_published: true
 tags:
   - BizTalk
   - BizTalk 2013
@@ -19,7 +22,7 @@ categories:
 ---
 <p>&nbsp;</p>
 <p>So you want to sysprep your BizTalk Server 2013 Development Environment? Well this might just be your lucky day. This post will detail the steps required in order for you to create your sysprep BizTalk Server 2013 Development environment.</p>
-<blockquote><p><strong>Update2! Due to several requests; I&#8217;ve created a zip file containing all required script files and a document highlighting the required steps in order to sysprep an BizTalk Server 2013 (Standalone) image. You can download it <a href="http://blog.brauwers.nl/?attachment_id=2982">here</a></strong></p>
+<blockquote><p><strong>Update2! Due to several requests; I&#8217;ve created a zip file containing all required script files and a document highlighting the required steps in order to sysprep an BizTalk Server 2013 (Standalone) image. You can download it <a href="/">here</a></strong></p>
 <p>Update! I&#8217;ve made a small change to the sysprep.xml file; fixing an issue with regards that you had would be prompted to agree with the fact that you were changing the powershell execution policy; it now includes the additional switch -force which will take care of this prompt. Besides this I added an additional script which will remove the product key and will prompt you at then end to enter a new product key. Please note that this last functionality is by default uncommented in the sysprep.xml file</p></blockquote>
 <h2>Ingredients</h2>
 <p>There is actually only one pre-requisite and it consists of the that you have already ‘build’ your own (Single-Server) BizTalk Server 2013 Development Environment; in short a <b><i><span style="text-decoration: underline">clean, lean and mean</span> </i></b>VM which contains:</p>
@@ -30,7 +33,7 @@ categories:
 <li>BizTalk Server 2013 <b><span style="text-decoration: underline">installed and configured</span></b></li>
 <li>Other tools you might find handy</li>
 </ol>
-<p>In case you don’t have an Environment available or need assistance creating one; I suggest to check out this <a href="http://sandroaspbiztalkblog.wordpress.com/2013/05/05/biztalk-2013-installation-and-configuration-important-considerations-before-set-up-the-server-part-1/">link</a> which will redirect you to Sandro Pereira BizTalk Blog.</p>
+<p>In case you don’t have an Environment available or need assistance creating one; I suggest to check out this <a href="https://web.archive.org/web/20161112031433/https://sandroaspbiztalkblog.wordpress.com/2013/05/05/biztalk-2013-installation-and-configuration-important-considerations-before-set-up-the-server-part-1/">link</a> which will redirect you to Sandro Pereira BizTalk Blog.</p>
 <p>&nbsp;</p>
 <h2>BizTalk Server Un-configuration</h2>
 <p>This chapter will explain how to export the current BizTalk Server Configuration settings; once these settings have been exported we will proceed with a complete un-configuration of BizTalk Server (Including dropping all BizTalk Databases). If you already know how to do this, feel free to skip this chapter, if not well read on…</p>
@@ -106,7 +109,7 @@ categories:
 <h2>Hacking the BizTalk Export File</h2>
 <p>This chapter will explain how to manually change the settings in the exported BizTalk configuration file. If you already know how to do this, feel free to skip this chapter, if not well read on…</p>
 <p>&nbsp;</p>
-<p>1. Before you un-configured your BizTalk Server you’ve exported the configuration settings, well now it’s time to open this file and make some modifications to it. Below you will see a ‘Large’ screenshot highlighting the pieces which should be modified and below the image the changes are highlighter per line number. (or alternatively download my exported <a title="http://blog.brauwers.nl/?attachment_id=2192" href="http://blog.brauwers.nl/?attachment_id=2192" target="_blank" rel="noopener noreferrer">configuration settings</a>)</p>
+<p>1. Before you un-configured your BizTalk Server you’ve exported the configuration settings, well now it’s time to open this file and make some modifications to it. Below you will see a ‘Large’ screenshot highlighting the pieces which should be modified and below the image the changes are highlighter per line number. (or alternatively download my exported <a title="http://blog.brauwers.nl/?attachment_id=2192" href="/" target="_blank" rel="noopener noreferrer">configuration settings</a>)</p>
 <hr align="left" size="1" width="33%" />
 <p><a name="_msocom_1"></a></p>
 <p><a href="/assets/images/uploads/2013/07/image.png"><img style="padding-top: 0px;padding-left: 0px;margin: 0px;padding-right: 0px;border: 0px" title="image" alt="image" src="/assets/images/uploads/2013/07/image_thumb.png" width="65" height="244" border="0" /></a></p>
@@ -176,16 +179,16 @@ line 211: Enter the password belonging to the service account mentioned in line 
 <h2>Golden Image</h2>
 <p>Well we are almost done, however now we need to care of a mechanism which will ensure that our BizTalk can be automagically configured, and for this we will use the all so mighty and sometimes underrated Windows Task Scheduler!</p>
 <p>&nbsp;</p>
-<p>Well the following trick I picked up in this <span style="text-decoration: underline"><a href="http://jeremiedevillard.wordpress.com/2013/05/06/one-touch-biztalk-configuration-in-windows-azure-virtual-machine/" target="_blank" rel="noopener noreferrer">blog-post</a></span>, and I used the same trick in my last blog-post. This trick involves the following actions which you need to perform</p>
+<p>Well the following trick I picked up in this <span style="text-decoration: underline"><a href="https://web.archive.org/web/20251127122955/https://jeremiedevillard.wordpress.com/2013/05/06/one-touch-biztalk-configuration-in-windows-azure-virtual-machine/" target="_blank" rel="noopener noreferrer">blog-post</a></span>, and I used the same trick in my last blog-post. This trick involves the following actions which you need to perform</p>
 <p>&nbsp;</p>
-<p>1. Download and unpack <a href="http://blog.brauwers.nl/?attachment_id=2172" target="_blank" rel="noopener noreferrer">this archive</a></p>
+<p>1. Download and unpack <a href="/" target="_blank" rel="noopener noreferrer">this archive</a></p>
 <p>&nbsp;</p>
 <p>2. Copy the contents to c:Program Files (x86)Microsoft BizTalk Server 2013</p>
 <p><a href="/assets/images/uploads/2013/07/clip_image0026.jpg"><img style="padding-top: 0px;padding-left: 0px;margin: 0px;padding-right: 0px;border: 0px" title="clip_image002[6]" alt="clip_image002[6]" src="/assets/images/uploads/2013/07/clip_image0026_thumb.jpg" width="244" height="115" border="0" /></a></p>
 <p>&nbsp;</p>
 <p>3. Create the following directory c:Scripts</p>
 <p>&nbsp;</p>
-<p>4. Download and unpack <a href="http://blog.brauwers.nl/?attachment_id=2842" target="_blank" rel="noopener noreferrer">this archive</a> and copy the contents to the newly created directory c:Scripts</p>
+<p>4. Download and unpack <a href="/" target="_blank" rel="noopener noreferrer">this archive</a> and copy the contents to the newly created directory c:Scripts</p>
 <p>&nbsp;</p>
 <p>5. No press the windows key, type ‘Scheduled Tasks’ and double click the application</p>
 <p><a href="/assets/images/uploads/2013/07/clip_image0046.jpg"><img style="padding-top: 0px;padding-left: 0px;margin: 0px;padding-right: 0px;border: 0px" title="clip_image004[6]" alt="clip_image004[6]" src="/assets/images/uploads/2013/07/clip_image0046_thumb.jpg" width="244" height="109" border="0" /></a></p>
@@ -241,12 +244,12 @@ Line 125: Enter the name of your Time Zone</p></blockquote>
 <p>&nbsp;</p>
 <p>Enjoy!</p>
 <ul>
-<li><a href="http://stretchedclub.accountant/">generic levitra</a></li>
-<li><a href="http://kamerakaufen.cricket/">website</a></li>
-<li><a href="http://cilaisgenericcialisfordailyuse20mg.accountant">viagra legal buy</a></li>
-<li><a href="http://sildenafilervaringen.men/">buy sildenafil online</a></li>
-<li><a href="http://genericforviagra.accountant/">generic cialis pas cher</a></li>
-<li><a href="http://sildenafil100mgblab.accountant/">viagra 50 mg 4 tabletten</a></li>
-<li><a href="http://sexyfeelingtabletsnamesmedicine.accountant/">view more</a></li>
-<li><a href="http://cheapestheretadalafil.org/">generic cialis 5mg daily</a></li>
+<li><a href="/link-unavailable/?url=http%3A%2F%2Fstretchedclub.accountant%2F">generic levitra</a></li>
+<li><a href="/link-unavailable/?url=http%3A%2F%2Fkamerakaufen.cricket%2F">website</a></li>
+<li><a href="/link-unavailable/?url=http%3A%2F%2Fcilaisgenericcialisfordailyuse20mg.accountant">viagra legal buy</a></li>
+<li><a href="/link-unavailable/?url=http%3A%2F%2Fsildenafilervaringen.men%2F">buy sildenafil online</a></li>
+<li><a href="/link-unavailable/?url=http%3A%2F%2Fgenericforviagra.accountant%2F">generic cialis pas cher</a></li>
+<li><a href="/link-unavailable/?url=http%3A%2F%2Fsildenafil100mgblab.accountant%2F">viagra 50 mg 4 tabletten</a></li>
+<li><a href="/link-unavailable/?url=http%3A%2F%2Fsexyfeelingtabletsnamesmedicine.accountant%2F">view more</a></li>
+<li><a href="https://web.archive.org/web/20191216075349/https://cheapestheretadalafil.org/">generic cialis 5mg daily</a></li>
 </ul>
