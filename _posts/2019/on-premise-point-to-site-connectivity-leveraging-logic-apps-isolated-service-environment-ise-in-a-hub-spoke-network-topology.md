@@ -147,9 +147,29 @@ image below depicts the high-level infrastructure configuration as I have
 tested.</p>
 <!-- /wp:paragraph -->
 
-<!-- wp:image {"id":5478} -->
-<figure class="wp-block-image"><img src="https://blogbrauwersimages.blob.core.windows.net/images/uploads/2019/02/hl-overview-ise.png" alt="" class="wp-image-5478"/></figure>
-<!-- /wp:image -->
+```mermaid
+flowchart LR
+    subgraph OnPrem[On-premise]
+        L[Work laptop<br/>sample REST API]
+        H[Home server<br/>FTP server]
+    end
+    subgraph SubA[Subscription A]
+        subgraph Y[Hub VNET Y]
+            Y1[DMZ Subnet 10.1.0.0/29]
+            Y2[Workload Subnet 10.1.1.0/24]
+            GW[VPN Gateway Subnet 10.1.0.16/28<br/>VPN gateway]
+        end
+    end
+    subgraph SubB[Subscription B]
+        subgraph X[Spoke VNET X]
+            ISE[ISE Subnets 1-4<br/>10.1.3.0/27, 10.1.3.32/27,<br/>10.1.3.64/27, 10.1.3.96/27<br/>Integration Service Environment]
+        end
+    end
+    L <-- point-to-site tunnel --> GW
+    H <-- point-to-site tunnel --> GW
+    Y <-. peering .-> X
+```
+
 
 <!-- wp:paragraph -->
 <p>In
@@ -385,13 +405,9 @@ created to test my on-premise connectivity, leveraging the HTTP connector.
 Please note; the IP used ;-) </p>
 <!-- /wp:paragraph -->
 
-<!-- wp:image {"id":5480} -->
-<figure class="wp-block-image"><img src="https://blogbrauwersimages.blob.core.windows.net/images/uploads/2019/02/rest-api-designerview-1.png" alt="" class="wp-image-5480"/><figcaption>Designer view</figcaption></figure>
-<!-- /wp:image -->
+<!-- TODO: retake screenshot in current Azure portal: Designer view -->
 
-<!-- wp:image {"id":5491,"width":572} -->
-<figure class="wp-block-image is-resized"><img src="https://blogbrauwersimages.blob.core.windows.net/images/uploads/2019/02/rest-api-executedrun-view-1.png" alt="" class="wp-image-5491" width="572"/><figcaption>Execution run view</figcaption></figure>
-<!-- /wp:image -->
+<!-- TODO: retake screenshot in current Azure portal: Execution run view -->
 
 <!-- wp:paragraph -->
 <p></p>
@@ -409,21 +425,15 @@ my on-premise connectivity, levering the FTP (ISE) Connector. Please note; the
 IP used  ;-)  for the FTP API connection</p>
 <!-- /wp:paragraph -->
 
-<!-- wp:image {"id":5482,"width":572} -->
-<figure class="wp-block-image is-resized"><img src="https://blogbrauwersimages.blob.core.windows.net/images/uploads/2019/02/ftp-designerview.png" alt="" class="wp-image-5482" width="572"/></figure>
-<!-- /wp:image -->
+<!-- TODO: retake screenshot in current Azure portal: image ftp-designerview.png -->
 
-<!-- wp:image {"id":5485,"width":572} -->
-<figure class="wp-block-image is-resized"><img src="https://blogbrauwersimages.blob.core.windows.net/images/uploads/2019/02/image.png" alt="" class="wp-image-5485" width="572"/><figcaption>FTP Connection view</figcaption></figure>
-<!-- /wp:image -->
+<!-- TODO: retake screenshot in current Azure portal: FTP Connection view -->
 
 <!-- wp:paragraph -->
 <p></p>
 <!-- /wp:paragraph -->
 
-<!-- wp:image {"id":5484,"width":572} -->
-<figure class="wp-block-image is-resized"><img src="https://blogbrauwersimages.blob.core.windows.net/images/uploads/2019/02/ftp-executedrun-view.png" alt="" class="wp-image-5484" width="572"/><figcaption>Execution run view</figcaption></figure>
-<!-- /wp:image -->
+<!-- TODO: retake screenshot in current Azure portal: Execution run view -->
 
 <!-- wp:heading -->
 <h2>Conclusion</h2>
