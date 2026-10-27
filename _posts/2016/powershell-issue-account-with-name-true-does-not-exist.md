@@ -25,7 +25,7 @@ Get-AzureSqlDatabaseServer or Get-AzureSqlDatabaseServerFirewallRule
 
 So I ended up looking at my different subscriptions and I noticed the following (see screenshot)
 
-<a href="https://menetazure.azurewebsites.net/wp-content/uploads/2016/08/powershell_screenshot1.jpg"><img class="alignnone size-medium wp-image-4873" src="https://menetazure.azurewebsites.net/wp-content/uploads/2016/08/powershell_screenshot1-300x264.jpg" alt="powershell_screenshot1" width="300" height="264" /></a>
+
 
 As you can see, 2 subscriptions contain the value True for DefaultAccount, so obviously this was causing the issue (as the account I was querying against was my Default one)
 
@@ -35,7 +35,7 @@ So I performed the following steps to resolve the issue
 
 1. In powershell execute: Get-AzureAccount and match the correct ID to Subscription (lookup the value in subscriptions (1) and compare them to the subscriptions id obtained using Get-Subscriptions). Once found, copy the corresponding Id (2)
 
-<img class="alignnone size-medium wp-image-4874" src="https://menetazure.azurewebsites.net/wp-content/uploads/2016/08/powersgell_screenshot2-300x78.png" alt="powersgell_screenshot2" width="300" height="78" />
+
 
 2. Now execute the following
 

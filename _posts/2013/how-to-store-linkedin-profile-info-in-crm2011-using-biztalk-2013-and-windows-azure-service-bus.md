@@ -53,7 +53,7 @@ categories:
 &nbsp;
 
 Okay all kidding aside; in this blog post I will dive deeper in to the above mentioned <span style="color: #555555;">scenar</span>io, and will highlight the ins-and-outs as mentioned in steps 1 to 9. So let’s get started.
-<blockquote><span style="font-size: small;">For all those, not interested in reading about it; but rather want to see the pre-recorded demo. Click <a href="/link-unavailable/?url=http%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3D-NONmqs1K5c" target="_blank" rel="noopener noreferrer">here</a> <img class="wlEmoticon wlEmoticon-winkingsmile" alt="Winking smile" src="https://blogbrauwersimages.blob.core.windows.net/images/uploads/2013/04/wlEmoticon-winkingsmile.png" /></span></blockquote>
+<blockquote><span style="font-size: small;">For all those, not interested in reading about it; but rather want to see the pre-recorded demo. Click <a href="/link-unavailable/?url=http%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3D-NONmqs1K5c" target="_blank" rel="noopener noreferrer">here</a> ;-)</span></blockquote>
 <h1>Website (steps 1 to 5) – Get OAUTH token and send it to Service bus</h1>
 One of the first challenges we have to tackle consist of obtaining a token from LinkedIn which allows us to perform authorized requests against a certain user profile. In English; in order to get LinkedIn profile information we need to acquire approval from the profile owner. Once we have obtained this permission we need to obtain an OATH 2.0 token which can then be used to authorize our requests to the LinkedIn API.
 

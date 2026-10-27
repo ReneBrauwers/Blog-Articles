@@ -85,7 +85,7 @@ categories:
 <p><img src="/assets/images/uploads/2014/05/052914_1715_Exposingase1.png" alt="" /></li>
 <li>
 <div>In the &#8216;traditional&#8217; portal click on Service Bus</div>
-<p><img src="https://blogbrauwersimages.blob.core.windows.net/images/uploads/2014/05/052914_1715_Exposingase2.png" alt="" /></li>
+<p><!-- TODO: retake screenshot in current Azure portal: image 052914_1715_Exposingase2.png --></li>
 <li>
 <div>Create a new Namespace for your Service bus Entity</div>
 <p><img src="/assets/images/uploads/2014/05/052914_1715_Exposingase3.png" alt="" /></li>
@@ -123,7 +123,7 @@ categories:
 <p><img src="/assets/images/uploads/2014/05/052914_1715_Exposingase10.png" alt="" /></li>
 <li>
 <div>Your new Topic should now have been created</div>
-<p><img src="https://blogbrauwersimages.blob.core.windows.net/images/uploads/2014/05/052914_1715_Exposingase11.png" alt="" /></li>
+<p><!-- TODO: retake screenshot in current Azure portal: image 052914_1715_Exposingase11.png --></li>
 </ol>
 <h3></h3>
 <h3><a name="#Add_Subscriptions_and_filters_to_your_newly_created_TOPIC">Add Subscriptions and filters to your newly created TOPIC</a></h3>
@@ -166,7 +166,7 @@ categories:
 <p><img src="/assets/images/uploads/2014/05/052914_1715_Exposingase14.png" alt="" /></li>
 <li>
 <div>Select the Connection Information Icon on the bottom</div>
-<p><img src="https://blogbrauwersimages.blob.core.windows.net/images/uploads/2014/05/052914_1715_Exposingase15.png" alt="" /></li>
+<p><!-- TODO: retake screenshot in current Azure portal: image 052914_1715_Exposingase15.png --></li>
 <li>
 <div>A new window will pop up, in this windows click on the link &#8220;Click here to configure&#8221;</div>
 <p><img src="/assets/images/uploads/2014/05/052914_1715_Exposingase16.png" alt="" /></li>
@@ -202,10 +202,10 @@ categories:
 <li><strong>D)</strong> Expiry Date = Select the date you want the Sas token to expire</li>
 <li><strong>E) </strong>Click on generate</li>
 </ul>
-<p><img src="https://blogbrauwersimages.blob.core.windows.net/images/uploads/2014/05/052914_1715_Exposingase19.png" alt="" /></li>
+<p><!-- TODO: retake screenshot in current Azure portal: image 052914_1715_Exposingase19.png --></li>
 <li>
 <div>After you have clicked GENERATE by Default a file will be created on your desktop containing all generated Sas Tokens, the file is named SAS_tokens.txt. Once saved you will be asked if you want to copy the generated token to your Clipboard. Below 2 images depicting the message-prompt as well as the contents stored in the generated file.Perform step 2 for the other 2 policies as well (API_Listen and API_Manage)</div>
-<p><img src="https://blogbrauwersimages.blob.core.windows.net/images/uploads/2014/05/052914_1715_Exposingase20.png" alt="" width="350" height="126" /></p>
+<p><!-- TODO: retake screenshot in current Azure portal: image 052914_1715_Exposingase20.png --></p>
 <p><img src="/assets/images/uploads/2014/05/052914_1715_Exposingase21.png" alt="" width="351" height="172" /></li>
 </ol>
 <h3></h3>
@@ -230,7 +230,7 @@ categories:
 <li><strong>D)</strong> Region: Select a region close to you</li>
 <li><strong>E)</strong> Click on the right arrow</li>
 </ul>
-<p><img src="https://blogbrauwersimages.blob.core.windows.net/images/uploads/2014/05/052914_1715_Exposingase24.png" alt="" /></li>
+<p><!-- TODO: retake screenshot in current Azure portal: image 052914_1715_Exposingase24.png --></li>
 <li>
 <div>You now will end up at step 2:</div>
 <ul>
@@ -249,7 +249,7 @@ categories:
 <p>So let&#8217;s get started with the creation of our API by Clicking the Manage Icon which should be visible in the menu bar at the bottom of your window.</p>
 <p style="margin-left: 36pt"><img src="/assets/images/uploads/2014/05/052914_1715_Exposingase26.png" alt="" /></p>
 <p>Once you&#8217;ve clicked the Manage icon, you should automatically be redirected to the API Management portal.</p>
-<p style="margin-left: 36pt"><img src="https://blogbrauwersimages.blob.core.windows.net/images/uploads/2014/05/052914_1715_Exposingase27.png" alt="" /></p>
+<p style="margin-left: 36pt"><!-- TODO: retake screenshot in current Azure portal: image 052914_1715_Exposingase27.png --></p>
 <h3></h3>
 <h3><a name="#Create_and_configure_a_new_API">Create and configure a new API</a></h3>
 <p>Now that you are in the Azure API Management Administration Portal you can start with creating and configuring a new API, which will virtualize your Service Bus Topic Rest Endpoints. In order to do so follow the following steps.</p>
@@ -289,7 +289,7 @@ categories:
 <p><img src="/assets/images/uploads/2014/05/052914_1715_Exposingase30.png" alt="" /></li>
 <li>
 <div>Once the API has been created you will end up at the API configuration page</div>
-<p><img src="https://blogbrauwersimages.blob.core.windows.net/images/uploads/2014/05/052914_1715_Exposingase31.png" alt="" /></li>
+<p><!-- TODO: retake screenshot in current Azure portal: image 052914_1715_Exposingase31.png --></li>
 <li>
 <div>Now click on the Settings Tab</div>
 <ul>
@@ -324,7 +324,7 @@ categories:
 </li>
 </ol>
 </ol>
-<p><img src="https://blogbrauwersimages.blob.core.windows.net/images/uploads/2014/05/052914_1715_Exposingase36.png" alt="" width="166" height="84" /></p>
+<p><!-- TODO: retake screenshot in current Azure portal: image 052914_1715_Exposingase36.png --></p>
 <ol>
 <ol>
 <li>
@@ -340,7 +340,7 @@ categories:
 </li>
 </ol>
 </ol>
-<p><img src="https://blogbrauwersimages.blob.core.windows.net/images/uploads/2014/05/052914_1715_Exposingase38.png" alt="" width="174" height="155" /></p>
+<p><!-- TODO: retake screenshot in current Azure portal: image 052914_1715_Exposingase38.png --></p>
 <ol>
 <ol>
 <li>
@@ -348,7 +348,7 @@ categories:
 </li>
 </ol>
 </ol>
-<p><img src="https://blogbrauwersimages.blob.core.windows.net/images/uploads/2014/05/052914_1715_Exposingase39.png" alt="" width="496" height="207" /></p>
+<p><!-- TODO: retake screenshot in current Azure portal: image 052914_1715_Exposingase39.png --></p>
 <ol>
 <li>
 <div>Now click on the ADD item in the menu bar on the left underneath RESPONSES (We will skip Caching, Parameters and Body as we don&#8217;t need it)</div>
@@ -371,7 +371,7 @@ categories:
 <p><img src="/assets/images/uploads/2014/05/052914_1715_Exposingase43.png" alt="" /></li>
 <li>
 <div>A new window will appear listing all products currently available, in this window click on the ADD PRODUCT item</div>
-<p><img src="https://blogbrauwersimages.blob.core.windows.net/images/uploads/2014/05/052914_1715_Exposingase44.png" alt="" /></li>
+<p><!-- TODO: retake screenshot in current Azure portal: image 052914_1715_Exposingase44.png --></li>
 <li>
 <div>Fill out the following form items in order to create a product.</div>
 <ul>
@@ -436,7 +436,7 @@ categories:
 <p><img src="/assets/images/uploads/2014/05/052914_1715_Exposingase52.png" alt="" /></li>
 <li>
 <div>From the Policy statements, select and click on the &#8220;Set HTTP Header&#8221; statement.</div>
-<p><img src="https://blogbrauwersimages.blob.core.windows.net/images/uploads/2014/05/052914_1715_Exposingase53.png" alt="" /></li>
+<p><!-- TODO: retake screenshot in current Azure portal: image 052914_1715_Exposingase53.png --></li>
 <li>
 <div>A &#8220;Set Header&#8221; Tag will be added to the Policy Definition area, which will leverage the Authorization Header containing our SAS token we created earlier. The steps required are listed below:</div>
 <ul>
@@ -457,7 +457,7 @@ categories:
 </li>
 <li>
 <div>From the Policy statements, select and click on the &#8220;Convert JSON to XML&#8221; statement.</div>
-<p><img src="https://blogbrauwersimages.blob.core.windows.net/images/uploads/2014/05/052914_1715_Exposingase55.png" alt="" /></li>
+<p><!-- TODO: retake screenshot in current Azure portal: image 052914_1715_Exposingase55.png --></li>
 <li>
 <div>A &#8220;json-to-xml&#8221; Tag will be added to the Policy Definition area, which contains the instructions resulting in JSON messages to be converted to XML. Ensure that the tag is configured as mentioned below:</div>
 <ul>
@@ -519,7 +519,7 @@ textual example:</p>
 <ol>
 <li>
 <div>Now select the Visibility tab, and click on the MANAGE GROUPS link</div>
-<p><img src="https://blogbrauwersimages.blob.core.windows.net/images/uploads/2014/05/052914_1715_Exposingase59.png" alt="" /></li>
+<p><!-- TODO: retake screenshot in current Azure portal: image 052914_1715_Exposingase59.png --></li>
 <li>
 <div>You will be redirected to the GROUPS page, on this page click on the ADD GROUP Link</div>
 <p><img src="/assets/images/uploads/2014/05/052914_1715_Exposingase60.png" alt="" /></li>
@@ -530,10 +530,10 @@ textual example:</p>
 <li><strong>B) </strong>Description: General description of the group and its purpose</li>
 <li><strong>C) </strong>Click on Save</li>
 </ul>
-<p><img src="https://blogbrauwersimages.blob.core.windows.net/images/uploads/2014/05/052914_1715_Exposingase61.png" alt="" /></li>
+<p><!-- TODO: retake screenshot in current Azure portal: image 052914_1715_Exposingase61.png --></li>
 <li>
 <div>After you&#8217;ve created the new Group, select the developers menu item and in the main window click on ADD User</div>
-<p><img src="https://blogbrauwersimages.blob.core.windows.net/images/uploads/2014/05/052914_1715_Exposingase62.png" alt="" /></li>
+<p><!-- TODO: retake screenshot in current Azure portal: image 052914_1715_Exposingase62.png --></li>
 <li>
 <div>Once again a new window will pop up. In this window fill out the following fields:</div>
 <ul>
@@ -552,7 +552,7 @@ textual example:</p>
 <li><strong>A) </strong>Ensure to select the new user</li>
 <li><strong>B) </strong>Click on the ADD TO GROUP item and add the user to the earlier created Group</li>
 </ul>
-<p><img src="https://blogbrauwersimages.blob.core.windows.net/images/uploads/2014/05/052914_1715_Exposingase64.png" alt="" /></li>
+<p><!-- TODO: retake screenshot in current Azure portal: image 052914_1715_Exposingase64.png --></li>
 <li>
 <div>Now go back to the PRODUCTS menu item and select the product you created earlier</div>
 <p><img src="/assets/images/uploads/2014/05/052914_1715_Exposingase65.png" alt="" /></li>
@@ -563,7 +563,7 @@ textual example:</p>
 <li><strong>B) </strong>Allow the new group to subscribe to your product</li>
 <li><strong>C)</strong> Click Save</li>
 </ul>
-<p><img src="https://blogbrauwersimages.blob.core.windows.net/images/uploads/2014/05/052914_1715_Exposingase66.png" alt="" /></li>
+<p><!-- TODO: retake screenshot in current Azure portal: image 052914_1715_Exposingase66.png --></li>
 <li>
 <div>Now Click on the summary tab and click on the PUBLISH link</div>
 <p><img src="/assets/images/uploads/2014/05/052914_1715_Exposingase67.png" alt="" /></li>
@@ -572,10 +572,10 @@ textual example:</p>
 <p><img src="/assets/images/uploads/2014/05/052914_1715_Exposingase68.png" alt="" /></li>
 <li>
 <div>The main window will now change, in this window click on ADD Subscription</div>
-<p><img src="https://blogbrauwersimages.blob.core.windows.net/images/uploads/2014/05/052914_1715_Exposingase69.png" alt="" /></li>
+<p><!-- TODO: retake screenshot in current Azure portal: image 052914_1715_Exposingase69.png --></li>
 <li>
 <div>A window will pop up, in this window ensure to put a checkmark in front of the product you want the user to subscribe to. Once done press the subscribe button</div>
-<p><img src="https://blogbrauwersimages.blob.core.windows.net/images/uploads/2014/05/052914_1715_Exposingase70.png" alt="" /></li>
+<p><!-- TODO: retake screenshot in current Azure portal: image 052914_1715_Exposingase70.png --></li>
 </ol>
 <h3><a name="#Test_your_API">Test your API</a></h3>
 <p>At this point you have set up your API and now you can proceed with testing it. In order to test we will use the Azure API Management Developer Portal and we will log-on to it using the user account we set up previously.</p>
@@ -593,10 +593,10 @@ textual example:</p>
 <p><img src="/assets/images/uploads/2014/05/052914_1715_Exposingase72.png" alt="" /></li>
 <li>
 <div>Click on the API you created earlier</div>
-<p><img src="https://blogbrauwersimages.blob.core.windows.net/images/uploads/2014/05/052914_1715_Exposingase73.png" alt="" /></li>
+<p><!-- TODO: retake screenshot in current Azure portal: image 052914_1715_Exposingase73.png --></li>
 <li>
 <div>Click on the button &#8220;Open Console&#8221;</div>
-<p><img src="https://blogbrauwersimages.blob.core.windows.net/images/uploads/2014/05/052914_1715_Exposingase74.png" alt="" /></li>
+<p><!-- TODO: retake screenshot in current Azure portal: image 052914_1715_Exposingase74.png --></li>
 <li>
 <div>A form will appear which allows you to send a message to the API. Follow the steps below to send a JSON formatted message to the API.</div>
 <ul>
@@ -614,7 +614,7 @@ textual example:</p>
 <li>D) Press HTTP POST</li>
 </ul>
 </ul>
-<p><img src="https://blogbrauwersimages.blob.core.windows.net/images/uploads/2014/05/052914_1715_Exposingase75.png" alt="" /></li>
+<p><!-- TODO: retake screenshot in current Azure portal: image 052914_1715_Exposingase75.png --></li>
 <li>
 <div>Now open up the Service Bus Explorer and connect to your service bus instance</div>
 </li>
