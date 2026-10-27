@@ -95,7 +95,7 @@ http://www.CodeHighlighter.com/
 <h3>Step 2</h3>
 <p>The BizTalk Flat File Wizard will appear. Now press the <strong>[ Next button]</strong> untill you see <strong>[ Flat File Information Screen ]</strong>. On this screen, <strong>[ browse ]</strong> to the csv file in question. Enter a name for the record in the <strong>[ Record Name ]</strong> input field. Leave the other options in tact and press the <strong>[ Next button ]</strong>.</p>
 <p>&nbsp;</p>
-<p><a href="https://blogbrauwersimages.blob.core.windows.net/images/uploads/2015/01/image1.png"><img title="image" style="border-top: 0px;border-right: 0px;border-bottom: 0px;padding-top: 0px;padding-left: 0px;border-left: 0px;padding-right: 0px" border="0" alt="image" src="https://blogbrauwersimages.blob.core.windows.net/images/uploads/2015/01/image_thumb1.png" width="639" height="503"></a></p>
+<p><a href="https://blogbrauwersimages.blob.core.windows.net/images/uploads/2015/01/image1.png"><img title="image" style="border-top: 0px;border-right: 0px;border-bottom: 0px;padding-top: 0px;padding-left: 0px;border-left: 0px;padding-right: 0px" border="0" alt="image" src="/assets/images/uploads/2015/01/image_thumb1.png" width="639" height="503"></a></p>
 <p>&nbsp;</p>
 <h3>Step 3</h3>
 <p>You should now be on the <strong>[ Select Document Screen ]</strong>. On this screen, select the header&nbsp; <strong>[ The first line ] </strong>and press the <strong>[ Next button ]</strong>.</p>
@@ -119,7 +119,7 @@ http://www.CodeHighlighter.com/
 <h3>Step 7</h3>
 <p>So far all we have done is defined our record definition, the next few steps will define our header elements (our columns if you prefer). The screen which you will be presented with at this stage is the start of this process.&nbsp; In order to start press the <strong>[ Next Button ]</strong></p>
 <p><strong><font color="#333333"></font></strong>&nbsp;</p>
-<p><a href="https://blogbrauwersimages.blob.core.windows.net/images/uploads/2015/01/image6.png"><img title="image" style="border-top: 0px;border-right: 0px;border-bottom: 0px;padding-top: 0px;padding-left: 0px;border-left: 0px;padding-right: 0px" border="0" alt="image" src="https://blogbrauwersimages.blob.core.windows.net/images/uploads/2015/01/image_thumb6.png" width="658" height="519"></a></p>
+<p><a href="https://blogbrauwersimages.blob.core.windows.net/images/uploads/2015/01/image6.png"><img title="image" style="border-top: 0px;border-right: 0px;border-bottom: 0px;padding-top: 0px;padding-left: 0px;border-left: 0px;padding-right: 0px" border="0" alt="image" src="/assets/images/uploads/2015/01/image_thumb6.png" width="658" height="519"></a></p>
 <p>&nbsp;</p>
 <h3>Step 8</h3>
 <p>The sceen <strong>[ Select Document Data ]</strong> allows you to select the actual data (headers elements). If you followed up on all the steps so far it would suffice to select the <strong>[ Next Button ]</strong>. In case you’re not sure ensure that you only have selected the actual data excluding the <u><strong>[ New line characters ]</strong>.</u></p>
@@ -140,10 +140,10 @@ http://www.CodeHighlighter.com/
 <p>You will now be presented with the <strong>[&nbsp; Childs Elements ]</strong> screen which actually allows us to define the columns of the header. In our example we will make a few modification relating to the <strong>[ Element Name ]</strong> we will not change the <strong>[ Data Type</strong> <strong>] </strong>as we are defining our header section and we are currently only defining the header (column) names. For brevity see the screenshot below which depicts all changes I’ve made. Once you have made the changes press the <strong>[ Next Button ]</strong></p>
 <p>&nbsp;</p>
 <h6>Before changes</h6>
-<p><a href="https://blogbrauwersimages.blob.core.windows.net/images/uploads/2015/01/image10.png"><img title="image" style="border-top: 0px;border-right: 0px;border-bottom: 0px;padding-top: 0px;padding-left: 0px;border-left: 0px;padding-right: 0px" border="0" alt="image" src="https://blogbrauwersimages.blob.core.windows.net/images/uploads/2015/01/image_thumb10.png" width="672" height="530"></a></p>
+<p><a href="https://blogbrauwersimages.blob.core.windows.net/images/uploads/2015/01/image10.png"><img title="image" style="border-top: 0px;border-right: 0px;border-bottom: 0px;padding-top: 0px;padding-left: 0px;border-left: 0px;padding-right: 0px" border="0" alt="image" src="/assets/images/uploads/2015/01/image_thumb10.png" width="672" height="530"></a></p>
 <p>&nbsp;</p>
 <h6>After changes</h6>
-<p><a href="https://blogbrauwersimages.blob.core.windows.net/images/uploads/2015/01/image11.png"><img title="image" style="border-top: 0px;border-right: 0px;border-bottom: 0px;padding-top: 0px;padding-left: 0px;border-left: 0px;padding-right: 0px" border="0" alt="image" src="https://blogbrauwersimages.blob.core.windows.net/images/uploads/2015/01/image_thumb11.png" width="676" height="533"></a></p>
+<p><a href="https://blogbrauwersimages.blob.core.windows.net/images/uploads/2015/01/image11.png"><img title="image" style="border-top: 0px;border-right: 0px;border-bottom: 0px;padding-top: 0px;padding-left: 0px;border-left: 0px;padding-right: 0px" border="0" alt="image" src="/assets/images/uploads/2015/01/image_thumb11.png" width="676" height="533"></a></p>
 <p>&nbsp;</p>
 <h3>Step 12</h3>
 <p>Congratulations at this point you have created your header structure, the end result should look similar to the image as depicted below. (note I’ve selected the Flat File tab, to display the non-xsd view)</p>
@@ -159,7 +159,7 @@ http://www.CodeHighlighter.com/
 <h3>Step 3</h3>
 <p>You should now be on the <strong>[ Select Document Screen ]</strong>. On this screen, select the <strong>[ The second line ] </strong>which contains the (repeating) data <strong>&nbsp;</strong>and press the <strong>[ Next button ]</strong>.</p>
 <p>&nbsp;</p>
-<p><a href="https://blogbrauwersimages.blob.core.windows.net/images/uploads/2015/01/image14.png"><img title="image" style="border-top: 0px;border-right: 0px;border-bottom: 0px;padding-top: 0px;padding-left: 0px;border-left: 0px;padding-right: 0px" border="0" alt="image" src="https://blogbrauwersimages.blob.core.windows.net/images/uploads/2015/01/image_thumb14.png" width="695" height="549"></a></p>
+<p><a href="https://blogbrauwersimages.blob.core.windows.net/images/uploads/2015/01/image14.png"><img title="image" style="border-top: 0px;border-right: 0px;border-bottom: 0px;padding-top: 0px;padding-left: 0px;border-left: 0px;padding-right: 0px" border="0" alt="image" src="/assets/images/uploads/2015/01/image_thumb14.png" width="695" height="549"></a></p>
 <p>&nbsp;</p>
 <h3>Step 6</h3>
 <p>Now you will be presented with the <strong>[ Child Elements ]</strong> screen. On this screen ensure that you change the <strong>[ Element Type ]</strong> from <strong>[ Field Element ]</strong> to <strong>[ Repeating Record ]</strong>. Once done press the <strong>[ Next Button ]</strong>.</p>

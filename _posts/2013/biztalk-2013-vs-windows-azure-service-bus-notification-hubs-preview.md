@@ -33,7 +33,7 @@ categories:
 <p>&nbsp;</p>
 <h1>Well here’s the bad news</h1>
 <p>You can’t use the SB-Messaging adapter. You might wonder why? The answer is quite simple: The SB-Messaging adapter (Microsoft.BizTalk.Adapter.ServiceBus.dll) contains a reference to the Microsoft.Servicebus.dll (1.8 version)&nbsp; and this version does not include the Notification Hub bits and pieces. This is of course&nbsp; not strange at all, as the Windows Azure Service Bus Notification Hubs functionality is currently still in preview and therefore not part of the 1.8 version.</p>
-<p><a href="https://blogbrauwersimages.blob.core.windows.net/images/uploads/2013/05/image.png"><img title="image" style="border-top: 0px;border-right: 0px;border-bottom: 0px;padding-top: 0px;padding-left: 0px;margin: 0px;border-left: 0px;padding-right: 0px" border="0" alt="image" src="https://blogbrauwersimages.blob.core.windows.net/images/uploads/2013/05/image_thumb.png" width="178" height="244"></a></p>
+<p><a href="https://blogbrauwersimages.blob.core.windows.net/images/uploads/2013/05/image.png"><img title="image" style="border-top: 0px;border-right: 0px;border-bottom: 0px;padding-top: 0px;padding-left: 0px;margin: 0px;border-left: 0px;padding-right: 0px" border="0" alt="image" src="/assets/images/uploads/2013/05/image_thumb.png" width="178" height="244"></a></p>
 <p>&nbsp;</p>
 <h1>Here’s the good news</h1>
 <p>Well you might currently not be able to leverage the SB-Messaging adapter out-of-the-box functionality to send toast-notifications to windows azure service bus notification hubs; but nothing can withhold you of using the Wcf-WebHttp Adapter in combination with a custom endpoint behavior <img class="wlEmoticon wlEmoticon-smile" style="border-top-style: none;border-left-style: none;border-bottom-style: none;border-right-style: none" alt="Smile" src="https://blogbrauwersimages.blob.core.windows.net/images/uploads/2013/05/wlEmoticon-smile.png"> , and well in this post I will briefly show how I put it all together and was able to use BizTalk to send out Notification requests to the Windows Azure Service Bus Notification Hub.</p>
@@ -53,11 +53,11 @@ categories:
 <p>&nbsp;</p>
 <blockquote>
 <p>Please note the following: the windows store application I created and used for this scenario creates a template registration with the Windows Azure Service Bus Notification Hub. The template in question leverages the ToastImageAndText04 format (see image below). Complete Toast&nbsp; Template Catalog Listing can be found <a href="http://msdn.microsoft.com/en-us/library/windows/apps/hh761494.aspx" target="_blank" rel="noopener noreferrer">here</a></p>
-<p><a href="https://blogbrauwersimages.blob.core.windows.net/images/uploads/2013/05/image1.png"><img title="image" style="border-top: 0px;border-right: 0px;border-bottom: 0px;padding-top: 0px;padding-left: 0px;margin: 0px;border-left: 0px;padding-right: 0px" border="0" alt="image" src="https://blogbrauwersimages.blob.core.windows.net/images/uploads/2013/05/image_thumb1.png" width="244" height="152"></a></p>
+<p><a href="https://blogbrauwersimages.blob.core.windows.net/images/uploads/2013/05/image1.png"><img title="image" style="border-top: 0px;border-right: 0px;border-bottom: 0px;padding-top: 0px;padding-left: 0px;margin: 0px;border-left: 0px;padding-right: 0px" border="0" alt="image" src="/assets/images/uploads/2013/05/image_thumb1.png" width="244" height="152"></a></p>
 <p>The registered template translates to the following xml</p>
-<p><a href="https://blogbrauwersimages.blob.core.windows.net/images/uploads/2013/05/image2.png"><img title="image" style="border-top: 0px;border-right: 0px;border-bottom: 0px;padding-top: 0px;padding-left: 0px;margin: 0px;border-left: 0px;padding-right: 0px" border="0" alt="image" src="https://blogbrauwersimages.blob.core.windows.net/images/uploads/2013/05/image_thumb2.png" width="244" height="118"></a></p>
+<p><a href="https://blogbrauwersimages.blob.core.windows.net/images/uploads/2013/05/image2.png"><img title="image" style="border-top: 0px;border-right: 0px;border-bottom: 0px;padding-top: 0px;padding-left: 0px;margin: 0px;border-left: 0px;padding-right: 0px" border="0" alt="image" src="/assets/images/uploads/2013/05/image_thumb2.png" width="244" height="118"></a></p>
 <p>Below a mapping, showing the link between the ToastImageAndText04 template and the Schema used in the scenario by BizTalk</p>
-<p><a href="https://blogbrauwersimages.blob.core.windows.net/images/uploads/2013/05/SNAGHTMLf8fa1eb.png"><img title="SNAGHTMLf8fa1eb" style="border-top: 0px;border-right: 0px;border-bottom: 0px;padding-top: 0px;padding-left: 0px;margin: 0px;border-left: 0px;padding-right: 0px" border="0" alt="SNAGHTMLf8fa1eb" src="https://blogbrauwersimages.blob.core.windows.net/images/uploads/2013/05/SNAGHTMLf8fa1eb_thumb.png" width="244" height="110"></a></p>
+<p><a href="https://blogbrauwersimages.blob.core.windows.net/images/uploads/2013/05/SNAGHTMLf8fa1eb.png"><img title="SNAGHTMLf8fa1eb" style="border-top: 0px;border-right: 0px;border-bottom: 0px;padding-top: 0px;padding-left: 0px;margin: 0px;border-left: 0px;padding-right: 0px" border="0" alt="SNAGHTMLf8fa1eb" src="/assets/images/uploads/2013/05/SNAGHTMLf8fa1eb_thumb.png" width="244" height="110"></a></p>
 </blockquote>
 <p>&nbsp;</p>
 <p>&nbsp;</p>
@@ -73,7 +73,7 @@ categories:
 <h1>The behavior which glues it all together.</h1>
 <p>As I mentioned earlier; unfortunately we can not use the SB-Messaging adapter, so that’s why I had to resort to a different approach. This approach consisted of creating a custom endpoint behavior which in short performs the following logic.</p>
 <p>&nbsp;</p>
-<p><a href="https://blogbrauwersimages.blob.core.windows.net/images/uploads/2013/05/image3.png"><img title="image" style="border-top: 0px;border-right: 0px;border-bottom: 0px;padding-top: 0px;padding-left: 0px;margin: 0px;border-left: 0px;padding-right: 0px" border="0" alt="image" src="https://blogbrauwersimages.blob.core.windows.net/images/uploads/2013/05/image_thumb3.png" width="244" height="243"></a></p>
+<p><a href="https://blogbrauwersimages.blob.core.windows.net/images/uploads/2013/05/image3.png"><img title="image" style="border-top: 0px;border-right: 0px;border-bottom: 0px;padding-top: 0px;padding-left: 0px;margin: 0px;border-left: 0px;padding-right: 0px" border="0" alt="image" src="/assets/images/uploads/2013/05/image_thumb3.png" width="244" height="243"></a></p>
 <p>&nbsp;</p>
 <p>&nbsp;</p>
 <p>&nbsp;</p>

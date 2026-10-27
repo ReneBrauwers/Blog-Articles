@@ -31,7 +31,7 @@ Well something kind of, came in between.. But no worries, I am still working on 
 But in the meantime, keep on reading,  relax, get your mouse or your finger-tips ready to click or swipe a-long as I shamelessly present another blog-post dedicated to another great BizTalk Server book which is a must read…
 
 &nbsp;
-<h3><a href="http://www.packtpub.com/biztalk-server-2010-for-developers-and-administrators-cookbook/book"><img style="margin: 5px;" alt="BizTalk Server 2010 Cookbook" src="http://www.packtpub.com/sites/default/files/4347EN_Biztalk%202010%20Cookbook_0.jpg" /></a></h3>
+<h3><a href="http://www.packtpub.com/biztalk-server-2010-for-developers-and-administrators-cookbook/book"><img style="margin: 5px;" alt="BizTalk Server 2010 Cookbook" src="/assets/images/uploads/misc/00/4347EN_Biztalk-2010-Cookbook_0.jpg" /></a></h3>
 &nbsp;
 
 It has been almost 2 months, since <a href="http://www.packtpub.com/">Packt publishing</a> released <a href="http://soa-thoughts.blogspot.com/">Steef-Jan Wiggers</a> book "<a href="http://www.packtpub.com/biztalk-server-2010-for-developers-and-administrators-cookbook/book">BizTalk Server 2010 Cookbook</a>".
