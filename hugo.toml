@@ -1,4 +1,4 @@
-baseURL = "https://blog.reneb.au/"
+baseURL = "https://blog-archive.reneb.au/"
 title = "Rene Brauwers – Blog Archive"
 languageCode = "en-au"
 assetDir = "hugo-assets"
