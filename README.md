@@ -1,6 +1,6 @@
-# Blog-Articles → blog.reneb.au
+# Blog-Articles → blog-archive.reneb.au
 
-This is the archive of Rene Brauwers' integration/Azure blog (2011–2019). It is built with [Hugo](https://gohugo.io) and published to GitHub Pages at https://blog.reneb.au.
+This is the archive of Rene Brauwers' integration/Azure blog (2011–2019). It is built with [Hugo](https://gohugo.io) and published to GitHub Pages at https://blog-archive.reneb.au.
 
 ## Writing a new post
 1. Run `scripts/new-post.sh "My post title"`. This creates `_posts/<year>/my-post-title.md`. You can also copy any file in `_posts/` and edit its front matter yourself; you need at least `title` and `date`.
